@@ -4,7 +4,7 @@
   <subtitle><![CDATA[天才向左,疯子向右。-----------------移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2015-10-30T13:21:41.000Z</updated>
+  <updated>2015-10-30T14:41:22.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -13,6 +13,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[hexo搭建博客之更换主题以及博客基本配置(二)]]></title>
+    <link href="http://waylenw.github.io/hexo/hexo-two/"/>
+    <id>http://waylenw.github.io/hexo/hexo-two/</id>
+    <published>2015-10-30T14:41:22.000Z</published>
+    <updated>2015-10-30T14:41:22.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="更换主题">更换主题</h1><blockquote>
+<p>在经过上一篇的博客搭建后，很多是否对默认的主题并不是很满意，是否希望可以打造一款属于<br> 自己风格的博客主题呢？</p>
+</blockquote>
+<p> <strong>有哪些主题可以更换</strong></p>
+<p>  github上的hexo的主题大全:<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a><br>   知乎上的hexo的主题排行版:<a href="http://www.zhihu.com/question/24422335/answer/46357100" target="_blank" rel="external">http://www.zhihu.com/question/24422335/answer/46357100</a></p>
+<p>  <strong>如何进行更换主题</strong>  </p>
+<p>  以本人的博客为例,本人使用的主题是jacman。<br>   此链接是主题制作者提供的主题使用博客:<a href="http://wuchong.me/jacman/2014/11/20/how-to-use-jacman/#more" target="_blank" rel="external">http://wuchong.me/jacman/2014/11/20/how-to-use-jacman/#more</a></p>
+<h1 id="主题和博客的相关配置">主题和博客的相关配置</h1><p> <strong>添加导航项目</strong></p>
+<p>  以我的路径为例:G:\Hexo\themes\jacman_config.xml<br> 主题默认的两个导航是主页和(归档)archives。：/后是导航的访问路径。前面是导航的名称<br> 根据这个规律自行添加导航和访问路径即可</p>
+ <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">##### Menu  导航项</span></span><br><span class="line"><span class="label">menu:</span></span><br><span class="line"> 主页: /      </span><br><span class="line"> 归档: /archives</span><br><span class="line"> 摄影: /cameras</span><br><span class="line"> About: /abouts</span><br></pre></td></tr></table></figure>
+<p> <strong>为导航项设置加载页面</strong></p>
+<p> archives导航是默认开启的，archives导航下的文章默认的目录是source_posts\在此文件夹下新建xx.md文件。归档下就会显示相应的文章item<br> cameras和abouts导航对应的文件夹是sourc/cameras和source/abouts。并在此目录下新建index.md.之后点击对应的menus时就默认加载目录下index.md文件</p>
+<p> ＃ 生成rss</p>
+<p> 生成插件</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-generator-feed <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure>
+<p> 配置hexo/_config.xml(详情可以查看第一篇时提供的_config.xml)</p>
+ <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins: #插件，例如生成 RSS 和站点地图的<span class="bullet">- </span>hero-generator-feed<span class="bullet">- </span>hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+<p> 这里要注意的是该配置必须在themes设置的前面配置,否则不起作用。配置完后clean一下重新生成一下就好。<br> 最后需要在导航上添加你的RSS链接。具体查看相关的主题配置。</p>
+<p> 以下是RSS的链接(比如我的),部署到服务器,输入此链接看是否生效<br> <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">waylenw<span class="class">.github</span><span class="class">.io</span>/atom.xml</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="更换主题">更换主题</h1><blockquote>
+<p>在经过上一篇的博客搭建后，很多是否对默认的主题并不是很满意，是否希望可以打造一款属于<br> 自己风格的博客主题呢？</p>
+</blockquote>
+<p> <strong>有哪些主题可以更换</s]]>
+    </summary>
+    
+      <category term="hexo" scheme="http://waylenw.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Android开发教程完全]]></title>
@@ -271,6 +308,28 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Android SDK版本与兼容包相关]]></title>
+    <link href="http://waylenw.github.io/Android/android-sdk-verion/"/>
+    <id>http://waylenw.github.io/Android/android-sdk-verion/</id>
+    <published>2015-10-17T01:32:48.000Z</published>
+    <updated>2015-10-17T01:31:45.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="SDK版本相关">SDK版本相关</h1><h2 id="5-X">5.X</h2><p> <strong><a href="http://wuxiaolong.me/2015/08/03/Palette/" target="_blank" rel="external">Palette取色器</a></strong></p>
+<h2 id="6-X">6.X</h2><p> <strong><a href="http://waylenw.github.io/Android/Android-sdk-6-change/">Android 6.0的变化</a></strong><br> <strong><a href="http://android.jobbole.com/81527/" target="_blank" rel="external">运行时权限开发者需要知道的一切</a></strong></p>
+<h1 id="兼容库相关">兼容库相关</h1><blockquote>
+<p>兼容库和兼容包是什么？兼容库和兼容包是对Android一些更低版本实现高版本的功能所<br>   提供的兼容架包。</p>
+</blockquote>
+<h2 id="Support-V4">Support-V4</h2><p> <strong><a href="http://mp.weixin.qq.com/s?__biz=MzA3MDMyMjkzNg==&amp;mid=212038361&amp;idx=1&amp;sn=ffcb677d058ecd7ff291a8a42d449566&amp;scene=0#rd" target="_blank" rel="external">NestedScrolling 实战:(5.0加入)</a></strong></p>
+<h2 id="Android_Design_Support_Library">Android Design Support Library</h2><p> <strong><a href="http://wuxiaolong.me/2015/08/03/TabLayout/" target="_blank" rel="external">TabLayout</a></strong></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="SDK版本相关">SDK版本相关</h1><h2 id="5-X">5.X</h2><p> <strong><a href="http://wuxiaolong.me/2015/08/03/Palette/" target="_blank" rel="extern]]>
+    </summary>
+    
+      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Android 6.0的改变]]></title>
     <link href="http://waylenw.github.io/Android/Android-sdk-6-change/"/>
     <id>http://waylenw.github.io/Android/Android-sdk-6-change/</id>
@@ -362,58 +421,6 @@
       <category term="Android第三方" scheme="http://waylenw.github.io/tags/Android%E7%AC%AC%E4%B8%89%E6%96%B9/"/>
     
       <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android SDK版本与兼容包相关]]></title>
-    <link href="http://waylenw.github.io/Android/android-sdk-verion/"/>
-    <id>http://waylenw.github.io/Android/android-sdk-verion/</id>
-    <published>2015-10-17T01:32:48.000Z</published>
-    <updated>2015-10-17T01:31:45.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="SDK版本相关">SDK版本相关</h1><h2 id="5-X">5.X</h2><p> <strong><a href="http://wuxiaolong.me/2015/08/03/Palette/" target="_blank" rel="external">Palette取色器</a></strong></p>
-<h2 id="6-X">6.X</h2><p> <strong><a href="http://waylenw.github.io/Android/Android-sdk-6-change/">Android 6.0的变化</a></strong><br> <strong><a href="http://android.jobbole.com/81527/" target="_blank" rel="external">运行时权限开发者需要知道的一切</a></strong></p>
-<h1 id="兼容库相关">兼容库相关</h1><blockquote>
-<p>兼容库和兼容包是什么？兼容库和兼容包是对Android一些更低版本实现高版本的功能所<br>   提供的兼容架包。</p>
-</blockquote>
-<h2 id="Support-V4">Support-V4</h2><p> <strong><a href="http://mp.weixin.qq.com/s?__biz=MzA3MDMyMjkzNg==&amp;mid=212038361&amp;idx=1&amp;sn=ffcb677d058ecd7ff291a8a42d449566&amp;scene=0#rd" target="_blank" rel="external">NestedScrolling 实战:(5.0加入)</a></strong></p>
-<h2 id="Android_Design_Support_Library">Android Design Support Library</h2><p> <strong><a href="http://wuxiaolong.me/2015/08/03/TabLayout/" target="_blank" rel="external">TabLayout</a></strong></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="SDK版本相关">SDK版本相关</h1><h2 id="5-X">5.X</h2><p> <strong><a href="http://wuxiaolong.me/2015/08/03/Palette/" target="_blank" rel="extern]]>
-    </summary>
-    
-      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[hexo搭建博客之更换主题以及博客基本配置(二)]]></title>
-    <link href="http://waylenw.github.io/hexo/hexo-two/"/>
-    <id>http://waylenw.github.io/hexo/hexo-two/</id>
-    <published>2015-10-17T01:32:48.000Z</published>
-    <updated>2015-10-17T01:31:45.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="更换主题">更换主题</h1><blockquote>
-<p>在经过上一篇的博客搭建后，很多是否对默认的主题并不是很满意，是否希望可以打造一款属于<br> 自己风格的博客主题呢？</p>
-</blockquote>
-<p> <strong>有哪些主题可以更换</strong></p>
-<p>  github上的hexo的主题大全:<a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="external">https://github.com/hexojs/hexo/wiki/Themes</a><br>   知乎上的hexo的主题排行版:<a href="http://www.zhihu.com/question/24422335/answer/46357100" target="_blank" rel="external">http://www.zhihu.com/question/24422335/answer/46357100</a></p>
-<p>  <strong>如何进行更换主题</strong>  </p>
-<p>  以本人的博客为例,本人使用的主题是jacman。<br>   此链接是主题制作者提供的主题使用博客:<a href="http://wuchong.me/jacman/2014/11/20/how-to-use-jacman/#more" target="_blank" rel="external">http://wuchong.me/jacman/2014/11/20/how-to-use-jacman/#more</a></p>
-<h1 id="主题和博客的相关配置">主题和博客的相关配置</h1><p> <strong>添加导航项目</strong></p>
-<p>  以我的路径为例:G:\Hexo\themes\jacman_config.xml<br> 主题默认的两个导航是主页和(归档)archives。：/后是导航的访问路径。前面是导航的名称<br> 根据这个规律自行添加导航和访问路径即可</p>
- <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">##### Menu  导航项</span></span><br><span class="line"><span class="label">menu:</span></span><br><span class="line"> 主页: /      </span><br><span class="line"> 归档: /archives</span><br><span class="line"> 摄影: /cameras</span><br><span class="line"> About: /abouts</span><br></pre></td></tr></table></figure>
-<p> <strong>为导航项设置加载页面</strong></p>
-<p> archives是默认开启的，archives的默认的目录是source_posts\在此文件夹下新建xx.md文件。归档下就会显示相应的文章item<br> cameras和abouts导航对应的文件夹是sourc/cameras和source/abouts。并在此目录下新建index.md.之后点击对应的menus时就默认加载目录下index.md文件</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="更换主题">更换主题</h1><blockquote>
-<p>在经过上一篇的博客搭建后，很多是否对默认的主题并不是很满意，是否希望可以打造一款属于<br> 自己风格的博客主题呢？</p>
-</blockquote>
-<p> <strong>有哪些主题可以更换</s]]>
-    </summary>
-    
-      <category term="hexo" scheme="http://waylenw.github.io/tags/hexo/"/>
     
   </entry>
   
@@ -748,7 +755,7 @@
     <link href="http://waylenw.github.io/hexo/hexo-one/"/>
     <id>http://waylenw.github.io/hexo/hexo-one/</id>
     <published>2015-09-08T16:00:00.000Z</published>
-    <updated>2015-10-17T01:31:45.000Z</updated>
+    <updated>2015-10-30T14:28:55.000Z</updated>
     <content type="html"><![CDATA[<h1 id="简介">简介</h1><p>   Hexo是由一个台湾的大神弄出来的东东。可以使用此工具来生成个人博客。很神奇高大上的东东。<br>   大神的博客:<a href="http://zespia.tw/" target="_blank" rel="external">http://zespia.tw/</a><br>   hexo官网:<a href="https://hexo.io/" target="_blank" rel="external">https://hexo.io/</a></p>
 <h1 id="1-_安装Git">1. 安装Git</h1><p>   如何安装git详情查看</p>
 <h1 id="2-_安装Node-js">2. 安装Node.js</h1><p>  下载：<a href="http://nodejs.org/download/" target="_blank" rel="external">http://nodejs.org/download/</a></p>
@@ -774,6 +781,7 @@
 <h2 id="5-3部署">5.3部署</h2><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo clean<span class="comment">//清理数据缓存，建议每次都清楚</span></span><br><span class="line">hexo <span class="keyword">d</span> <span class="comment">//部署</span></span><br></pre></td></tr></table></figure>
 <p>部署成功的信息<br>    [info] Deploy done: github</p>
 <h2 id="5-4成功">5.4成功</h2><p>   在浏览器输入<a href="http://waylenw.github.io/">http://waylenwang.github.io/</a>就能看到网页了。</p>
+<p><strong><a href="http://waylenw.github.io/hexo/hexo-two/">hexo搭建博客之更换主题以及博客基本配置(二)</a></strong></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="简介">简介</h1><p>   Hexo是由一个台湾的大神弄出来的东东。可以使用此工具来生成个人博客。很神奇高大上的东东。<br>   大神的博客:<a href="http://zespia.tw/" target="_blank" rel="external]]>

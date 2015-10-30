@@ -25,7 +25,7 @@
 
  有哪些主题可以更换
   github上的hexo的主题大全:https://github.com/hexojs/hexo/wiki/Themes   知乎上的hexo的主题排行版:http://www.zhihu.com/question/24422335/answer/46">
-<meta property="og:updated_time" content="2015-10-17T01:31:45.000Z">
+<meta property="og:updated_time" content="2015-10-30T14:41:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo搭建博客之更换主题以及博客基本配置(二)">
 <meta name="twitter:description" content="更换主题
@@ -103,7 +103,7 @@
 		<a href="/about" title="Waylenw" target="_blank" itemprop="author">Waylenw</a>
 		
   <p class="article-time">
-    <time datetime="2015-10-17T01:32:48.000Z" itemprop="datePublished"> 发表于 2015-10-17</time>
+    <time datetime="2015-10-30T14:41:22.000Z" itemprop="datePublished"> 发表于 2015-10-30</time>
     
   </p>
 </header>
@@ -127,7 +127,14 @@
 <p>  以我的路径为例:G:\Hexo\themes\jacman_config.xml<br> 主题默认的两个导航是主页和(归档)archives。：/后是导航的访问路径。前面是导航的名称<br> 根据这个规律自行添加导航和访问路径即可</p>
  <figure class="highlight avrasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">##### Menu  导航项</span></span><br><span class="line"><span class="label">menu:</span></span><br><span class="line"> 主页: /      </span><br><span class="line"> 归档: /archives</span><br><span class="line"> 摄影: /cameras</span><br><span class="line"> About: /abouts</span><br></pre></td></tr></table></figure>
 <p> <strong>为导航项设置加载页面</strong></p>
-<p> archives是默认开启的，archives的默认的目录是source_posts\在此文件夹下新建xx.md文件。归档下就会显示相应的文章item<br> cameras和abouts导航对应的文件夹是sourc/cameras和source/abouts。并在此目录下新建index.md.之后点击对应的menus时就默认加载目录下index.md文件</p>
+<p> archives导航是默认开启的，archives导航下的文章默认的目录是source_posts\在此文件夹下新建xx.md文件。归档下就会显示相应的文章item<br> cameras和abouts导航对应的文件夹是sourc/cameras和source/abouts。并在此目录下新建index.md.之后点击对应的menus时就默认加载目录下index.md文件</p>
+<p> ＃ 生成rss</p>
+<p> 生成插件</p>
+ <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="operator"><span class="keyword">install</span> hexo-generator-feed <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure>
+<p> 配置hexo/_config.xml(详情可以查看第一篇时提供的_config.xml)</p>
+ <figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plugins: #插件，例如生成 RSS 和站点地图的<span class="bullet">- </span>hero-generator-feed<span class="bullet">- </span>hexo-generator-sitemap</span><br></pre></td></tr></table></figure>
+<p> 这里要注意的是该配置必须在themes设置的前面配置,否则不起作用。配置完后clean一下重新生成一下就好。<br> 最后需要在导航上添加你的RSS链接。具体查看相关的主题配置。</p>
+<p> 以下是RSS的链接(比如我的),部署到服务器,输入此链接看是否生效<br> <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">waylenw<span class="class">.github</span><span class="class">.io</span>/atom.xml</span><br></pre></td></tr></table></figure></p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -158,19 +165,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/Android/android-sdk-verion/" title="Android SDK版本与兼容包相关">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Android SDK版本与兼容包相关</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/AndroidStudio/android-studio-logcat-highlight/"  title="Android Studio logcat高亮">
+<a href="/android-dev-teacher/"  title="Android开发教程完全">
  <strong>下一篇：</strong><br/> 
- <span>Android Studio logcat高亮
+ <span>Android开发教程完全
 </span>
 </a>
 </div>
