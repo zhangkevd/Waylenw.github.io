@@ -4,7 +4,7 @@
   <subtitle><![CDATA[天才向左,疯子向右。-----------------移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2015-11-03T06:00:36.000Z</updated>
+  <updated>2015-11-03T10:10:25.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[Android开源项目和轮子]]></title>
     <link href="http://waylenw.github.io/android-all-open-source/"/>
     <id>http://waylenw.github.io/android-all-open-source/</id>
-    <published>2015-11-03T06:00:36.000Z</published>
-    <updated>2015-11-03T06:00:36.000Z</updated>
+    <published>2015-11-03T10:10:25.000Z</published>
+    <updated>2015-11-03T10:10:25.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>最近发现多了不少访问量，仔细查看后发现原来是<a href="http://droidyue.com" target="_blank" rel="external">技术小黑屋</a>推荐了。首先很感谢被推荐，这篇博客初衷是记录一下自己开发使用到的一些轮子和开源项目，不追求全，只追求实用吧。鉴于很久没更新了，所以本次周末便把之前收藏的一些更新了。也是希望能继续完善吧。</p>
 </blockquote>
@@ -64,8 +64,9 @@
 <h2 id="Loading">Loading</h2></li>
 <li><a href="https://github.com/dodola/MetaballLoading" target="_blank" rel="external">MetaballLoading水滴传递的效果</a><br><img src="https://raw.githubusercontent.com/dodola/MetaballLoading/master/metaball.gif" alt=""></li>
 <li><a href="https://github.com/Kyson/WhorlView" target="_blank" rel="external">WhorlView漩涡风格的加载效果</a><br><img src="http://www.jcodecraeer.com/uploads/150818/1-150QP34Q2261.gif" alt=""></li>
-<li><p><a href="https://github.com/81813780/AVLoadingIndicatorView" target="_blank" rel="external">AVLoadingIndicatorView</a><br>Android Loading动画的一个集合<br><img src="https://raw.githubusercontent.com/81813780/AVLoadingIndicatorView/master/Demo.gif" alt=""></p>
-<h2 id="ViewPager">ViewPager</h2></li>
+<li><a href="https://github.com/81813780/AVLoadingIndicatorView" target="_blank" rel="external">AVLoadingIndicatorView</a><br>Android Loading动画的一个集合<br><img src="https://raw.githubusercontent.com/81813780/AVLoadingIndicatorView/master/Demo.gif" alt=""><br>－ <a href="https://github.com/zzz40500/android-shapeLoadingView" target="_blank" rel="external">android-shapeLoadingView仿58loading效果</a></li>
+</ul>
+<h2 id="ViewPager">ViewPager</h2><ul>
 <li><a href="http://www.apkbus.com/android-243081-1-1.html" target="_blank" rel="external">带有切换的动画的viewpager</a><br><img src="http://data.apkbus.com/5p14141288AU24" alt=""></li>
 <li><a href="https://github.com/chenupt/SpringIndicator" target="_blank" rel="external">SpringIndicator viewapger指示器，像水滴流动的效果</a><br><img src="https://raw.githubusercontent.com/chenupt/SpringIndicator/master/img/si_1.0.0.gif" alt=""></li>
 <li><a href="https://github.com/matrixxun/ProductTour" target="_blank" rel="external">ProductTour(ViewPager的PageTransformer切换动画)</a><br><img src="https://raw.githubusercontent.com/matrixxun/ProductTour/master/art/run.gif" alt=""></li>
@@ -130,6 +131,52 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Android开发教程完全]]></title>
+    <link href="http://waylenw.github.io/android-dev-teacher/"/>
+    <id>http://waylenw.github.io/android-dev-teacher/</id>
+    <published>2015-11-03T10:08:09.000Z</published>
+    <updated>2015-11-03T10:08:09.000Z</updated>
+    <content type="html"><![CDATA[<p> <strong>不定时更新</strong></p>
+<blockquote>
+<p>首先声明：本博客的所链接的文章不全是原创。很多是写的非常好的博客。所以本博客主要是收集Android开发教程优秀的博客。<br>以下是推荐初学者学习和了解Android开发的的链接<br><a href="http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank" rel="external">Android学习之路</a><br> <a href="http://blog.csdn.net/xyz_lmn/article/details/41411355" target="_blank" rel="external">Android 知识图谱</a><br><a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">Android Training培训课程中文版</a></p>
+</blockquote>
+<h2 id="系统架构">系统架构</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/49560045" target="_blank" rel="external">ART运行时相关</a></p>
+<h2 id="Android控件">Android控件</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46564229" target="_blank" rel="external">Android主题和样式</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46682141" target="_blank" rel="external">Android控件属性大全</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/45745093" target="_blank" rel="external">WebView的讲解</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46635287" target="_blank" rel="external">颜色不透明度16进制值</a><br> <a href="http://blog.csdn.net/column/details/xiaoshuang-ui.html" target="_blank" rel="external">Android UI设计博客专栏</a></p>
+<p> <strong>事件</strong><br> <a href="http://blog.csdn.net/lmj623565791/article/details/39102591" target="_blank" rel="external">Android ViewGroup事件分发</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/9097463" target="_blank" rel="external">Android事件分发机制(上)</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/9153747" target="_blank" rel="external">Android事件分发机制(下)</a><br> 想要熟悉Android View控件，其中就包含View控件的事件的分发，他是如何进行事件的传递，只有了解<br> 事件分发你才能明白事件的真正原理。</p>
+<h2 id="四大组件">四大组件</h2><p>  <strong>Activity</strong><br> <a href="http://blog.csdn.net/liuhe688/article/details/6733407" target="_blank" rel="external">Activity生命周期</a><br> Activity的生命周期。初学者必须要了解的。<br> <a href="http://blog.csdn.net/github_25928675/article/details/46049045" target="_blank" rel="external">Activity的启动模式</a><br>要熟练的掌握Activity的使用，Activity的启动模式就显得十分重要。了解启动模式对资源消耗情况，而且可以避免掉开发中你所认为’莫名其妙’的问题。<br> <a href="http://blog.csdn.net/github_25928675/article/details/49452183" target="_blank" rel="external">Activity界面切换动画讲解</a><br> <strong>Intent</strong><br> <a href="http://blog.csdn.net/github_25928675/article/details/45333253" target="_blank" rel="external">调用系统操作</a><br> <a href="http://blog.csdn.net/yuzhiboyi/article/details/8484771" target="_blank" rel="external">pendingIntent的使用和讲解</a><br> <a href="http://blog.csdn.net/zeng622peng/article/details/6180190" target="_blank" rel="external">intent和PendingIntent的区别</a><br> <strong>service</strong><br> <a href="http://blog.csdn.net/android_tutor/article/details/5789203" target="_blank" rel="external">Android Service生命周期及用法</a><br> <a href="http://blog.csdn.net/lmj623565791/article/details/47143563" target="_blank" rel="external">IntentService的使用和讲解</a><br><a href="http://blog.csdn.net/mad1989/article/details/22492519" target="_blank" rel="external">service如何不被杀死</a> </p>
+<h2 id="数据存储">数据存储</h2><p> <a href="http://blog.csdn.net/wenwen091100304/article/details/49050277" target="_blank" rel="external">数据存储方式之Shareprefences</a></p>
+<h2 id="音频和视频">音频和视频</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/49181907" target="_blank" rel="external">Android音频播放讲解</a><br> <a href="http://blog.csdn.net/peijiangping1989/article/details/7042610" target="_blank" rel="external">音频录制</a><br> <a href="http://blog.csdn.net/peijiangping1989/article/details/7049991" target="_blank" rel="external">视频录制</a></p>
+<h2 id="多线程">多线程</h2><p> <a href="http://blog.csdn.net/yuzhiboyi/article/details/7562245" target="_blank" rel="external">Handler讲解之基本使用(一)</a><br> <a href="http://blog.csdn.net/yuzhiboyi/article/details/7562254" target="_blank" rel="external">Handler讲解之sendMessage(二)</a><br> <a href="http://blog.csdn.net/yuzhiboyi/article/details/7562259" target="_blank" rel="external">Handler讲解之异步任务操作(三)</a><br> <a href="http://blog.csdn.net/lmj623565791/article/details/47079737" target="_blank" rel="external">HandlerThread讲解</a><br> <a href="http://blog.csdn.net/yanbober/article/details/48861457" target="_blank" rel="external">Loader的全面讲解及源码浅析</a><br> <a href="http://code.oneapm.com/android/2015/06/02/android1/" target="_blank" rel="external">AysnTask内部机制详解</a><br> <strong>优化</strong><br> <a href="http://blog.csdn.net/github_25928675/article/details/47259097" target="_blank" rel="external">Android 线程池的使用和讲解</a><br> 本篇文章将带你了解线程池,看完本篇文章相信你对资源消耗又有了一个新的认识，从此杜绝new Thread。<br><a href="http://droidyue.com/blog/2015/09/05/android-process-and-thread-schedule-nice/" target="_blank" rel="external">线程优先级讲解</a><br> <strong>案例</strong><br> <a href="http://blog.csdn.net/github_25928675/article/details/47702303" target="_blank" rel="external">Android计时和倒计时</a></p>
+<h2 id="权限和动作">权限和动作</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46460417" target="_blank" rel="external">权限和动作大全</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/45916267" target="_blank" rel="external">自定义权限</a></p>
+<h2 id="软键盘输入法">软键盘输入法</h2><p> <a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0822/3344.html" target="_blank" rel="external">软键盘遮挡问题</a></p>
+<h2 id="进阶篇">进阶篇</h2><p> <a href="http://www.open-open.com/lib/view/open1328836804515.html" target="_blank" rel="external">例子:根据需求自定义控件</a><br> <strong>优化</strong><br> <a href="http://blog.csdn.net/yanbober/article/details/48394201" target="_blank" rel="external">Android应用开发性能优化完全分析</a></p>
+<h2 id="开发工具">开发工具</h2><p> <a href="http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/">Android studio使用教程</a></p>
+<h2 id="Android适配和兼容">Android适配和兼容</h2><p>  <a href="http://blog.csdn.net/zhaokaiqiang1992/article/details/45419023" target="_blank" rel="external">Android屏幕适配全攻略</a></p>
+<p><strong>SDK版本和兼容包</strong></p>
+<blockquote>
+<p> Android开发的童鞋们都知道，Google的碎片化是很严重的，所以官方提供了兼容包去试配一些低版本的机器。<br>    并且兼容包也在更新，除此之外，Android的SDK版本更新也十分的快速，基本上是一年发一个大的版本号。而且<br>    Api的变更也十分大，但是很多时候对这些变更感到无从下手。以下链接的这篇文章对SDK版本更新的内容都会<br>    有一个汇总。相信你可以很快熟悉各版本之间的差异。</p>
+</blockquote>
+<p><a href="http://waylenw.github.io/Android/android-sdk-verion/">Android SDK版本和兼容包讲解</a></p>
+<h2 id="内存泄露之内存优化">内存泄露之内存优化</h2><p> <a href="http://blog.csdn.net/zhuanglonghai/article/details/38233069" target="_blank" rel="external">Handler内存泄露优化</a><br> <a href="http://waylenw.github.io/Android/android-bitmap-memory-yh/">Bitmap内存优化</a></p>
+<h2 id="XML文件属性">XML文件属性</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46650183" target="_blank" rel="external">Android xml资源文件中@、@android:type、@*、？、@+含义和区别</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46366173" target="_blank" rel="external">AndroidManifest.xml文件讲解</a></p>
+<h2 id="实战">实战</h2><p> <a href="http://www.devtf.cn/?p=941" target="_blank" rel="external">开发前你需要知道的六件事</a><br> <a href="https://github.com/futurice/android-best-practices/blob/master/translations/Chinese/README.cn.md" target="_blank" rel="external">Android开发最佳实践</a><br> 本篇博客主要通过项目编译架构和网络请求(数据解析)和Activity界面管理和资源文件的误区和一些优化和开发推荐几个方面来讲述最佳实践。<br> <a href="http://www.jianshu.com/p/d6611c8bd45c?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=pc_author_hots&amp;utm_source=recommendation#" target="_blank" rel="external">Android开发经验谈</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/48161147" target="_blank" rel="external">如何更新SDK?</a></p>
+<h2 id="视频">视频</h2><p> <a href="https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw" target="_blank" rel="external">google开发者频道(vpn)</a><br> <a href="https://www.youtube.com/channel/UCQqa5UIHtrnpiADC3eHFupw" target="_blank" rel="external">gooogle中文开发者频道(vpn)</a></p>
+<h2 id="其他">其他</h2><p> <a href="http://blog.csdn.net/vipzjyno1/article/details/21039349/" target="_blank" rel="external">Apk反编译</a> </p>
+<h2 id="课外了解">课外了解</h2><p> <a href="http://pcedu.pconline.com.cn/688/6883561.html" target="_blank" rel="external">中国Android的APP现状</a><br>该文章概述了目前国内Android APP的发展的一个现状。包括UI设计和内置功能以及造成系统卡顿的主要原因。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p> <strong>不定时更新</strong></p>
+<blockquote>
+<p>首先声明：本博客的所链接的文章不全是原创。很多是写的非常好的博客。所以本博客主要是收集Android开发教程优秀的博客。<br>以下是推荐初学者学习和了解Android开发的的链接<br]]>
+    </summary>
+    
+      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
+    
+      <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Android Studio使用教程]]></title>
     <link href="http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/"/>
     <id>http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/</id>
@@ -188,51 +235,6 @@
     </summary>
     
       <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android开发教程完全]]></title>
-    <link href="http://waylenw.github.io/android-dev-teacher/"/>
-    <id>http://waylenw.github.io/android-dev-teacher/</id>
-    <published>2015-11-03T03:47:10.000Z</published>
-    <updated>2015-11-03T03:47:10.000Z</updated>
-    <content type="html"><![CDATA[<p> <strong>不定时更新</strong></p>
-<blockquote>
-<p>首先声明：本博客的所链接的文章不全是原创。很多是写的非常好的博客。所以本博客主要是收集Android开发教程优秀的博客。<br>以下是推荐初学者学习和了解Android开发的的链接<br><a href="http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank" rel="external">Android学习之路</a><br> <a href="http://blog.csdn.net/xyz_lmn/article/details/41411355" target="_blank" rel="external">Android 知识图谱</a><br><a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">Android Training培训课程中文版</a></p>
-</blockquote>
-<h2 id="系统架构">系统架构</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/49560045" target="_blank" rel="external">ART运行时相关</a></p>
-<h2 id="Android控件">Android控件</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46564229" target="_blank" rel="external">Android主题和样式</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46682141" target="_blank" rel="external">Android控件属性大全</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/45745093" target="_blank" rel="external">WebView的讲解</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46635287" target="_blank" rel="external">颜色不透明度16进制值</a><br> <a href="http://blog.csdn.net/column/details/xiaoshuang-ui.html" target="_blank" rel="external">Android UI设计博客专栏</a></p>
-<p> <strong>事件</strong><br> <a href="http://blog.csdn.net/lmj623565791/article/details/39102591" target="_blank" rel="external">Android ViewGroup事件分发</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/9097463" target="_blank" rel="external">Android事件分发机制(上)</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/9153747" target="_blank" rel="external">Android事件分发机制(下)</a><br> 想要熟悉Android View控件，其中就包含View控件的事件的分发，他是如何进行事件的传递，只有了解<br> 事件分发你才能明白事件的真正原理。</p>
-<h2 id="四大组件">四大组件</h2><p>  <strong>Activity</strong><br> <a href="http://blog.csdn.net/liuhe688/article/details/6733407" target="_blank" rel="external">Activity生命周期</a><br> Activity的生命周期。初学者必须要了解的。<br> <a href="http://blog.csdn.net/github_25928675/article/details/46049045" target="_blank" rel="external">Activity的启动模式</a><br>要熟练的掌握Activity的使用，Activity的启动模式就显得十分重要。了解启动模式对资源消耗情况，而且可以避免掉开发中你所认为’莫名其妙’的问题。<br> <a href="http://blog.csdn.net/github_25928675/article/details/49452183" target="_blank" rel="external">Activity界面切换动画讲解</a><br> <strong>Intent</strong><br> <a href="http://blog.csdn.net/github_25928675/article/details/45333253" target="_blank" rel="external">调用系统操作</a><br> <a href="http://blog.csdn.net/yuzhiboyi/article/details/8484771" target="_blank" rel="external">pendingIntent的使用和讲解</a><br> <a href="http://blog.csdn.net/zeng622peng/article/details/6180190" target="_blank" rel="external">intent和PendingIntent的区别</a><br> <strong>service</strong><br> <a href="http://blog.csdn.net/android_tutor/article/details/5789203" target="_blank" rel="external">Android Service生命周期及用法</a><br> <a href="http://blog.csdn.net/lmj623565791/article/details/47143563" target="_blank" rel="external">IntentService的使用和讲解</a><br><a href="http://blog.csdn.net/mad1989/article/details/22492519" target="_blank" rel="external">service如何不被杀死</a> </p>
-<h2 id="数据存储">数据存储</h2><p> <a href="http://blog.csdn.net/wenwen091100304/article/details/49050277" target="_blank" rel="external">数据存储方式之Shareprefences</a></p>
-<h2 id="音频和视频">音频和视频</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/49181907" target="_blank" rel="external">Android音频播放讲解</a><br> <a href="http://blog.csdn.net/peijiangping1989/article/details/7042610" target="_blank" rel="external">音频录制</a><br> <a href="http://blog.csdn.net/peijiangping1989/article/details/7049991" target="_blank" rel="external">视频录制</a></p>
-<h2 id="多线程">多线程</h2><p> <a href="http://blog.csdn.net/yuzhiboyi/article/details/7562245" target="_blank" rel="external">Handler讲解之基本使用(一)</a><br> <a href="http://blog.csdn.net/yuzhiboyi/article/details/7562254" target="_blank" rel="external">Handler讲解之sendMessage(二)</a><br> <a href="http://blog.csdn.net/yuzhiboyi/article/details/7562259" target="_blank" rel="external">Handler讲解之异步任务操作(三)</a><br> <a href="http://blog.csdn.net/lmj623565791/article/details/47079737" target="_blank" rel="external">HandlerThread讲解</a><br> <a href="http://blog.csdn.net/yanbober/article/details/48861457" target="_blank" rel="external">Loader的全面讲解及源码浅析</a><br> <a href="http://code.oneapm.com/android/2015/06/02/android1/" target="_blank" rel="external">AysnTask内部机制详解</a><br> <strong>优化</strong><br> <a href="http://blog.csdn.net/github_25928675/article/details/47259097" target="_blank" rel="external">Android 线程池的使用和讲解</a><br> 本篇文章将带你了解线程池,看完本篇文章相信你对资源消耗又有了一个新的认识，从此杜绝new Thread。<br><a href="http://droidyue.com/blog/2015/09/05/android-process-and-thread-schedule-nice/" target="_blank" rel="external">线程优先级讲解</a><br> <strong>案例</strong><br> <a href="http://blog.csdn.net/github_25928675/article/details/47702303" target="_blank" rel="external">Android计时和倒计时</a></p>
-<h2 id="权限和动作">权限和动作</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46460417" target="_blank" rel="external">权限和动作大全</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/45916267" target="_blank" rel="external">自定义权限</a></p>
-<h2 id="软键盘输入法">软键盘输入法</h2><p> <a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0822/3344.html" target="_blank" rel="external">软键盘遮挡问题</a></p>
-<h2 id="进阶篇">进阶篇</h2><p> <a href="http://www.open-open.com/lib/view/open1328836804515.html" target="_blank" rel="external">例子:根据需求自定义控件</a></p>
-<h2 id="开发工具">开发工具</h2><p> <a href="http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/">Android studio使用教程</a></p>
-<h2 id="Android适配和兼容">Android适配和兼容</h2><p>  <a href="http://blog.csdn.net/zhaokaiqiang1992/article/details/45419023" target="_blank" rel="external">Android屏幕适配全攻略</a></p>
-<h2 id="SDK版本和兼容包">SDK版本和兼容包</h2><blockquote>
-<p> Android开发的童鞋们都知道，Google的碎片化是很严重的，所以官方提供了兼容包去试配一些低版本的机器。<br>    并且兼容包也在更新，除此之外，Android的SDK版本更新也十分的快速，基本上是一年发一个大的版本号。而且<br>    Api的变更也十分大，但是很多时候对这些变更感到无从下手。以下链接的这篇文章对SDK版本更新的内容都会<br>    有一个汇总。相信你可以很快熟悉各版本之间的差异。</p>
-</blockquote>
-<p><a href="http://waylenw.github.io/Android/android-sdk-verion/">Android SDK版本和兼容包讲解</a></p>
-<h2 id="内存泄露之内存优化">内存泄露之内存优化</h2><p> <a href="http://blog.csdn.net/zhuanglonghai/article/details/38233069" target="_blank" rel="external">Handler内存泄露优化</a><br> <a href="http://waylenw.github.io/Android/android-bitmap-memory-yh/">Bitmap内存优化</a></p>
-<h2 id="XML文件属性">XML文件属性</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46650183" target="_blank" rel="external">Android xml资源文件中@、@android:type、@*、？、@+含义和区别</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46366173" target="_blank" rel="external">AndroidManifest.xml文件讲解</a></p>
-<h2 id="实战">实战</h2><p> <a href="http://www.devtf.cn/?p=941" target="_blank" rel="external">开发前你需要知道的六件事</a><br> <a href="https://github.com/futurice/android-best-practices/blob/master/translations/Chinese/README.cn.md" target="_blank" rel="external">Android开发最佳实践</a><br> 本篇博客主要通过项目编译架构和网络请求(数据解析)和Activity界面管理和资源文件的误区和一些优化和开发推荐几个方面来讲述最佳实践。<br> <a href="http://www.jianshu.com/p/d6611c8bd45c?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=pc_author_hots&amp;utm_source=recommendation#" target="_blank" rel="external">Android开发经验谈</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/48161147" target="_blank" rel="external">如何更新SDK?</a></p>
-<h2 id="视频">视频</h2><p> <a href="https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw" target="_blank" rel="external">google开发者频道(vpn)</a><br> <a href="https://www.youtube.com/channel/UCQqa5UIHtrnpiADC3eHFupw" target="_blank" rel="external">gooogle中文开发者频道(vpn)</a></p>
-<h2 id="其他">其他</h2><p> <a href="http://blog.csdn.net/vipzjyno1/article/details/21039349/" target="_blank" rel="external">Apk反编译</a> </p>
-<h2 id="课外了解">课外了解</h2><p> <a href="http://pcedu.pconline.com.cn/688/6883561.html" target="_blank" rel="external">中国Android的APP现状</a><br>该文章概述了目前国内Android APP的发展的一个现状。包括UI设计和内置功能以及造成系统卡顿的主要原因。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p> <strong>不定时更新</strong></p>
-<blockquote>
-<p>首先声明：本博客的所链接的文章不全是原创。很多是写的非常好的博客。所以本博客主要是收集Android开发教程优秀的博客。<br>以下是推荐初学者学习和了解Android开发的的链接<br]]>
-    </summary>
-    
-      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
-    
-      <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
     
   </entry>
   
