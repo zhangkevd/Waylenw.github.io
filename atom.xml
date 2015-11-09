@@ -4,7 +4,7 @@
   <subtitle><![CDATA[天才向左,疯子向右。-----------------移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2015-11-09T11:45:30.000Z</updated>
+  <updated>2015-11-09T11:49:26.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[推荐一些优秀的日常开发工具]]></title>
     <link href="http://waylenw.github.io/recomd_dev_utils/"/>
     <id>http://waylenw.github.io/recomd_dev_utils/</id>
-    <published>2015-11-09T11:45:30.000Z</published>
-    <updated>2015-11-09T11:45:30.000Z</updated>
+    <published>2015-11-09T11:49:26.000Z</published>
+    <updated>2015-11-09T11:49:26.000Z</updated>
     <content type="html"><![CDATA[<p><strong>不定时更新</strong></p>
 <h1 id="Markdown编写">Markdown编写</h1><ol>
 <li><p><strong><a href="https://www.zybuluo.com/cmd/" target="_blank" rel="external">Cmd Markdown</a></strong><br>支持三大平台，对代码有高亮效果。支持云同步</p>
@@ -36,8 +36,7 @@
 <h1 id="浏览器">浏览器</h1><ol>
 <li><strong><a href="http://www.xmarks.com/" target="_blank" rel="external">xmarks</a></strong><br>书签工具。国内使用chrome的同步书签不错的选择，轻巧实用。</li>
 </ol>
-<p> ＃ Mac</p>
-<ol>
+<h1 id="Mac">Mac</h1><ol>
 <li><a href="https://itunes.apple.com/cn/app/go2shell/id445770608?mt=12" target="_blank" rel="external">Go2Shell</a><br>在Finder中进入到终端的神器</li>
 </ol>
 ]]></content>
