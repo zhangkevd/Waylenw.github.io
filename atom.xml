@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[Android Studio Mac快捷键]]></title>
-    <link href="http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/"/>
-    <id>http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/</id>
+    <link href="http://waylenw.github.io/AndroidStudio/androdi-studio-mac-keymap/"/>
+    <id>http://waylenw.github.io/AndroidStudio/androdi-studio-mac-keymap/</id>
     <published>2015-12-18T06:38:49.000Z</published>
     <updated>2015-12-18T06:38:49.000Z</updated>
     <content type="html"><![CDATA[<h1 id="设置Keymap">设置Keymap</h1><p>setting=&gt;左侧输入框输入keymap。如图<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/Mac/mac_keymap.png" alt=""></p>
@@ -41,8 +41,8 @@
   
   <entry>
     <title><![CDATA[Android Studio logcat高亮]]></title>
-    <link href="http://waylenw.github.io/AndroidStudio/androdi-studio-mac-keymap/"/>
-    <id>http://waylenw.github.io/AndroidStudio/androdi-studio-mac-keymap/</id>
+    <link href="http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/"/>
+    <id>http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/</id>
     <published>2015-12-18T06:31:15.000Z</published>
     <updated>2015-10-17T01:31:45.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
