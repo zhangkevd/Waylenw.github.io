@@ -4,7 +4,7 @@
   <subtitle><![CDATA[天才向左,疯子向右。-----------------移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2015-12-22T06:24:51.000Z</updated>
+  <updated>2015-12-22T06:47:47.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[Android开源项目和轮子]]></title>
     <link href="http://waylenw.github.io/android-all-open-source/"/>
     <id>http://waylenw.github.io/android-all-open-source/</id>
-    <published>2015-12-22T06:24:51.000Z</published>
-    <updated>2015-12-22T06:24:51.000Z</updated>
+    <published>2015-12-22T06:47:47.000Z</published>
+    <updated>2015-12-22T06:47:47.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>此博客初衷是记录一下自己开发过程后使用到或者收集到的一些轮子和开源项目，不追求全，只追求实用吧。会不断的更新,也是希望能继续完善吧。</p>
 </blockquote>
@@ -27,32 +27,31 @@
 <h1 id="功能框架">功能框架</h1><p><strong>数据库</strong></p>
 <ol>
 <li><a href="http://blog.csdn.net/lmj623565791/article/details/39122981" target="_blank" rel="external">ORMLite</a></li>
-<li><a href="http://blog.csdn.net/krislight/article/details/9391455" target="_blank" rel="external">GreenDaoMaster</a></li>
+<li><a href="http://blog.csdn.net/krislight/article/details/9391455" target="_blank" rel="external">GreenDaoMaster</a><br><a href="http://blog.csdn.net/u012565107/article/details/21546829" target="_blank" rel="external">ORMLitehe和greenDaoMaster简单性能对比</a></li>
 </ol>
 <hr>
-<p><a href="http://blog.csdn.net/u012565107/article/details/21546829" target="_blank" rel="external">ORMLitehe和greenDaoMaster简单性能对比</a></p>
 <p><strong>图片加载</strong></p>
 <ul>
-<li><a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="_blank" rel="external">ImageLoader</a><br><a href="http://blog.csdn.net/github_25928675/article/details/46442037" target="_blank" rel="external">使用讲解</a></li>
-<li><a href="https://github.com/square/picasso" target="_blank" rel="external">picasso</a><br><a href="http://blog.csdn.net/github_25928675/article/details/46660179" target="_blank" rel="external">使用讲解</a></li>
-<li><a href="https://github.com/facebook/fresco" target="_blank" rel="external">Fresco</a><br><a href="http://www.cnblogs.com/stay/p/4398432.html" target="_blank" rel="external">使用讲解</a><br>框架对比</li>
-<li><a href="http://stackoverflow.com/questions/29363321/picasso-v-s-imageloader-v-s-fresco-vs-glide" target="_blank" rel="external">Stackoverflow几个框架对比1</a> </li>
-<li><a href="http://www.csdn.net/article/2015-10-21/2825984" target="_blank" rel="external">MDCC 2015:三大图片缓存原理、特性对比</a></li>
+<li><a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="_blank" rel="external">ImageLoader</a><br>ImageLoader是目前Android平台上使用数量最多也是最为常见的图片加载框架。<a href="http://blog.csdn.net/github_25928675/article/details/46442037" target="_blank" rel="external">使用讲解</a></li>
+<li><a href="https://github.com/square/picasso" target="_blank" rel="external">picasso</a><br>Picasso是美国一家支付公司Square推出的。它的特点是通过复杂的压缩来减少内存的消耗,自带内存和硬盘的二级缓存<a href="http://blog.csdn.net/github_25928675/article/details/46660179" target="_blank" rel="external">使用讲解</a></li>
+<li><a href="https://github.com/facebook/fresco" target="_blank" rel="external">Fresco</a><br>Fresco是FaceBook推出的一款图片加载框架。自动释放内存的。<a href="http://www.cnblogs.com/stay/p/4398432.html" target="_blank" rel="external">使用讲解</a></li>
 </ul>
+<p>框架对比<br><a href="http://stackoverflow.com/questions/29363321/picasso-v-s-imageloader-v-s-fresco-vs-glide" target="_blank" rel="external">Stackoverflow几个框架对比</a><br><a href="http://www.csdn.net/article/2015-10-21/2825984" target="_blank" rel="external">MDCC 2015:三大图片缓存原理、特性对比</a></p>
+<hr>
 <p><strong>工具类</strong></p>
 <ul>
 <li><a href="https://github.com/pengwei1024/LogUtils" target="_blank" rel="external">LogUtil</a><br>支持直接打印数据集合,如List、Set、Map、数组</li>
+<li><a href="https://github.com/bunnyblue/DroidFix" target="_blank" rel="external">DroidFix</a><br>热修复的工具,修改补丁</li>
 </ul>
 <p><strong>插件</strong></p>
 <ul>
-<li><a href="https://github.com/dmytrodanylyk/folding-plugin" target="_blank" rel="external">布局文件分组</a></li>
+<li><a href="https://github.com/dmytrodanylyk/folding-plug" target="_blank" rel="external">布局文件分组</a></li>
 </ul>
 <p><strong>依赖注入</strong></p>
 <ul>
-<li><p><a href="https://github.com/wyouflf/xUtils" target="_blank" rel="external">xUtils的Viewutils</a></p>
-<h1 id="View">View</h1></li>
+<li><a href="https://github.com/wyouflf/xUtils" target="_blank" rel="external">xUtils的Viewutils</a></li>
 </ul>
-<h2 id="Loading">Loading</h2><ul>
+<h1 id="View">View</h1><h2 id="Loading">Loading</h2><ul>
 <li><a href="https://github.com/dodola/MetaballLoading" target="_blank" rel="external">MetaballLoading水滴传递的效果</a><br><img src="https://raw.githubusercontent.com/dodola/MetaballLoading/master/metaball.gif" alt=""></li>
 <li><a href="https://github.com/Kyson/WhorlView" target="_blank" rel="external">WhorlView漩涡风格的加载效果</a><br><img src="http://www.jcodecraeer.com/uploads/150818/1-150QP34Q2261.gif" alt=""></li>
 <li><a href="https://github.com/81813780/AVLoadingIndicatorView" target="_blank" rel="external">AVLoadingIndicatorView</a><br>Android Loading动画的一个集合<br><img src="https://raw.githubusercontent.com/81813780/AVLoadingIndicatorView/master/Demo.gif" alt=""></li>
@@ -95,24 +94,23 @@
 </ul>
 <h1 id="动画">动画</h1><ul>
 <li><a href="https://github.com/jaychou2012/SwitchLayout" target="_blank" rel="external">SwitchLayout 视图切换动画</a></li>
-<li><a href="https://github.com/sd6352051/NiftyDialogEffects" target="_blank" rel="external">NiftyDialogEffects 支持自定义飞入动画样式的 Dialog</a><br><img src="https://camo.githubusercontent.com/456687ac516bb07f1076928d635bfddf6b90d5ec/687474703a2f2f696d67302e70682e3132362e6e65742f69433436653162586b55316631724966555a6f3939773d3d2f363539373632303632313938343031393430382e676966" alt=""></li>
+<li><a href="https://github.com/sd6352051/NiftyDialogEffects" target="_blank" rel="external">NiftyDialogEffects 支持自定义飞入动画样式的 Dialog</a><br><img src="https://camo.githubusercontent.com/456687ac516bb07f1076928d635bfddf6b90d5ec/687474703a2f2f696d67302e70682e3132362e6e65742f69433436653162586b55316631724966555a6f3939773d3d2f363539373632303632313938343031393430382e676966" alt=""><ul>
+<li><a href="https://github.com/daimajia/AndroidViewAnimations" target="_blank" rel="external">AndroidViewAnimations</a><br>View 动画的Android库</li>
+</ul>
+</li>
 </ul>
 <h1 id="图像处理">图像处理</h1><ul>
 <li><a href="https://github.com/jaychou2012/ImageBlurring" target="_blank" rel="external">ImageBlurring图像模糊</a></li>
 <li><p><a href="https://github.com/cooltechworks/BitmapMerger" target="_blank" rel="external">BitmapMerger图片合成</a><br><img src="https://cloud.githubusercontent.com/assets/13122232/8438305/9f7c2644-1f82-11e5-8f51-25ba7cca0711.gif" alt="这里写图片描述"></p>
-<h1 id="功能应用">功能应用</h1></li>
+<h1 id="功能应用">功能应用</h1><ul>
 <li><a href="http://wister.iteye.com/blog/334562" target="_blank" rel="external">pinyin4j的使用(汉字转拼音)</a></li>
 <li><a href="https://git.oschina.net/xiao-lifan/MutiPhotoChoser" target="_blank" rel="external">自定义相册多图选择</a></li>
 <li><a href="https://github.com/bboyfeiyu/Colorful" target="_blank" rel="external">换肤</a></li>
 <li><a href="https://github.com/sevenler/Uninstall_Statics" target="_blank" rel="external">Apk统计自身被卸载</a></li>
-<li><p><a href="https://github.com/kymjs/EmojiChat" target="_blank" rel="external">Emoji表情的实现</a><br><img src="https://raw.githubusercontent.com/kymjs/EmojiChat/master/screen_shots/Screenshot_2.png" alt=""></p>
-<h2 id="图表">图表</h2><p><a href="https://github.com/diogobernardino/WilliamChart" target="_blank" rel="external">WilliamChart</a></p>
-<h1 id="实用工具">实用工具</h1></li>
-<li><p><a href="https://github.com/bunnyblue/DroidFix" target="_blank" rel="external">DroidFix</a><br>热修复的工具,修改补丁</p>
-<h1 id="开源项目">开源项目</h1></li>
-<li><a href="https://github.com/izzyleung/ZhihuDailyPurify" target="_blank" rel="external">知乎日报</a></li>
+<li><a href="https://github.com/kymjs/EmojiChat" target="_blank" rel="external">Emoji表情的实现</a><br><img src="https://raw.githubusercontent.com/kymjs/EmojiChat/master/screen_shots/Screenshot_2.png" alt=""></li>
 </ul>
-<h1 id="Demo">Demo</h1><ul>
+<h2 id="图表">图表</h2><p><a href="https://github.com/diogobernardino/WilliamChart" target="_blank" rel="external">WilliamChart</a></p>
+<h1 id="Demo">Demo</h1></li>
 <li><a href="https://github.com/stormzhang/9GAG" target="_blank" rel="external">9GAG(整合一些轮子的案例)</a></li>
 </ul>
 ]]></content>
