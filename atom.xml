@@ -4,7 +4,7 @@
   <subtitle><![CDATA[天才向左,疯子向右。-----------------移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2015-12-26T06:16:20.000Z</updated>
+  <updated>2015-12-26T07:46:12.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -15,46 +15,46 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Mac使用操作大全]]></title>
-    <link href="http://waylenw.github.io/Mac/mac-control-all/"/>
-    <id>http://waylenw.github.io/Mac/mac-control-all/</id>
-    <published>2015-12-26T06:16:20.000Z</published>
-    <updated>2015-12-26T06:16:20.000Z</updated>
+    <title><![CDATA[Android Studio使用教程]]></title>
+    <link href="http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/"/>
+    <id>http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/</id>
+    <published>2015-12-26T07:46:12.000Z</published>
+    <updated>2015-12-26T07:46:12.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
-<p>本博主要是mac使用操作教程汇总。不定时的更新。</p>
+<p>推荐链接<br>   <a href="http://www.android-studio.org/" target="_blank" rel="external">Android studio中文社区</a><br>   <a href="http://android.jobbole.com/81687/?url_type=39&amp;object_type=webpage&amp;pos=1" target="_blank" rel="external">倍数提高工作效率的 Android Studio 奇技</a></p>
 </blockquote>
-<p> 推荐：<br> <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/SystemPreferences/index.html" target="_blank" rel="external">Mac开发配置配置手册</a></p>
-<h1 id="系统基本介绍">系统基本介绍</h1><p> <a href="http://blog.csdn.net/smstong/article/details/15499661" target="_blank" rel="external">系统目录结构介绍</a><br></p>
-<h1 id="快捷键">快捷键</h1><p><strong>快捷键的符号所对应的按键</strong></p>
-<p>⌥—&gt; option|alt</p>
-<p>⇧—&gt;shift</p>
-<p>⌃—&gt;control</p>
-<p>⌘—&gt;command</p>
-<p>⎋—&gt;esc</p>
-<p><strong>快捷键一览</strong></p>
-<p><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/Mac/keybroad.jpg" alt=""><br>以下为补充</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_ins">cmd</span>+方向键上  <span class="comment">#返回向一级文件夹</span></span><br><span class="line"><span class="built_ins">cmd</span>+方向键    <span class="comment">#进入下一级文件夹       </span></span><br><span class="line"><span class="built_ins">cmd</span>+alt+v    <span class="comment">#将文件复制并移动</span></span><br></pre></td></tr></table></figure>
-<h1 id="基本操作">基本操作</h1><blockquote>
-<p><a href="http://sspai.com/28012/" target="_blank" rel="external">Mac卸载软件的四种方法</a><br>  <a href="http://jingyan.baidu.com/article/8cdccae965875c315413cdfe.html" target="_blank" rel="external">Mac修改hosts文件</a></p>
-</blockquote>
-<p> <strong>如何使用右键</strong></p>
-<blockquote>
-<p>1.两指点击触摸板<br>  2.⌃+单击触摸板</p>
-</blockquote>
-<p> <strong>手势操作</strong></p>
-<blockquote>
-<p>系统偏好设置＝》触摸板＝》里面可以查看所有相关的手势操作，有图演示非常易懂<br> <a href="http://www.ifunmac.com/2012/11/mac-gesture/" target="_blank" rel="external">20个Mac用户必须掌握的触摸手势</a></p>
-</blockquote>
-<h1 id="软件">软件</h1><p><a href="http://blog.csdn.net/github_25928675/article/details/49179247" target="_blank" rel="external">OS x yosemite jdk安装路径和环境变量配置</a></p>
+<h1 id="历史">历史</h1><p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/Android_Studio/2015/0804/3258.html" target="_blank" rel="external">Android studio1.3新特性</a><br><a href="http://blog.csdn.net/crazy1235/article/details/49747141#vectordrawable" target="_blank" rel="external">Android studio1.4新特性</a></p>
+<h2 id="基本操作">基本操作</h2><p> <a href="http://blog.csdn.net/ryantang03/article/details/8941364" target="_blank" rel="external">Android studio的基础使用教程一</a></p>
+<h2 id="工具配置">工具配置</h2><p> <a href="http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/">Android studio logcat高亮</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/49763473" target="_blank" rel="external"> Android studio mac 快捷键</a></p>
+<h2 id="项目构建">项目构建</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46423571" target="_blank" rel="external">Android Studio导入Eclipse项目</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46423293" target="_blank" rel="external">Android Studio导入AS项目(出现的问题) </a><br> <a href="http://www.jianshu.com/p/a0b4c4691407" target="_blank" rel="external">Android Studio使用jni、so库</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46728385" target="_blank" rel="external">Android Studio开发JNI工程</a> </p>
+<h1 id="Gradle">Gradle</h1><p> <a href="http://stormzhang.com/devtools/2014/12/18/android-studio-tutorial4/" target="_blank" rel="external">Gradle基础</a></p>
+<h2 id="插件">插件</h2><ul>
+<li><a href="http://www.zhihu.com/question/28026027" target="_blank" rel="external">插件汇总</a></li>
+<li><p><a href="http://qushouxichuan.com/blog/article/70" target="_blank" rel="external">GsonFormat</a><br>根据gson生成对应的javabean<br><img src="https://camo.githubusercontent.com/fbf4b89e2ec64e80d351f725d11762ebd2b7a515/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f3136363836362d303766333038346262363735386566612e676966" alt=""></p>
+<h2 id="打包">打包</h2><p><a href="http://blog.csdn.net/ljchlx/article/details/43059467" target="_blank" rel="external">多渠道打包</a></p>
+<h2 id="Git和GitHub">Git和GitHub</h2><ol>
+<li><a href="http://blog.csdn.net/github_25928675/article/details/47834533#t2" target="_blank" rel="external">Android studio上使用github</a></li>
+<li>将项目添加git管理<br>项目通过git命令clone或者其他工具clone下来<br>菜单里点击cvs<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs.png"><br>然后选中Enable Vesion……..<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs(1).png"><br>紧接着选中那种版本控制就可以了<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs(2).png"></li>
+</ol>
+<h2 id="异常解决">异常解决</h2><ul>
+<li><a href="http://blog.csdn.net/github_25928675/article/details/46483731" target="_blank" rel="external">Android Studio Failed to complete Gradle execution</a></li>
+<li><a href="http://blog.csdn.net/github_25928675/article/details/46564727" target="_blank" rel="external">Android studio报AAPT err(854725124):</a></li>
+<li><a href="http://blog.csdn.net/github_25928675/article/details/46482475" target="_blank" rel="external"> AndroidStudio_local path doesn’t exist解决办法</a></li>
+<li><a href="http://blog.csdn.net/github_25928675/article/details/46481849" target="_blank" rel="external"> Could not download artifact ‘ecj.jar (org.eclipse.jdt.core.compiler:ecj:4.4.2)</a></li>
+<li><a href="http://blog.csdn.net/github_25928675/article/details/46695217" target="_blank" rel="external"> Android Studio 错误: 非法字符: ‘\ufeff’ 解决方案|错误: 需要class, interface或enum</a></li>
+<li><a href="http://blog.csdn.net/github_25928675/article/details/46482475" target="_blank" rel="external">AndroidStudio_local path doesn’t exist解决办法</a></li>
+</ul>
+</li>
+</ul>
 ]]></content>
     <summary type="html">
     <![CDATA[<blockquote>
-<p>本博主要是mac使用操作教程汇总。不定时的更新。</p>
-</blockquote>
-<p> 推荐：<br> <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/SystemPr]]>
+<p>推荐链接<br>   <a href="http://www.android-studio.org/" target="_blank" rel="external">Android studio中文社区</a><br>   <a href="htt]]>
     </summary>
     
-      <category term="Mac" scheme="http://waylenw.github.io/tags/Mac/"/>
+      <category term="Android Studio" scheme="http://waylenw.github.io/tags/Android-Studio/"/>
+    
+      <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
     
   </entry>
   
@@ -62,16 +62,16 @@
     <title><![CDATA[Android开发教程完全]]></title>
     <link href="http://waylenw.github.io/android-dev-teacher/"/>
     <id>http://waylenw.github.io/android-dev-teacher/</id>
-    <published>2015-12-26T03:41:49.000Z</published>
-    <updated>2015-12-26T03:41:49.000Z</updated>
+    <published>2015-12-26T07:38:40.000Z</published>
+    <updated>2015-12-26T07:38:40.000Z</updated>
     <content type="html"><![CDATA[<p> <strong>不定时更新</strong></p>
 <blockquote>
 <p>本博客的所链接的文章不全是原创。很多是写的非常好的博客。所以本博客主要是收集Android开发教程优秀的博客。以下是推荐初学者学习和了解Android开发的的链接</p>
 </blockquote>
-<p><a href="http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank" rel="external">Android学习之路</a><br><a href="http://blog.csdn.net/singwhatiwanna/article/details/49560409" target="_blank" rel="external">Android学习路线图</a><br><a href="http://blog.csdn.net/xyz_lmn/article/details/41411355" target="_blank" rel="external">Android知识图谱</a><br><a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">Android Training培训课程中文版</a></p>
+<p><a href="http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank" rel="external">Android学习之路</a><br><a href="http://blog.csdn.net/singwhatiwanna/article/details/49560409" target="_blank" rel="external">Android学习路线指南</a><br><a href="http://blog.csdn.net/xyz_lmn/article/details/41411355" target="_blank" rel="external">Android知识图谱</a><br><a href="http://hukai.me/android-training-course-in-chinese/index.html" target="_blank" rel="external">Android官方培训课程中文版</a></p>
 <h2 id="系统架构">系统架构</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/49680541" target="_blank" rel="external">Android系统源码基础知识讲解</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/49560045" target="_blank" rel="external">Android ART运行时相关</a></p>
 <h2 id="Android控件">Android控件</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46564229" target="_blank" rel="external">Android主题和样式</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46682141" target="_blank" rel="external">Android控件属性大全</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/45745093" target="_blank" rel="external">Anddroid WebView的讲解</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/49949213" target="_blank" rel="external">ListView的完全讲解</a><br> <a href="http://blog.csdn.net/column/details/xiaoshuang-ui.html" target="_blank" rel="external">Android UI设计博客专栏</a><br> <strong>事件</strong><br> <a href="http://blog.csdn.net/lmj623565791/article/details/39102591" target="_blank" rel="external">Android ViewGroup事件分发</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/9097463" target="_blank" rel="external">Android事件分发机制(上)</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/9153747" target="_blank" rel="external">Android事件分发机制(下)</a><br> <strong>View</strong><br> <a href="http://blog.csdn.net/wangbofei/article/details/7795430" target="_blank" rel="external">Android getWidth和getMeasuredWidth的正解</a><br> <a href="http://www.open-open.com/lib/view/open1328836804515.html" target="_blank" rel="external">Android例子:根据需求自定义控件</a></p>
-<h2 id="资源文件">资源文件</h2><p>  <a href="http://blog.csdn.net/github_25928675/article/details/50330635" target="_blank" rel="external">Android颜色透明度对应的开头字母</a><br>  <a href="http://blog.csdn.net/github_25928675/article/details/46650183" target="_blank" rel="external">Android xml资源文件中@、@android:type、@*、？、@+含义和区别</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46366173" target="_blank" rel="external">AndroidManifest.xml文件讲解</a><br> <a href="http://blog.csdn.net/s1e1s/article/details/46558681" target="_blank" rel="external">实现透明状态栏</a></p>
+<h2 id="资源文件">资源文件</h2><p>  <a href="http://blog.csdn.net/github_25928675/article/details/50330635" target="_blank" rel="external">Android颜色透明度对应的开头字母</a><br>  <a href="http://blog.csdn.net/github_25928675/article/details/46650183" target="_blank" rel="external">Android xml资源文件中@、@android:type、@*、？、@+含义和区别</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46366173" target="_blank" rel="external">AndroidManifest.xml文件讲解</a><br> <a href="http://blog.csdn.net/s1e1s/article/details/46558681" target="_blank" rel="external">实现透明状态栏</a><br> <a href="http://www.tinylab.org/android-loading-a-different-relationship-between-dpi-and-memory-consumption-of-resources/" target="_blank" rel="external">Android 加载不同 DPI 资源与内存消耗间的关系</a></p>
 <h2 id="四大组件">四大组件</h2><p>  <strong>Activity</strong><br> <a href="http://blog.csdn.net/liuhe688/article/details/6733407" target="_blank" rel="external">Activity生命周期</a> <a href="http://blog.csdn.net/github_25928675/article/details/46049045" target="_blank" rel="external">Activity的启动模式</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/49452183" target="_blank" rel="external">Activity界面切换动画讲解</a><br> <a href="http://www.cnblogs.com/xiajf/p/3993599.html" target="_blank" rel="external">Activity OnTrimMemory内存消耗</a><br> <a href="http://www.flakor.cn/2014-09-04-707.html" target="_blank" rel="external">Activity 后台监听</a><br> <a href="http://blog.csdn.net/sheldon4090/article/details/7785571" target="_blank" rel="external">Activity 电话监听</a><br> <a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0822/3344.html" target="_blank" rel="external">Activity 软键盘弹出效果完全讲解</a><br> <strong>Intent</strong><br> <a href="http://blog.csdn.net/github_25928675/article/details/45333253" target="_blank" rel="external">Android Intent调用系统操作</a><br> <a href="http://blog.csdn.net/yuzhiboyi/article/details/8484771" target="_blank" rel="external">Android pendingIntent的使用和讲解</a><br> <a href="http://blog.csdn.net/zeng622peng/article/details/6180190" target="_blank" rel="external">Android intent和PendingIntent的区别</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/50358912" target="_blank" rel="external">Android启动多个后台任务预览视图</a><br> <strong>service</strong><br> <a href="http://blog.csdn.net/android_tutor/article/details/5789203" target="_blank" rel="external">Android Service生命周期及用法</a><br> <a href="http://blog.csdn.net/lmj623565791/article/details/47143563" target="_blank" rel="external">IntentService的使用和讲解</a><br><a href="http://blog.csdn.net/mad1989/article/details/22492519" target="_blank" rel="external">Android service如何不被杀死</a><br><strong>BroadCast</strong><br><a href="http://blog.csdn.net/yuanzeyao/article/details/43052517" target="_blank" rel="external">BroadCast内部机制讲解</a></p>
 <h2 id="数据存储和网络请求">数据存储和网络请求</h2><p> <a href="http://blog.csdn.net/wenwen091100304/article/details/49050277" target="_blank" rel="external">数据存储方式之Shareprefences</a><br> <a href="http://www.liaohuqiu.net/cn/posts/storage-in-android/" target="_blank" rel="external">Android存储路径完全讲解</a><br> <a href="http://blog.csdn.net/loongggdroid/article/details/12304695" target="_blank" rel="external">Android SD卡存储容量相关讲解</a>、<br><strong>网络请求</strong><br><a href="http://blog.csdn.net/u010590685/article/details/49104875" target="_blank" rel="external">Android访问https</a><br><a href="http://www.cnblogs.com/hanyonglu/archive/2012/02/20/2358801.html" target="_blank" rel="external">Android实现网络多线程断点续传下载</a></p>
 <h2 id="多媒体">多媒体</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/49181907" target="_blank" rel="external">Android音频播放讲解</a><br> <a href="http://blog.csdn.net/peijiangping1989/article/details/7042610" target="_blank" rel="external">Android音频录制</a><br> <a href="http://blog.csdn.net/peijiangping1989/article/details/7049991" target="_blank" rel="external">Android视频录制</a><br> <a href="http://www.open-open.com/lib/view/open1341754267229.html" target="_blank" rel="external">Android视频播放的三种方式</a><br> <a href="http://www.devwiki.net/2015/09/20/Android-Music-Play-Mode/#comments" target="_blank" rel="external">Android音乐播放模式切换-外放、听筒、耳机</a></p>
@@ -79,10 +79,11 @@
 <h2 id="绘制和动画">绘制和动画</h2><h2 id="权限和动作">权限和动作</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46460417" target="_blank" rel="external">权限和动作大全</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/45916267" target="_blank" rel="external">自定义权限</a></p>
 <h2 id="软键盘输入法">软键盘输入法</h2><p> <a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0822/3344.html" target="_blank" rel="external">软键盘遮挡问题</a></p>
 <h2 id="进阶篇">进阶篇</h2><p> <strong>性能优化</strong><br> <a href="http://blog.csdn.net/zhuanglonghai/article/details/38233069" target="_blank" rel="external">Android Handler内存泄露优化</a><br> <a href="http://waylenw.github.io/Android/android-bitmap-memory-yh/">Android Bitmap内存优化</a><br> <a href="http://blog.csdn.net/yanbober/article/details/48394201" target="_blank" rel="external">Android应用开发性能优化完全分析</a><br> <strong>适配和兼容</strong><br> <a href="http://blog.csdn.net/zhaokaiqiang1992/article/details/45419023" target="_blank" rel="external">Android屏幕适配全攻略</a><br> <a href="http://waylenw.github.io/Android/android-sdk-verion/">Android SDK版本和兼容包讲解</a> </p>
-<h2 id="开发工具">开发工具</h2><p> <a href="http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/">Android studio使用教程</a></p>
-<h2 id="Android系统信息和安全机制">Android系统信息和安全机制</h2><p> <a href="http://blog.csdn.net/xinzheng_wang/article/details/7837550" target="_blank" rel="external">Android 系统CPU,RAM,ROM,SDCard,MAC等信息查询</a><br> <a href="http://blog.csdn.net/vipzjyno1/article/details/21039349/" target="_blank" rel="external">Android Apk反编译</a> </p>
+<h2 id="开发工具">开发工具</h2><p> <a href="http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/">Android studio使用教程</a><br> <a href="http://www.oschina.net/news/68890/15-android-option" target="_blank" rel="external">Android 15个必知的Android开发者选项</a></p>
+<h2 id="Android系统信息和安全机制">Android系统信息和安全机制</h2><p> <a href="http://blog.csdn.net/xinzheng_wang/article/details/7837550" target="_blank" rel="external">Android 系统CPU,RAM,ROM,SDCard,MAC等信息查询</a><br> <a href="http://blog.csdn.net/vipzjyno1/article/details/21039349/" target="_blank" rel="external">Android Apk反编译</a><br> <a href="http://blog.csdn.net/jiangwei0910410003/article/details/50402000" target="_blank" rel="external">Android签名机制之—签名过程详解</a></p>
 <h2 id="开源框架">开源框架</h2><p> <strong>RxJava</strong><br> <a href="http://blog.csdn.net/meegomeego/article/details/49155989" target="_blank" rel="external">给Android开发的RxJava详解</a><br> <a href="http://www.jianshu.com/p/72911b9ba2d7" target="_blank" rel="external">RxJava在正确的线程上运行</a><br> <strong>React-native</strong></p>
-<h2 id="实战">实战</h2><p> <strong>项目架构</strong><br> <a href="http://www.jianshu.com/p/ea48332c82af" target="_blank" rel="external">《App研发录》落地之项目架构以及管理</a><br> <a href="http://www.devtf.cn/?p=1134" target="_blank" rel="external">面向对象六大原则</a><br> <strong>经验</strong><br> <a href="http://www.devtf.cn/?p=941" target="_blank" rel="external">开发前你需要知道的六件事</a><br> <a href="https://github.com/futurice/android-best-practices/blob/master/translations/Chinese/README.cn.md" target="_blank" rel="external">Android开发最佳实践</a> <a href="http://www.jianshu.com/p/d6611c8bd45c?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=pc_author_hots&amp;utm_source=recommendation#" target="_blank" rel="external">Android开发经验谈</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/48161147" target="_blank" rel="external">如何更新SDK?</a></p>
+<h2 id="实战">实战</h2><p> <strong>架构设计</strong><br> <a href="http://www.jianshu.com/p/ea48332c82af" target="_blank" rel="external">《App研发录》落地之项目架构以及管理</a><br> <a href="http://www.devtf.cn/?p=1134" target="_blank" rel="external">面向对象六大原则</a><br> <strong>项目管理</strong></p>
+<p> <strong>经验</strong><br> <a href="http://www.devtf.cn/?p=941" target="_blank" rel="external">开发前你需要知道的六件事</a><br> <a href="https://github.com/futurice/android-best-practices/blob/master/translations/Chinese/README.cn.md" target="_blank" rel="external">Android开发最佳实践</a><br> <a href="http://www.jianshu.com/p/d6611c8bd45c?utm_campaign=maleskine&amp;utm_content=note&amp;utm_medium=pc_author_hots&amp;utm_source=recommendation#" target="_blank" rel="external">Android开发经验谈</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/48161147" target="_blank" rel="external">如何更新SDK?</a></p>
 <h2 id="学习资源">学习资源</h2><p> <a href="https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw" target="_blank" rel="external">Android google开发者频道(Youtube)</a><br> <a href="https://www.youtube.com/channel/UCQqa5UIHtrnpiADC3eHFupw" target="_blank" rel="external">Android gooogle中文开发者频道(Youtube    )</a></p>
 <h2 id="课外了解">课外了解</h2><p> <a href="http://pcedu.pconline.com.cn/688/6883561.html" target="_blank" rel="external">Android国内的APP现状</a></p>
 ]]></content>
@@ -103,8 +104,8 @@
     <title><![CDATA[Android开源项目和轮子]]></title>
     <link href="http://waylenw.github.io/android-all-open-source/"/>
     <id>http://waylenw.github.io/android-all-open-source/</id>
-    <published>2015-12-26T03:16:45.000Z</published>
-    <updated>2015-12-26T03:16:45.000Z</updated>
+    <published>2015-12-26T07:13:30.000Z</published>
+    <updated>2015-12-26T07:13:30.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>此博客初衷是记录一下自己开发过程后使用到或者收集到的一些轮子和开源项目，不追求全，只追求实用吧。会不断的更新,也是希望能继续完善吧。</p>
 </blockquote>
@@ -187,16 +188,17 @@
 <h1 id="图像处理">图像处理</h1><ul>
 <li><a href="https://github.com/jaychou2012/ImageBlurring" target="_blank" rel="external">ImageBlurring图像模糊</a></li>
 <li><p><a href="https://github.com/cooltechworks/BitmapMerger" target="_blank" rel="external">BitmapMerger图片合成</a><br><img src="https://cloud.githubusercontent.com/assets/13122232/8438305/9f7c2644-1f82-11e5-8f51-25ba7cca0711.gif" alt="这里写图片描述"></p>
-<h1 id="功能应用">功能应用</h1><ul>
+<h1 id="功能应用">功能应用</h1></li>
 <li><a href="http://wister.iteye.com/blog/334562" target="_blank" rel="external">pinyin4j的使用(汉字转拼音)</a></li>
 <li><a href="https://git.oschina.net/xiao-lifan/MutiPhotoChoser" target="_blank" rel="external">自定义相册多图选择</a></li>
-<li><a href="https://github.com/bboyfeiyu/Colorful" target="_blank" rel="external">换肤</a></li>
+<li><a href="https://github.com/bboyfeiyu/Colorful" target="_blank" rel="external">Colorful</a><br>实现了换肤的功能。</li>
 <li><a href="https://github.com/sevenler/Uninstall_Statics" target="_blank" rel="external">Apk统计自身被卸载</a></li>
-<li><a href="https://github.com/kymjs/EmojiChat" target="_blank" rel="external">Emoji表情的实现</a><br><img src="https://raw.githubusercontent.com/kymjs/EmojiChat/master/screen_shots/Screenshot_2.png" alt=""></li>
-</ul>
+<li><p><a href="https://github.com/kymjs/EmojiChat" target="_blank" rel="external">Emoji表情的实现</a><br><img src="https://raw.githubusercontent.com/kymjs/EmojiChat/master/screen_shots/Screenshot_2.png" alt=""></p>
 <h2 id="图表">图表</h2><p><a href="https://github.com/diogobernardino/WilliamChart" target="_blank" rel="external">WilliamChart</a></p>
-<h1 id="Demo">Demo</h1></li>
+<h1 id="Demo">Demo</h1><ul>
 <li><a href="https://github.com/stormzhang/9GAG" target="_blank" rel="external">9GAG(整合一些轮子的案例)</a></li>
+</ul>
+</li>
 </ul>
 ]]></content>
     <summary type="html">
@@ -209,6 +211,50 @@
       <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
     
       <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Mac使用操作大全]]></title>
+    <link href="http://waylenw.github.io/Mac/mac-control-all/"/>
+    <id>http://waylenw.github.io/Mac/mac-control-all/</id>
+    <published>2015-12-26T06:16:20.000Z</published>
+    <updated>2015-12-26T06:16:20.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>本博主要是mac使用操作教程汇总。不定时的更新。</p>
+</blockquote>
+<p> 推荐：<br> <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/SystemPreferences/index.html" target="_blank" rel="external">Mac开发配置配置手册</a></p>
+<h1 id="系统基本介绍">系统基本介绍</h1><p> <a href="http://blog.csdn.net/smstong/article/details/15499661" target="_blank" rel="external">系统目录结构介绍</a><br></p>
+<h1 id="快捷键">快捷键</h1><p><strong>快捷键的符号所对应的按键</strong></p>
+<p>⌥—&gt; option|alt</p>
+<p>⇧—&gt;shift</p>
+<p>⌃—&gt;control</p>
+<p>⌘—&gt;command</p>
+<p>⎋—&gt;esc</p>
+<p><strong>快捷键一览</strong></p>
+<p><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/Mac/keybroad.jpg" alt=""><br>以下为补充</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_ins">cmd</span>+方向键上  <span class="comment">#返回向一级文件夹</span></span><br><span class="line"><span class="built_ins">cmd</span>+方向键    <span class="comment">#进入下一级文件夹       </span></span><br><span class="line"><span class="built_ins">cmd</span>+alt+v    <span class="comment">#将文件复制并移动</span></span><br></pre></td></tr></table></figure>
+<h1 id="基本操作">基本操作</h1><blockquote>
+<p><a href="http://sspai.com/28012/" target="_blank" rel="external">Mac卸载软件的四种方法</a><br>  <a href="http://jingyan.baidu.com/article/8cdccae965875c315413cdfe.html" target="_blank" rel="external">Mac修改hosts文件</a></p>
+</blockquote>
+<p> <strong>如何使用右键</strong></p>
+<blockquote>
+<p>1.两指点击触摸板<br>  2.⌃+单击触摸板</p>
+</blockquote>
+<p> <strong>手势操作</strong></p>
+<blockquote>
+<p>系统偏好设置＝》触摸板＝》里面可以查看所有相关的手势操作，有图演示非常易懂<br> <a href="http://www.ifunmac.com/2012/11/mac-gesture/" target="_blank" rel="external">20个Mac用户必须掌握的触摸手势</a></p>
+</blockquote>
+<h1 id="软件">软件</h1><p><a href="http://blog.csdn.net/github_25928675/article/details/49179247" target="_blank" rel="external">OS x yosemite jdk安装路径和环境变量配置</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>本博主要是mac使用操作教程汇总。不定时的更新。</p>
+</blockquote>
+<p> 推荐：<br> <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/SystemPr]]>
+    </summary>
+    
+      <category term="Mac" scheme="http://waylenw.github.io/tags/Mac/"/>
     
   </entry>
   
@@ -403,46 +449,6 @@
 </blockquote>
 <p><a href="https]]>
     </summary>
-    
-      <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android Studio使用教程]]></title>
-    <link href="http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/"/>
-    <id>http://waylenw.github.io/AndroidStudio/android-studio-control-teacher/</id>
-    <published>2015-11-28T09:07:08.000Z</published>
-    <updated>2015-11-28T09:07:08.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>推荐链接<br>   <a href="http://www.android-studio.org/" target="_blank" rel="external">Android studio中文社区</a><br>   <a href="http://android.jobbole.com/81687/?url_type=39&amp;object_type=webpage&amp;pos=1" target="_blank" rel="external">倍数提高工作效率的 Android Studio 奇技</a></p>
-</blockquote>
-<h1 id="历史">历史</h1><p><a href="http://www.jcodecraeer.com/a/anzhuokaifa/Android_Studio/2015/0804/3258.html" target="_blank" rel="external">Android studio1.3新特性</a><br><a href="http://blog.csdn.net/crazy1235/article/details/49747141#vectordrawable" target="_blank" rel="external">Android studio1.4新特性</a></p>
-<h2 id="基本操作">基本操作</h2><p> <a href="http://blog.csdn.net/ryantang03/article/details/8941364" target="_blank" rel="external">Android studio的基础使用教程一</a></p>
-<h2 id="工具配置">工具配置</h2><p> <a href="http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/">Android studio logcat高亮</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/49763473" target="_blank" rel="external"> Android studio mac 快捷键</a></p>
-<h2 id="项目构建">项目构建</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46423571" target="_blank" rel="external">Android Studio导入Eclipse项目</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46423293" target="_blank" rel="external">Android Studio导入AS项目(出现的问题) </a><br> <a href="http://www.jianshu.com/p/a0b4c4691407" target="_blank" rel="external">Android Studio使用jni、so库</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46728385" target="_blank" rel="external">Android Studio开发JNI工程</a> </p>
-<h2 id="插件">插件</h2><p> <a href="http://www.zhihu.com/question/28026027" target="_blank" rel="external">插件汇总</a><br> <a href="http://qushouxichuan.com/blog/article/70" target="_blank" rel="external">GsonFormat</a><br> 根据gson生成对应的javabean<br> <img src="https://camo.githubusercontent.com/fbf4b89e2ec64e80d351f725d11762ebd2b7a515/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f3136363836362d303766333038346262363735386566612e676966" alt=""></p>
-<h2 id="打包">打包</h2><p> <a href="http://blog.csdn.net/ljchlx/article/details/43059467" target="_blank" rel="external">多渠道打包</a></p>
-<h2 id="Git和GitHub">Git和GitHub</h2><ol>
-<li><a href="http://blog.csdn.net/github_25928675/article/details/47834533#t2" target="_blank" rel="external">Android studio上使用github</a></li>
-<li><p>将项目添加git管理<br>项目通过git命令clone或者其他工具clone下来<br>菜单里点击cvs<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs.png"><br>然后选中Enable Vesion……..<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs(1).png"><br>紧接着选中那种版本控制就可以了<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs(2).png"></p>
-<h2 id="异常解决">异常解决</h2></li>
-</ol>
-<ul>
-<li><a href="http://blog.csdn.net/github_25928675/article/details/46483731" target="_blank" rel="external">Android Studio Failed to complete Gradle execution</a></li>
-<li><a href="http://blog.csdn.net/github_25928675/article/details/46564727" target="_blank" rel="external">Android studio报AAPT err(854725124):</a></li>
-<li><a href="http://blog.csdn.net/github_25928675/article/details/46482475" target="_blank" rel="external"> AndroidStudio_local path doesn’t exist解决办法</a></li>
-<li><a href="http://blog.csdn.net/github_25928675/article/details/46481849" target="_blank" rel="external"> Could not download artifact ‘ecj.jar (org.eclipse.jdt.core.compiler:ecj:4.4.2)</a></li>
-<li><a href="http://blog.csdn.net/github_25928675/article/details/46695217" target="_blank" rel="external"> Android Studio 错误: 非法字符: ‘\ufeff’ 解决方案|错误: 需要class, interface或enum</a></li>
-<li><a href="http://blog.csdn.net/github_25928675/article/details/46482475" target="_blank" rel="external">AndroidStudio_local path doesn’t exist解决办法</a></li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<blockquote>
-<p>推荐链接<br>   <a href="http://www.android-studio.org/" target="_blank" rel="external">Android studio中文社区</a><br>   <a href="htt]]>
-    </summary>
-    
-      <category term="Android Studio" scheme="http://waylenw.github.io/tags/Android-Studio/"/>
     
       <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
     
