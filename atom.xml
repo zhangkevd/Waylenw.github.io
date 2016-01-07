@@ -4,7 +4,7 @@
   <subtitle><![CDATA[天才向左,疯子向右。-----------------移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2016-01-06T12:06:43.000Z</updated>
+  <updated>2016-01-07T09:46:18.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -13,6 +13,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Android Studio Buid缓慢问题]]></title>
+    <link href="http://waylenw.github.io/AndroidStudio/android-studio-build-speed-/"/>
+    <id>http://waylenw.github.io/AndroidStudio/android-studio-build-speed-/</id>
+    <published>2016-01-06T16:00:00.000Z</published>
+    <updated>2016-01-07T09:46:18.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>Eclipse转到Android Stuido感受最明显的就是buid速度变慢了,对与一些项目庞大一点的的项目稍微改动一两行代码就要buid一分多钟，改动大一点往3分多钟去了。这样太影响开发效率。怎么办？换SSD？别急你可以先试试以下的方法</p>
+</blockquote>
+<h1 id="配置多线程编译">配置多线程编译</h1><p> 在下面的目录下面创建gradle.properties文件：</p>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/home/</span>&lt;username&gt;<span class="regexp">/.gradle/</span> (Linux)</span><br><span class="line"><span class="regexp">/Users/</span>&lt;username&gt;<span class="regexp">/.gradle/</span> (Mac)</span><br><span class="line"><span class="string">C:</span>\Users\&lt;username&gt;\.gradle (Windows)</span><br></pre></td></tr></table></figure>
+<p>gradle.properties</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">org<span class="class">.gradle</span><span class="class">.daemon</span>=true		#开启gradle单独的守护进程</span><br><span class="line">org<span class="class">.gradle</span><span class="class">.parallel</span>=true</span><br><span class="line">org<span class="class">.gradle</span><span class="class">.jvmargs</span>=-Xmx1024m  #增大gradle运行的java虚拟机的大小</span><br></pre></td></tr></table></figure>
+<p> 同时上面的这些参数也可以配置到前面的用户目录下的gradle.properties文件里，那样就不是针对一个项目生效，而是针对所有项目生效。</p>
+<h1 id="升级Gradle_2-4">升级Gradle 2.4</h1><p>Gradle 2.4对执行性能有很大的优化，但Android Studio现在默认使用的是Gradle 2.2,<br>所以我们需要手动让Android Studio使用Gradle 2.4，在项目根目录下的 build.grade中加入</p>
+<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">task</span> wrapper(<span class="typedef"><span class="keyword">type</span>: <span class="type">Wrapper</span>) <span class="container">&#123;</span><br><span class="line">    gradleVersion = '2.4'</span><br><span class="line">&#125;</span></span></span><br></pre></td></tr></table></figure>
+<p>然后打开终端执行 ./gradlew wrapper，就可以下载Gradle 2.4了，下载完成后，我们需要在<br>Android Studio让我们的项目使用Gradle 2.4</p>
+<h1 id="离线加载">离线加载</h1><p> 在不需要加载新的Jencter架包时可以使用离线加载<br> <img src="http://isming.qiniudn.com/as_gradle_offline.png" alt=""></p>
+<h1 id="打开dex增量编译">打开dex增量编译</h1><p>这还是一个实验性的功能，但是还是推荐打开试试<br>在项目主Module下的build.grade中加入<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">dexOptions</span> &#123;</span><br><span class="line">    <span class="title">incremental</span> <span class="built_in">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>以上配置完了，是不是明显快了很多。<br><strong>感谢参考</strong><br><a href="https://www.aswifter.com/2015/06/14/boost-android-studio/" target="_blank" rel="external">https://www.aswifter.com/2015/06/14/boost-android-studio/</a><br><a href="http://my.oschina.net/sammy1990/blog/388846" target="_blank" rel="external">http://my.oschina.net/sammy1990/blog/388846</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>Eclipse转到Android Stuido感受最明显的就是buid速度变慢了,对与一些项目庞大一点的的项目稍微改动一两行代码就要buid一分多钟，改动大一点往3分多钟去了。这样太影响开发效率。怎么办？换SSD？别急你可以先试试以下的方法</p>]]>
+    </summary>
+    
+      <category term="Android Studio" scheme="http://waylenw.github.io/tags/Android-Studio/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Android SDK版本与兼容包相关]]></title>
