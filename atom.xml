@@ -58,6 +58,84 @@
   </entry>
   
   <entry>
+    <title><![CDATA[Android RecyclerView三部曲之基础篇(一)]]></title>
+    <link href="http://waylenw.github.io/Android/android-recyclerview-one/"/>
+    <id>http://waylenw.github.io/Android/android-recyclerview-one/</id>
+    <published>2016-01-17T16:00:00.000Z</published>
+    <updated>2016-01-18T09:35:39.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="简介和准备">简介和准备</h1><blockquote>
+<p>相信大家对RecyclerView都不陌生了。自RecyclerView的出现开始，它就慢慢占据了我们日常开发使用的频率。所以掌握它就显得格外重要了。ReclclerView将各个模块的操作进行了拆解。很好的解决耦合问题。正是因为这种解耦让你做的事情更多，也更强大。逻辑也格外的清晰。</p>
+</blockquote>
+<p> RecyclerView是Support-V7架包中得一个组件。所以在使用前必须先升级support lib，然后导入support-v7。</p>
+<h1 id="基本现实">基本现实</h1><p> 首先在build.gradle文件添加依赖库</p>
+ <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line"> <span class="keyword">compile</span> <span class="keyword">fileTree</span>(<span class="keyword">include</span>: [<span class="string">'*.jar'</span>], dir: <span class="string">'libs'</span>)</span><br><span class="line"> <span class="keyword">compile</span> <span class="string">'com.android.support:recyclerview-v7:23.1.0'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p> MainAcvtivity</p>
+<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> <span class="keyword">implements</span> <span class="title">View</span>.<span class="title">OnClickListener</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> GridVeiwAdapter gridAdapter;</span><br><span class="line">    <span class="keyword">private</span> ListViewAdapter listAdapter;</span><br><span class="line">    <span class="keyword">private</span> FlowViewAdapter flowViewAdapter;</span><br><span class="line">    <span class="keyword">private</span> RecyclerView recyclerView;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        initView();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">initView</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        recyclerView = (RecyclerView) findViewById(R.id.main_recyclerView);</span><br><span class="line">        gridAdapter = <span class="keyword">new</span> GridVeiwAdapter(getApplication());</span><br><span class="line">        listAdapter= <span class="keyword">new</span> ListViewAdapter(getApplication());</span><br><span class="line">        flowViewAdapter= <span class="keyword">new</span> FlowViewAdapter(getApplication());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        recyclerView.setLayoutManager(<span class="keyword">new</span> LinearLayoutManager(<span class="keyword">this</span>));</span><br><span class="line">        recyclerView.setAdapter(listAdapter);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">switch</span> (view.getId()) &#123;</span><br><span class="line">            <span class="keyword">case</span> R.id.lineBtn:</span><br><span class="line">                recyclerView.setLayoutManager(<span class="keyword">new</span> (<span class="keyword">this</span>));</span><br><span class="line">                recyclerView.setAdapter(listAdapter);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> R.id.gridBtn:</span><br><span class="line">                recyclerView.setLayoutManager(<span class="keyword">new</span> GridLayoutManager(<span class="keyword">this</span>,3));</span><br><span class="line">                recyclerView.setAdapter(gridAdapter);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> R.id.flowBtn:</span><br><span class="line">                //StaggeredGridLayoutManager.VERTICAL此处表示有多少列</span><br><span class="line">                recyclerView.setLayoutManager(<span class="keyword">new</span> StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL));</span><br><span class="line">                recyclerView.setAdapter(flowViewAdapter);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>setLayoutManager()表示给你的Item设置一个布局管理器</p>
+<ul>
+<li>LinearLayoutManager线性布局管理器</li>
+<li>GridLayoutManager网格布局管理器</li>
+<li>StaggeredGridLayoutManager瀑布网格布局管理器<br>使用上面的集中布局管理器可以很轻松的实现ListView和GriView以及瀑布流的效果。既然这么吊还不用ListView和GridView吗!</li>
+</ul>
+<p>FlowViewAdapter</p>
+<pre><code>public <span class="class"><span class="keyword">class</span> <span class="title">ListViewAdapter</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">RecyclerView</span>.<span class="title">Adapter&lt;ListViewAdapter</span>.<span class="title">MyViewHolder&gt;</span> {</span>
+
+    <span class="type">List</span>&lt;<span class="type">String</span>&gt; list=<span class="keyword">new</span> <span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt;();
+
+    <span class="keyword">private</span> <span class="type">Context</span> context;
+    public <span class="type">ListViewAdapter</span>(<span class="type">Context</span> context){
+        <span class="keyword">for</span>(int i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++){
+            list.add(<span class="string">"列表:"</span>+i);
+        }
+        <span class="keyword">this</span>.context=context;
+    }
+
+
+
+    <span class="annotation">@Override</span>
+    public int getItemCount() {
+        <span class="keyword">return</span> list.size();
+    }
+
+    <span class="annotation">@Override</span>
+    public <span class="type">MyViewHolder</span> onCreateViewHolder(<span class="type">ViewGroup</span> parent, int viewType) {
+    <span class="comment">//创建布局的Hodler</span>
+        <span class="type">MyViewHolder</span> holder = <span class="keyword">new</span> <span class="type">MyViewHolder</span>(<span class="type">LayoutInflater</span>.from(context).inflate(<span class="type">R</span>.layout.recycler_item_list_view, parent,
+                <span class="literal">false</span>));
+        <span class="keyword">return</span> holder;
+    }
+
+    <span class="annotation">@Override</span>
+    public void onBindViewHolder(<span class="type">MyViewHolder</span> holder, int position) {
+        <span class="comment">//在此处完成布局的现实操作</span>
+        holder.tv.setText(list.get(position));
+
+
+    }
+
+    <span class="class"><span class="keyword">class</span> <span class="title">MyViewHolder</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span> {</span>
+
+        <span class="type">TextView</span> tv;
+
+        public <span class="type">MyViewHolder</span>(<span class="type">View</span> view) {
+            <span class="keyword">super</span>(view);
+            tv = (<span class="type">TextView</span>) view.findViewById(<span class="type">R</span>.id.textView);
+        }
+    }
+}
+</code></pre><p>RecyclerView的Adapter的不同之处是你在继承RecyclerView.Adaper必需现实一个ViewHolder。在创建的时候会将这个每个Item_layour转化成Viewholder。在传递给onBindViewHolder方法去做布局展示。</p>
+<p><strong>效果图</strong><br><img src="https://raw.githubusercontent.com/Waylenw/AndroidDemo_Waylen/master/screen/recyclerView.gif" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="简介和准备">简介和准备</h1><blockquote>
+<p>相信大家对RecyclerView都不陌生了。自RecyclerView的出现开始，它就慢慢占据了我们日常开发使用的频率。所以掌握它就显得格外重要了。ReclclerView将各个模块的操作进行了拆]]>
+    </summary>
+    
+      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Mac使用操作大全]]></title>
     <link href="http://waylenw.github.io/Mac/mac-control-all/"/>
     <id>http://waylenw.github.io/Mac/mac-control-all/</id>
@@ -925,84 +1003,6 @@
     </summary>
     
       <category term="hexo" scheme="http://waylenw.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android RecyclerView三部曲之基础篇(一)]]></title>
-    <link href="http://waylenw.github.io/Android/android-recyclerview-one/"/>
-    <id>http://waylenw.github.io/Android/android-recyclerview-one/</id>
-    <published>2015-01-17T16:00:00.000Z</published>
-    <updated>2016-01-18T09:31:55.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="简介和准备">简介和准备</h1><blockquote>
-<p>相信大家对RecyclerView都不陌生了。自RecyclerView的出现开始，它就慢慢占据了我们日常开发使用的频率。所以掌握它就显得格外重要了。ReclclerView将各个模块的操作进行了拆解。很好的解决耦合问题。正是因为这种解耦让你做的事情更多，也更强大。逻辑也格外的清晰。</p>
-</blockquote>
-<p> RecyclerView是Support-V7架包中得一个组件。所以在使用前必须先升级support lib，然后导入support-v7。</p>
-<h1 id="基本现实">基本现实</h1><p> 首先在build.gradle文件添加依赖库</p>
- <figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">dependencies</span> &#123;</span><br><span class="line"> <span class="keyword">compile</span> <span class="keyword">fileTree</span>(<span class="keyword">include</span>: [<span class="string">'*.jar'</span>], dir: <span class="string">'libs'</span>)</span><br><span class="line"> <span class="keyword">compile</span> <span class="string">'com.android.support:recyclerview-v7:23.1.0'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p> MainAcvtivity</p>
-<figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> <span class="keyword">implements</span> <span class="title">View</span>.<span class="title">OnClickListener</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> GridVeiwAdapter gridAdapter;</span><br><span class="line">    <span class="keyword">private</span> ListViewAdapter listAdapter;</span><br><span class="line">    <span class="keyword">private</span> FlowViewAdapter flowViewAdapter;</span><br><span class="line">    <span class="keyword">private</span> RecyclerView recyclerView;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        initView();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">initView</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        recyclerView = (RecyclerView) findViewById(R.id.main_recyclerView);</span><br><span class="line">        gridAdapter = <span class="keyword">new</span> GridVeiwAdapter(getApplication());</span><br><span class="line">        listAdapter= <span class="keyword">new</span> ListViewAdapter(getApplication());</span><br><span class="line">        flowViewAdapter= <span class="keyword">new</span> FlowViewAdapter(getApplication());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        recyclerView.setLayoutManager(<span class="keyword">new</span> LinearLayoutManager(<span class="keyword">this</span>));</span><br><span class="line">        recyclerView.setAdapter(listAdapter);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">switch</span> (view.getId()) &#123;</span><br><span class="line">            <span class="keyword">case</span> R.id.lineBtn:</span><br><span class="line">                recyclerView.setLayoutManager(<span class="keyword">new</span> (<span class="keyword">this</span>));</span><br><span class="line">                recyclerView.setAdapter(listAdapter);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> R.id.gridBtn:</span><br><span class="line">                recyclerView.setLayoutManager(<span class="keyword">new</span> GridLayoutManager(<span class="keyword">this</span>,3));</span><br><span class="line">                recyclerView.setAdapter(gridAdapter);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            <span class="keyword">case</span> R.id.flowBtn:</span><br><span class="line">                //StaggeredGridLayoutManager.VERTICAL此处表示有多少列</span><br><span class="line">                recyclerView.setLayoutManager(<span class="keyword">new</span> StaggeredGridLayoutManager(3,StaggeredGridLayoutManager.VERTICAL));</span><br><span class="line">                recyclerView.setAdapter(flowViewAdapter);</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>setLayoutManager()表示给你的Item设置一个布局管理器</p>
-<ul>
-<li>LinearLayoutManager线性布局管理器</li>
-<li>GridLayoutManager网格布局管理器</li>
-<li>StaggeredGridLayoutManager瀑布网格布局管理器<br>使用上面的集中布局管理器可以很轻松的实现ListView和GriView以及瀑布流的效果。既然这么吊还不用ListView和GridView吗!</li>
-</ul>
-<p>FlowViewAdapter</p>
-<pre><code>public <span class="class"><span class="keyword">class</span> <span class="title">ListViewAdapter</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">RecyclerView</span>.<span class="title">Adapter&lt;ListViewAdapter</span>.<span class="title">MyViewHolder&gt;</span> {</span>
-
-    <span class="type">List</span>&lt;<span class="type">String</span>&gt; list=<span class="keyword">new</span> <span class="type">ArrayList</span>&lt;<span class="type">String</span>&gt;();
-
-    <span class="keyword">private</span> <span class="type">Context</span> context;
-    public <span class="type">ListViewAdapter</span>(<span class="type">Context</span> context){
-        <span class="keyword">for</span>(int i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++){
-            list.add(<span class="string">"列表:"</span>+i);
-        }
-        <span class="keyword">this</span>.context=context;
-    }
-
-
-
-    <span class="annotation">@Override</span>
-    public int getItemCount() {
-        <span class="keyword">return</span> list.size();
-    }
-
-    <span class="annotation">@Override</span>
-    public <span class="type">MyViewHolder</span> onCreateViewHolder(<span class="type">ViewGroup</span> parent, int viewType) {
-    <span class="comment">//创建布局的Hodler</span>
-        <span class="type">MyViewHolder</span> holder = <span class="keyword">new</span> <span class="type">MyViewHolder</span>(<span class="type">LayoutInflater</span>.from(context).inflate(<span class="type">R</span>.layout.recycler_item_list_view, parent,
-                <span class="literal">false</span>));
-        <span class="keyword">return</span> holder;
-    }
-
-    <span class="annotation">@Override</span>
-    public void onBindViewHolder(<span class="type">MyViewHolder</span> holder, int position) {
-        <span class="comment">//在此处完成布局的现实操作</span>
-        holder.tv.setText(list.get(position));
-
-
-    }
-
-    <span class="class"><span class="keyword">class</span> <span class="title">MyViewHolder</span> <span class="keyword"><span class="keyword">extends</span></span> <span class="title">RecyclerView</span>.<span class="title">ViewHolder</span> {</span>
-
-        <span class="type">TextView</span> tv;
-
-        public <span class="type">MyViewHolder</span>(<span class="type">View</span> view) {
-            <span class="keyword">super</span>(view);
-            tv = (<span class="type">TextView</span>) view.findViewById(<span class="type">R</span>.id.textView);
-        }
-    }
-}
-</code></pre><p>RecyclerView的Adapter的不同之处是你在继承RecyclerView.Adaper必需现实一个ViewHolder。在创建的时候会将这个每个Item_layour转化成Viewholder。在传递给onBindViewHolder方法去做布局展示。</p>
-<p><strong>效果图</strong><br><img src="https://raw.githubusercontent.com/Waylenw/AndroidDemo_Waylen/master/screen/recyclerView.gif" alt=""></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="简介和准备">简介和准备</h1><blockquote>
-<p>相信大家对RecyclerView都不陌生了。自RecyclerView的出现开始，它就慢慢占据了我们日常开发使用的频率。所以掌握它就显得格外重要了。ReclclerView将各个模块的操作进行了拆]]>
-    </summary>
-    
-      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
     
   </entry>
   
