@@ -1,0 +1,515 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Android HandlerThread使用总结 | WaylenWang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="Waylenw">
+    
+
+    
+    <meta name="description" content="简介  首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。   Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android HandlerThread使用总结">
+<meta property="og:url" content="http://waylenw.github.io/Android/android-handler-thread-usage/index.html">
+<meta property="og:site_name" content="WaylenWang">
+<meta property="og:description" content="简介  首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。   Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队">
+<meta property="og:image" content="https://raw.githubusercontent.com/Waylenw/AndroidBase/master/screen/handlerThread.gif">
+<meta property="og:updated_time" content="2016-01-30T08:42:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android HandlerThread使用总结">
+<meta name="twitter:description" content="简介  首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。   Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队">
+
+    
+    <link rel="alternative" href="/atom.xml" title="WaylenWang" type="application/atom+xml">
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.png" alt="WaylenWang" title="WaylenWang"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="WaylenWang">WaylenWang</a></h1>
+				<h2 class="blog-motto">移动互联网、摄影。</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页</a></li>
+					
+						<li><a href="/archives">归档</a></li>
+					
+						<li><a href="/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/">精华</a></li>
+					
+						<li><a href="/somore">大杂烩</a></li>
+					
+						<li><a href="/cameras">摄影</a></li>
+					
+						<li><a href="/abouts">About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:waylenw.github.io">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/Android/android-handler-thread-usage/" title="Android HandlerThread使用总结" itemprop="url">Android HandlerThread使用总结</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Waylenw" target="_blank" itemprop="author">Waylenw</a>
+		
+  <p class="article-time">
+    <time datetime="2016-01-30T08:42:03.000Z" itemprop="datePublished"> 发表于 2016-01-30</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用法"><span class="toc-number">2.</span> <span class="toc-text">用法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">3.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+		
+		</div>
+		
+		<h1 id="简介">简介</h1><p>  首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。<br>   Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个进行处理，保证安全，不会出现混乱引发的异常。HandlerThread继承于Thread，所以它本质就是个Thread。与普通Thread的差别就在于，它有个Looper成员变量。<br>  在看看官方的对他的讲解</p>
+<blockquote>
+<p>Handy class for starting a new thread that has a looper. The looper can  then be used to create handler classes. Note that start() must still be called. </p>
+</blockquote>
+<p>  大致意思就是说HandlerThread可以创建一个带有looper的线程。looper对象可以用于创建Handler类来进行来进行调度。<br>  接下来看看HandlerThread的源码</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">package</span> android.os;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HandlerThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> mPriority;</span><br><span class="line">    <span class="keyword">int</span> mTid = -<span class="number">1</span>;</span><br><span class="line">    Looper mLooper;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HandlerThread</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">        mPriority = Process.THREAD_PRIORITY_DEFAULT;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onLooperPrepared</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        mTid = Process.myTid();</span><br><span class="line">        Looper.prepare();</span><br><span class="line">        <span class="keyword">synchronized</span> (<span class="keyword">this</span>) &#123;</span><br><span class="line">            mLooper = Looper.myLooper();</span><br><span class="line">            notifyAll();</span><br><span class="line">        &#125;</span><br><span class="line">        Process.setThreadPriority(mPriority);</span><br><span class="line">        onLooperPrepared();</span><br><span class="line">        Looper.loop();</span><br><span class="line">        mTid = -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p> 线程run()方法当中先调用Looper.prepare()初始化Looper,然后再run()方法最后调用Looper.loop()，这样我们就在该线程当中创建好Looper。(注意：Looper.loop()方法默认是死循环).prepare()呢，中创建了一个Looper对象，并且把该对象放到了该线程范围内的变量中（sThreadLocal），在Looper对象的构造过程中，初始化了一个MessageQueue，作为该Looper对象成员变量。</p>
+<p>loop()就开启了，不断的循环从MessageQueue中取消息处理了，当没有消息的时候会阻塞<br><strong>Handler原理</strong><br>要理解Handler的原理，理解如下几个概念即可茅塞顿开。</p>
+<ul>
+<li>Message 意为消息，发送到Handler进行处理的对象，携带描述信息和任意数据。</li>
+<li>MessageQueue 意为消息队列，Message的集合。</li>
+<li>Looper 有着一个很难听的中文名字，消息泵，用来从MessageQueue中抽取Message，发送给Handler进行处理。</li>
+<li><p>Handler 处理Looper抽取出来的Message。<br><a href="http://blog.csdn.net/lmj623565791/article/details/38377229" target="_blank" rel="external"> Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系</a></p>
+<h1 id="用法">用法</h1><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HandlerThread <span class="keyword">thread</span> = newHandlerThread(<span class="string">"handler_thread"</span>);</span><br><span class="line"><span class="keyword">thread</span><span class="built_in">.</span>start();<span class="comment">//必须要调用start方法</span></span><br><span class="line">final Handlerhandler = newHandler(<span class="keyword">thread</span><span class="built_in">.</span>getLooper())&#123;</span><br></pre></td></tr></table></figure>
+<p>其他api</p>
+<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用于返回与该线程相关联的Looper对象</span></span><br><span class="line">publicLooper getLooper ()</span><br><span class="line"><span class="comment">//获得该线程的Id</span></span><br><span class="line">publicint getThreadId ()</span><br><span class="line"><span class="comment">//结束当前的Looper 循环。</span></span><br><span class="line">publicboolean <span class="keyword">quit</span> ()</span><br><span class="line"><span class="comment">//用于looper取出的消息处理</span></span><br><span class="line">publicvoid run ()</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="实例">实例</h1><p> <strong>效果图</strong><br> <img src="https://raw.githubusercontent.com/Waylenw/AndroidBase/master/screen/handlerThread.gif" alt=""></p>
+<p> 在以上效果图中可以看到当我点击按钮之后，两个蓝色的方块变成了图片。在按钮点击事件中我添加了两个下载图片的任务(模拟情况下)，并在加载完后替换控件的默认图片。很明显很可以看到是有先后顺序的。在第一张图片加载完后第二张图片才会显示。</p>
+<p> <strong>MainActivity</strong></p>
+ <figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">AppCompatActivity</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> HandlerThread handlerThread;</span><br><span class="line">    <span class="keyword">private</span> ImageView imageView,imageView1;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        init();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="function"><span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        imageView= (ImageView) findViewById(R.id.imageView);</span><br><span class="line">        imageView1= (ImageView) findViewById(R.id.imageView1);</span><br><span class="line"></span><br><span class="line">        handlerThread = <span class="keyword">new</span> HandlerThread(<span class="string">"MainActivity"</span>);</span><br><span class="line">        handlerThread.start();</span><br><span class="line">        <span class="keyword">final</span> Handler <span class="keyword">handler</span> = <span class="keyword">new</span> Handler(handlerThread.getLooper());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//点击download开始进行下载</span></span><br><span class="line">        findViewById(R.id.button).setOnClickListener(<span class="keyword">new</span> View.OnClickListener() &#123;</span><br><span class="line">            <span class="annotation">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onClick</span><span class="params">(View v)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">handler</span>.post(<span class="keyword">new</span> MyRunable(<span class="number">1</span>));</span><br><span class="line">                <span class="keyword">handler</span>.post(<span class="keyword">new</span> MyRunable(<span class="number">2</span>));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">MyRunable</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> pos;</span><br><span class="line"></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">MyRunable</span><span class="params">(<span class="keyword">int</span> pos)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">this</span>.pos = pos;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="annotation">@Override</span></span><br><span class="line">        <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="comment">//模拟耗时</span></span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">2000</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (pos == <span class="number">1</span>) &#123;</span><br><span class="line">                imageView.post(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">                    <span class="annotation">@Override</span></span><br><span class="line">                    <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                        imageView.setBackgroundResource(R.mipmap.ic_launcher);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                imageView.post(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">                    <span class="annotation">@Override</span></span><br><span class="line">                    <span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                        imageView1.setBackgroundResource(R.mipmap.ic_launcher);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="function"><span class="keyword">void</span> <span class="title">onDestroy</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onDestroy();</span><br><span class="line">        handlerThread.quit();<span class="comment">//停止Looper的循环</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>布局文件</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">LinearLayout</span> <span class="attribute">xmlns:android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span></span><br><span class="line">    <span class="attribute">xmlns:tools</span>=<span class="value">"http://schemas.android.com/tools"</span></span><br><span class="line">    <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">    <span class="attribute">android:layout_height</span>=<span class="value">"match_parent"</span></span><br><span class="line">    <span class="attribute">android:orientation</span>=<span class="value">"vertical"</span></span><br><span class="line">    <span class="attribute">android:paddingBottom</span>=<span class="value">"@dimen/activity_vertical_margin"</span></span><br><span class="line">    <span class="attribute">android:paddingLeft</span>=<span class="value">"@dimen/activity_horizontal_margin"</span></span><br><span class="line">    <span class="attribute">android:paddingRight</span>=<span class="value">"@dimen/activity_horizontal_margin"</span></span><br><span class="line">    <span class="attribute">android:paddingTop</span>=<span class="value">"@dimen/activity_vertical_margin"</span></span><br><span class="line">    <span class="attribute">tools:context</span>=<span class="value">"com.example.handlerthread.MainActivity"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">LinearLayout</span></span><br><span class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span></span><br><span class="line">        <span class="attribute">android:orientation</span>=<span class="value">"horizontal"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="title">ImageView</span></span><br><span class="line">            <span class="attribute">android:id</span>=<span class="value">"@+id/imageView"</span></span><br><span class="line">            <span class="attribute">android:layout_width</span>=<span class="value">"100dp"</span></span><br><span class="line">            <span class="attribute">android:layout_height</span>=<span class="value">"50dp"</span></span><br><span class="line">            <span class="attribute">android:background</span>=<span class="value">"@android:color/holo_blue_dark"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="title">ImageView</span></span><br><span class="line">            <span class="attribute">android:id</span>=<span class="value">"@+id/imageView1"</span></span><br><span class="line">            <span class="attribute">android:layout_width</span>=<span class="value">"100dp"</span></span><br><span class="line">            <span class="attribute">android:layout_height</span>=<span class="value">"50dp"</span></span><br><span class="line">            <span class="attribute">android:layout_marginLeft</span>=<span class="value">"10dp"</span></span><br><span class="line">            <span class="attribute">android:background</span>=<span class="value">"@android:color/holo_blue_dark"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="title">LinearLayout</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="title">Button</span></span><br><span class="line">        <span class="attribute">android:id</span>=<span class="value">"@+id/button"</span></span><br><span class="line">        <span class="attribute">android:layout_width</span>=<span class="value">"match_parent"</span></span><br><span class="line">        <span class="attribute">android:layout_height</span>=<span class="value">"wrap_content"</span></span><br><span class="line">        <span class="attribute">android:text</span>=<span class="value">"downLoad"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="title">LinearLayout</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>源码地址</strong><br><a href="https://github.com/Waylenw/AndroidBase" target="_blank" rel="external">https://github.com/Waylenw/AndroidBase</a></p>
+<h1 id="总结">总结</h1><p> HandlerThread适合在只需要在一个工作线程(非UI线程)+任务的等待队列的形式,优点是不会有堵塞，减少了对性能的消耗，缺点是不能同时进行多任务的处理,需要等待进行处理。处理效率较低。</p>
+<p><strong>感谢参考(更多详细)</strong><br><a href="http://blog.csdn.net/lmj623565791/article/details/47079737" target="_blank" rel="external">http://blog.csdn.net/lmj623565791/article/details/47079737</a><br><a href="http://droidyue.com/blog/2015/11/08/make-use-of-handlerthread/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">http://droidyue.com/blog/2015/11/08/make-use-of-handlerthread/?utm_source=tuicool&amp;utm_medium=referral</a></p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Android/">Android</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://waylenw.github.io/Android/android-handler-thread-usage/" data-title="Android HandlerThread使用总结 | WaylenWang" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/Android/android-fit-screen-img/"  title="Android 图像的拉伸适配解决">
+ <strong>下一篇：</strong><br/> 
+ <span>Android 图像的拉伸适配解决
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="Android/android-handler-thread-usage/" data-title="Android HandlerThread使用总结" data-url="http://waylenw.github.io/Android/android-handler-thread-usage/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#简介"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用法"><span class="toc-number">2.</span> <span class="toc-text">用法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实例"><span class="toc-number">3.</span> <span class="toc-text">实例</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/Android/" title="Android">Android<sup>10</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/博客精华/" title="博客精华">博客精华<sup>5</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Android-Studio/" title="Android Studio">Android Studio<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/hexo/" title="hexo">hexo<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/mobile/" title="mobile">mobile<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/Mac/" title="Mac">Mac<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/互联网/" title="互联网">互联网<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://www.jcodecraeer.com/" target="_blank" title="移动互联网最新博文">泡在网上的日子</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://gank.io/" target="_blank" title="干货妹子">干货集中营</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> I&#39;m Waylenw.This is my blog <br/>
+			</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2016 
+		
+		<a href="/about" target="_blank" title="Waylenw">Waylenw</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"waylenw"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fcf4ae79885736c1472da708e8d106dad' type='text/javascript'%3E%3C/script%3E"));
+</script>
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>
