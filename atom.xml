@@ -4,7 +4,7 @@
   <subtitle><![CDATA[移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2016-01-30T09:07:07.000Z</updated>
+  <updated>2016-01-30T09:08:29.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[Android HandlerThread使用总结]]></title>
     <link href="http://waylenw.github.io/Android/android-handler-thread-usage/"/>
     <id>http://waylenw.github.io/Android/android-handler-thread-usage/</id>
-    <published>2016-01-30T09:07:07.000Z</published>
-    <updated>2016-01-30T09:07:07.000Z</updated>
+    <published>2016-01-30T09:08:29.000Z</published>
+    <updated>2016-01-30T09:08:29.000Z</updated>
     <content type="html"><![CDATA[<h1 id="简介">简介</h1><p>   首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。<br>      Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个进行处理，保证安全，不会出现混乱引发的异常。HandlerThread继承于Thread，所以它本质就是个Thread。与普通Thread的差别就在于，它有个Looper成员变量。<br>  在看看官方的对他的讲解</p>
 <blockquote>
 <p>Handy class for starting a new thread that has a looper. The looper can  then be used to create handler classes. Note that start() must still be called. </p>
@@ -61,7 +61,7 @@
     <link href="http://waylenw.github.io/cvs/smartgit-use/"/>
     <id>http://waylenw.github.io/cvs/smartgit-use/</id>
     <published>2016-01-28T16:00:00.000Z</published>
-    <updated>2016-01-30T09:00:10.000Z</updated>
+    <updated>2016-01-30T09:08:33.000Z</updated>
     <content type="html"><![CDATA[<h1 id="授权文件问题">授权文件问题</h1><p>由于smartgit是收费软件,当你使用的免费天数到了，就会提示你导入授权文件。否则就不能使用了。如果还想继续使用的话，则进入以下目录。并删除setting.xml文件。删除后重新打开即可重新使用。<br><figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="constant">Windows</span>：         <span class="variable">%APPDATA</span>%\syntevo\<span class="constant">SmartGit</span>\</span><br><span class="line"><span class="constant">OS</span> <span class="constant">X</span>：    	      ~<span class="regexp">/Library/</span><span class="constant">Preferences</span>/<span class="constant">SmartGit</span>/</span><br><span class="line"><span class="constant">Unix</span>/<span class="constant">Linux</span>：      ~<span class="regexp">/.smartgit/</span></span><br></pre></td></tr></table></figure></p>
 ]]></content>
     <summary type="html">
