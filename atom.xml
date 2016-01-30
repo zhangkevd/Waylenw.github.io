@@ -4,7 +4,7 @@
   <subtitle><![CDATA[移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2016-01-30T08:42:03.000Z</updated>
+  <updated>2016-01-30T08:48:52.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -18,26 +18,26 @@
     <title><![CDATA[Android HandlerThread使用总结]]></title>
     <link href="http://waylenw.github.io/Android/android-handler-thread-usage/"/>
     <id>http://waylenw.github.io/Android/android-handler-thread-usage/</id>
-    <published>2016-01-30T08:42:03.000Z</published>
-    <updated>2016-01-30T08:42:03.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="简介">简介</h1><p>  首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。<br>   Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个进行处理，保证安全，不会出现混乱引发的异常。HandlerThread继承于Thread，所以它本质就是个Thread。与普通Thread的差别就在于，它有个Looper成员变量。<br>  在看看官方的对他的讲解</p>
+    <published>2016-01-30T08:48:52.000Z</published>
+    <updated>2016-01-30T08:48:52.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="简介">简介</h1><p>   首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。<br>      Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个进行处理，保证安全，不会出现混乱引发的异常。HandlerThread继承于Thread，所以它本质就是个Thread。与普通Thread的差别就在于，它有个Looper成员变量。<br>  在看看官方的对他的讲解</p>
 <blockquote>
 <p>Handy class for starting a new thread that has a looper. The looper can  then be used to create handler classes. Note that start() must still be called. </p>
 </blockquote>
 <p>  大致意思就是说HandlerThread可以创建一个带有looper的线程。looper对象可以用于创建Handler类来进行来进行调度。<br>  接下来看看HandlerThread的源码</p>
  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">package</span> android.os;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HandlerThread</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> mPriority;</span><br><span class="line">    <span class="keyword">int</span> mTid = -<span class="number">1</span>;</span><br><span class="line">    Looper mLooper;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">HandlerThread</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name);</span><br><span class="line">        mPriority = Process.THREAD_PRIORITY_DEFAULT;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">onLooperPrepared</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="annotation">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        mTid = Process.myTid();</span><br><span class="line">        Looper.prepare();</span><br><span class="line">        <span class="keyword">synchronized</span> (<span class="keyword">this</span>) &#123;</span><br><span class="line">            mLooper = Looper.myLooper();</span><br><span class="line">            notifyAll();</span><br><span class="line">        &#125;</span><br><span class="line">        Process.setThreadPriority(mPriority);</span><br><span class="line">        onLooperPrepared();</span><br><span class="line">        Looper.loop();</span><br><span class="line">        mTid = -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p> 线程run()方法当中先调用Looper.prepare()初始化Looper,然后再run()方法最后调用Looper.loop()，这样我们就在该线程当中创建好Looper。(注意：Looper.loop()方法默认是死循环).prepare()呢，中创建了一个Looper对象，并且把该对象放到了该线程范围内的变量中（sThreadLocal），在Looper对象的构造过程中，初始化了一个MessageQueue，作为该Looper对象成员变量。</p>
-<p>loop()就开启了，不断的循环从MessageQueue中取消息处理了，当没有消息的时候会阻塞<br><strong>Handler原理</strong><br>要理解Handler的原理，理解如下几个概念即可茅塞顿开。</p>
+<p> 线程run()方法当中先调用Looper.prepare()初始化Looper,然后再run()方法最后调用Looper.loop()，这样我们就在该线程当中创建好Looper。(注意：Looper.loop()方法默认是死循环).prepare()呢，中创建了一个Looper对象，并且把该对象放到了该线程范围内的变量中（sThreadLocal），在Looper对象的构造过程中，初始化了一个MessageQueue，作为该Looper对象成员变量。loop()就开启了，不断的循环从MessageQueue中取消息处理了，当没有消息的时候会阻塞</p>
+<p><strong>Handler原理</strong><br>要理解Handler的原理，理解如下几个概念即可茅塞顿开。</p>
 <ul>
 <li>Message 意为消息，发送到Handler进行处理的对象，携带描述信息和任意数据。</li>
 <li>MessageQueue 意为消息队列，Message的集合。</li>
 <li>Looper 有着一个很难听的中文名字，消息泵，用来从MessageQueue中抽取Message，发送给Handler进行处理。</li>
-<li><p>Handler 处理Looper抽取出来的Message。<br><a href="http://blog.csdn.net/lmj623565791/article/details/38377229" target="_blank" rel="external"> Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系</a></p>
-<h1 id="用法">用法</h1><figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HandlerThread <span class="keyword">thread</span> = newHandlerThread(<span class="string">"handler_thread"</span>);</span><br><span class="line"><span class="keyword">thread</span><span class="built_in">.</span>start();<span class="comment">//必须要调用start方法</span></span><br><span class="line">final Handlerhandler = newHandler(<span class="keyword">thread</span><span class="built_in">.</span>getLooper())&#123;</span><br></pre></td></tr></table></figure>
-<p>其他api</p>
-<figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用于返回与该线程相关联的Looper对象</span></span><br><span class="line">publicLooper getLooper ()</span><br><span class="line"><span class="comment">//获得该线程的Id</span></span><br><span class="line">publicint getThreadId ()</span><br><span class="line"><span class="comment">//结束当前的Looper 循环。</span></span><br><span class="line">publicboolean <span class="keyword">quit</span> ()</span><br><span class="line"><span class="comment">//用于looper取出的消息处理</span></span><br><span class="line">publicvoid run ()</span><br></pre></td></tr></table></figure>
-</li>
+<li>Handler 处理Looper抽取出来的Message。</li>
 </ul>
+<p><a href="http://blog.csdn.net/lmj623565791/article/details/38377229" target="_blank" rel="external"> Android 异步消息处理机制 让你深入理解 Looper、Handler、Message三者关系</a></p>
+<h1 id="用法">用法</h1> <figure class="highlight lasso"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HandlerThread <span class="keyword">thread</span> = newHandlerThread(<span class="string">"handler_thread"</span>);</span><br><span class="line"><span class="keyword">thread</span><span class="built_in">.</span>start();<span class="comment">//必须要调用start方法</span></span><br><span class="line">final Handlerhandler = newHandler(<span class="keyword">thread</span><span class="built_in">.</span>getLooper())&#123;</span><br></pre></td></tr></table></figure>
+<p> 其他api</p>
+ <figure class="highlight mel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用于返回与该线程相关联的Looper对象</span></span><br><span class="line">publicLooper getLooper ()</span><br><span class="line"><span class="comment">//获得该线程的Id</span></span><br><span class="line">publicint getThreadId ()</span><br><span class="line"><span class="comment">//结束当前的Looper 循环。</span></span><br><span class="line">publicboolean <span class="keyword">quit</span> ()</span><br><span class="line"><span class="comment">//用于looper取出的消息处理</span></span><br><span class="line">publicvoid run ()</span><br></pre></td></tr></table></figure>
 <h1 id="实例">实例</h1><p> <strong>效果图</strong><br> <img src="https://raw.githubusercontent.com/Waylenw/AndroidBase/master/screen/handlerThread.gif" alt=""></p>
 <p> 在以上效果图中可以看到当我点击按钮之后，两个蓝色的方块变成了图片。在按钮点击事件中我添加了两个下载图片的任务(模拟情况下)，并在加载完后替换控件的默认图片。很明显很可以看到是有先后顺序的。在第一张图片加载完后第二张图片才会显示。</p>
 <p> <strong>MainActivity</strong></p>
@@ -49,7 +49,7 @@
 <p><strong>感谢参考(更多详细)</strong><br><a href="http://blog.csdn.net/lmj623565791/article/details/47079737" target="_blank" rel="external">http://blog.csdn.net/lmj623565791/article/details/47079737</a><br><a href="http://droidyue.com/blog/2015/11/08/make-use-of-handlerthread/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">http://droidyue.com/blog/2015/11/08/make-use-of-handlerthread/?utm_source=tuicool&amp;utm_medium=referral</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="简介">简介</h1><p>  首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。<br> ]]>
+    <![CDATA[<h1 id="简介">简介</h1><p>   首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。<br>]]>
     </summary>
     
       <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
