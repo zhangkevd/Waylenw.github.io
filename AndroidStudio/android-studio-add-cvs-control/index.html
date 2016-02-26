@@ -4,33 +4,47 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Android Studio Buid缓慢问题 | WaylenWang</title>
+    <title>Android Studio添加版本控制 | WaylenWang</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Waylenw">
     
 
     
-    <meta name="description" content="Eclipse转到Android Stuido感受最明显的就是buid速度变慢了,对与一些项目庞大一点的的项目稍微改动一两行代码就要buid一分多钟，改动大一点往3分多钟去了。这样太影响开发效率。怎么办？换SSD？别急你可以先试试以下的方法
+    <meta name="description" content="有时候在切换多个Android studio的项目时候,原本项目是由svn或者git管理的，但是你会发现在项目包中点击右键弹出的菜单,你会发现并没有git或者svn的选项。那么如何解决呢,看下文。
 
-配置多线程编译 在下面的目录下面创建gradle.properties文件：
-123/home/&amp;lt;username&amp;gt;/.gradle/ (Lin">
+
+将项目添加git管理项目通过git命令clone或者其他工具clone下来
+菜单里点击cvs
+然后选中Enable Vesion……..
+紧接着选中相应版本控制就可以了
+最后在项目包中鼠标右键就可以">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Studio Buid缓慢问题">
-<meta property="og:url" content="http://waylenw.github.io/AndroidStudio/android-studio-build-speed/index.html">
+<meta property="og:title" content="Android Studio添加版本控制">
+<meta property="og:url" content="http://waylenw.github.io/AndroidStudio/android-studio-add-cvs-control/index.html">
 <meta property="og:site_name" content="WaylenWang">
-<meta property="og:description" content="Eclipse转到Android Stuido感受最明显的就是buid速度变慢了,对与一些项目庞大一点的的项目稍微改动一两行代码就要buid一分多钟，改动大一点往3分多钟去了。这样太影响开发效率。怎么办？换SSD？别急你可以先试试以下的方法
+<meta property="og:description" content="有时候在切换多个Android studio的项目时候,原本项目是由svn或者git管理的，但是你会发现在项目包中点击右键弹出的菜单,你会发现并没有git或者svn的选项。那么如何解决呢,看下文。
 
-配置多线程编译 在下面的目录下面创建gradle.properties文件：
-123/home/&amp;lt;username&amp;gt;/.gradle/ (Lin">
-<meta property="og:image" content="http://isming.qiniudn.com/as_gradle_offline.png">
-<meta property="og:updated_time" content="2016-01-07T09:46:18.000Z">
+
+将项目添加git管理项目通过git命令clone或者其他工具clone下来
+菜单里点击cvs
+然后选中Enable Vesion……..
+紧接着选中相应版本控制就可以了
+最后在项目包中鼠标右键就可以">
+<meta property="og:image" content="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs(1).png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs(2).png">
+<meta property="og:updated_time" content="2016-02-26T03:35:40.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Studio Buid缓慢问题">
-<meta name="twitter:description" content="Eclipse转到Android Stuido感受最明显的就是buid速度变慢了,对与一些项目庞大一点的的项目稍微改动一两行代码就要buid一分多钟，改动大一点往3分多钟去了。这样太影响开发效率。怎么办？换SSD？别急你可以先试试以下的方法
+<meta name="twitter:title" content="Android Studio添加版本控制">
+<meta name="twitter:description" content="有时候在切换多个Android studio的项目时候,原本项目是由svn或者git管理的，但是你会发现在项目包中点击右键弹出的菜单,你会发现并没有git或者svn的选项。那么如何解决呢,看下文。
 
-配置多线程编译 在下面的目录下面创建gradle.properties文件：
-123/home/&amp;lt;username&amp;gt;/.gradle/ (Lin">
+
+将项目添加git管理项目通过git命令clone或者其他工具clone下来
+菜单里点击cvs
+然后选中Enable Vesion……..
+紧接着选中相应版本控制就可以了
+最后在项目包中鼠标右键就可以">
 
     
     <link rel="alternative" href="/atom.xml" title="WaylenWang" type="application/atom+xml">
@@ -96,14 +110,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/AndroidStudio/android-studio-build-speed/" title="Android Studio Buid缓慢问题" itemprop="url">Android Studio Buid缓慢问题</a>
+      <a href="/AndroidStudio/android-studio-add-cvs-control/" title="Android Studio添加版本控制" itemprop="url">Android Studio添加版本控制</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Waylenw" target="_blank" itemprop="author">Waylenw</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-06T16:00:00.000Z" itemprop="datePublished"> 发表于 2016-01-07</time>
+    <time datetime="2016-02-25T16:00:00.000Z" itemprop="datePublished"> 发表于 2016-02-26</time>
     
   </p>
 </header>
@@ -112,24 +126,20 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#配置多线程编译"><span class="toc-number">1.</span> <span class="toc-text">配置多线程编译</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#升级Gradle_2-4"><span class="toc-number">2.</span> <span class="toc-text">升级Gradle 2.4</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#离线加载"><span class="toc-number">3.</span> <span class="toc-text">离线加载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#打开dex增量编译"><span class="toc-number">4.</span> <span class="toc-text">打开dex增量编译</span></a></li></ol>
+			
 		
 		</div>
 		
 		<blockquote>
-<p>Eclipse转到Android Stuido感受最明显的就是buid速度变慢了,对与一些项目庞大一点的的项目稍微改动一两行代码就要buid一分多钟，改动大一点往3分多钟去了。这样太影响开发效率。怎么办？换SSD？别急你可以先试试以下的方法</p>
+<p>有时候在切换多个Android studio的项目时候,原本项目是由svn或者git管理的，但是你会发现在项目包中点击右键弹出的菜单,你会发现并没有git或者svn的选项。那么如何解决呢,看下文。</p>
 </blockquote>
-<h1 id="配置多线程编译">配置多线程编译</h1><p> 在下面的目录下面创建gradle.properties文件：</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/home/</span>&lt;username&gt;<span class="regexp">/.gradle/</span> (Linux)</span><br><span class="line"><span class="regexp">/Users/</span>&lt;username&gt;<span class="regexp">/.gradle/</span> (Mac)</span><br><span class="line"><span class="string">C:</span>\Users\&lt;username&gt;\.gradle (Windows)</span><br></pre></td></tr></table></figure>
-<p>gradle.properties</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">org<span class="class">.gradle</span><span class="class">.daemon</span>=true		#开启gradle单独的守护进程</span><br><span class="line">org<span class="class">.gradle</span><span class="class">.parallel</span>=true</span><br><span class="line">org<span class="class">.gradle</span><span class="class">.jvmargs</span>=-Xmx1024m  #增大gradle运行的java虚拟机的大小</span><br></pre></td></tr></table></figure>
-<p> 同时上面的这些参数也可以配置到前面的用户目录下的gradle.properties文件里，那样就不是针对一个项目生效，而是针对所有项目生效。</p>
-<h1 id="升级Gradle_2-4">升级Gradle 2.4</h1><p>Gradle 2.4对执行性能有很大的优化，但Android Studio现在默认使用的是Gradle 2.2,<br>所以我们需要手动让Android Studio使用Gradle 2.4，在项目根目录下的 build.grade中加入</p>
-<figure class="highlight elm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">task</span> wrapper(<span class="typedef"><span class="keyword">type</span>: <span class="type">Wrapper</span>) <span class="container">&#123;</span><br><span class="line">    gradleVersion = '2.4'</span><br><span class="line">&#125;</span></span></span><br></pre></td></tr></table></figure>
-<p>然后打开终端执行 ./gradlew wrapper，就可以下载Gradle 2.4了，下载完成后，我们需要在<br>Android Studio让我们的项目使用Gradle 2.4</p>
-<h1 id="离线加载">离线加载</h1><p> 在不需要加载新的Jencter架包时可以使用离线加载<br> <img src="http://isming.qiniudn.com/as_gradle_offline.png" alt=""></p>
-<h1 id="打开dex增量编译">打开dex增量编译</h1><p>这还是一个实验性的功能，但是还是推荐打开试试<br>在项目主Module下的build.grade中加入<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">dexOptions</span> &#123;</span><br><span class="line">    <span class="title">incremental</span> <span class="built_in">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>以上配置完了，是不是明显快了很多。<br><strong>感谢参考</strong><br><a href="https://www.aswifter.com/2015/06/14/boost-android-studio/" target="_blank" rel="external">https://www.aswifter.com/2015/06/14/boost-android-studio/</a><br><a href="http://my.oschina.net/sammy1990/blog/388846" target="_blank" rel="external">http://my.oschina.net/sammy1990/blog/388846</a></p>
+<ol>
+<li>将项目添加git管理项目通过git命令clone或者其他工具clone下来</li>
+<li>菜单里点击cvs<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs.png"></li>
+<li>然后选中Enable Vesion……..<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs(1).png"></li>
+<li>紧接着选中相应版本控制就可以了<br><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/camera/AndroidStudio/androidstudio_cvs(2).png"></li>
+<li>最后在项目包中鼠标右键就可以看到git选项了。</li>
+</ol>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -147,7 +157,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://waylenw.github.io/AndroidStudio/android-studio-build-speed/" data-title="Android Studio Buid缓慢问题 | WaylenWang" data-tsina="null" class="share clearfix">
+	  <div data-url="http://waylenw.github.io/AndroidStudio/android-studio-add-cvs-control/" data-title="Android Studio添加版本控制 | WaylenWang" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -160,19 +170,11 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/Mac/mac-control-all/" title="Mac使用操作大全">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Mac使用操作大全</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/android-all-open-source/"  title="Android开源项目和轮子">
+<a href="/Android/android-handler-thread-usage/"  title="Android HandlerThread使用总结">
  <strong>下一篇：</strong><br/> 
- <span>Android开源项目和轮子
+ <span>Android HandlerThread使用总结
 </span>
 </a>
 </div>
@@ -181,7 +183,7 @@
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="AndroidStudio/android-studio-build-speed/" data-title="Android Studio Buid缓慢问题" data-url="http://waylenw.github.io/AndroidStudio/android-studio-build-speed/"></div>
+	<div class="ds-thread" data-thread-key="AndroidStudio/android-studio-add-cvs-control/" data-title="Android Studio添加版本控制" data-url="http://waylenw.github.io/AndroidStudio/android-studio-add-cvs-control/"></div>
 </section>
 
 
@@ -191,7 +193,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#配置多线程编译"><span class="toc-number">1.</span> <span class="toc-text">配置多线程编译</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#升级Gradle_2-4"><span class="toc-number">2.</span> <span class="toc-text">升级Gradle 2.4</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#离线加载"><span class="toc-number">3.</span> <span class="toc-text">离线加载</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#打开dex增量编译"><span class="toc-number">4.</span> <span class="toc-text">打开dex增量编译</span></a></li></ol>
+ 
  
   </div>
 
