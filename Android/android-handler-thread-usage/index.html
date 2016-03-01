@@ -11,17 +11,17 @@
     
 
     
-    <meta name="description" content="简介   首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。      Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handl">
+    <meta name="description" content="我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android HandlerThread使用总结">
 <meta property="og:url" content="http://waylenw.github.io/Android/android-handler-thread-usage/index.html">
 <meta property="og:site_name" content="WaylenWang">
-<meta property="og:description" content="简介   首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。      Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handl">
+<meta property="og:description" content="我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个">
 <meta property="og:image" content="https://raw.githubusercontent.com/Waylenw/AndroidBase/master/screen/handlerThread.gif">
-<meta property="og:updated_time" content="2016-01-30T09:08:29.000Z">
+<meta property="og:updated_time" content="2016-03-01T12:38:47.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android HandlerThread使用总结">
-<meta name="twitter:description" content="简介   首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。      Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handl">
+<meta name="twitter:description" content="我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个">
 
     
     <link rel="alternative" href="/atom.xml" title="WaylenWang" type="application/atom+xml">
@@ -94,7 +94,7 @@
 		<a href="/about" title="Waylenw" target="_blank" itemprop="author">Waylenw</a>
 		
   <p class="article-time">
-    <time datetime="2016-01-30T09:08:29.000Z" itemprop="datePublished"> 发表于 2016-01-30</time>
+    <time datetime="2016-01-29T16:00:00.000Z" itemprop="datePublished"> 发表于 2016-01-30</time>
     
   </p>
 </header>
@@ -107,7 +107,8 @@
 		
 		</div>
 		
-		<h1 id="简介">简介</h1><p>   首先我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。<br>      Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个进行处理，保证安全，不会出现混乱引发的异常。HandlerThread继承于Thread，所以它本质就是个Thread。与普通Thread的差别就在于，它有个Looper成员变量。<br>  在看看官方的对他的讲解</p>
+		<p>我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个进行处理，保证安全，不会出现混乱引发的异常。HandlerThread继承于Thread，所以它本质就是个Thread。与普通Thread的差别就在于，它有个Looper成员变量。</p>
+<h1 id="简介">简介</h1><p> 看看官方的对他的讲解</p>
 <blockquote>
 <p>Handy class for starting a new thread that has a looper. The looper can  then be used to create handler classes. Note that start() must still be called. </p>
 </blockquote>
@@ -164,11 +165,19 @@
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/Android/android-bitmap-memory-yh/" title="Android Bitmap内存优化概述">
+  <strong>上一篇：</strong><br/>
+  <span>
+  Android Bitmap内存优化概述</span>
+</a>
+</div>
+
 
 <div class="next">
-<a href="/cvs/smartgit-use/"  title="SmartGit使用手册">
+<a href="/Android/android-fit-screen-img/"  title="Android 图像的拉伸适配解决">
  <strong>下一篇：</strong><br/> 
- <span>SmartGit使用手册
+ <span>Android 图像的拉伸适配解决
 </span>
 </a>
 </div>
@@ -220,10 +229,6 @@
 		
 			
 				<li><a href="/tags/mobile/" title="mobile">mobile<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/CVS/" title="CVS">CVS<sup>1</sup></a></li>
 			
 		
 			
