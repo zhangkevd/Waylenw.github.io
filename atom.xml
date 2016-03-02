@@ -4,7 +4,7 @@
   <subtitle><![CDATA[移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2016-03-01T12:37:25.000Z</updated>
+  <updated>2016-03-02T06:17:53.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -15,27 +15,29 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA[Android Bitmap内存优化概述]]></title>
+    <title><![CDATA[Android Bitmap与内存之间的联系]]></title>
     <link href="http://waylenw.github.io/Android/android-bitmap-memory-yh/"/>
     <id>http://waylenw.github.io/Android/android-bitmap-memory-yh/</id>
-    <published>2016-03-01T12:37:25.000Z</published>
-    <updated>2016-03-01T12:37:25.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="分析">分析</h1><p>首先先了解一个概念内存溢出。内存溢出就是分配的内存不足以放下数据项序列。如在一个域中输入的数据超过了它的要求就会系统能给你的，系统不能满足需求，于是产生溢出。或者可以这样理解堆上分配的内存没有被释放，从而失去对其控制。这样会造成程序能使用的内存越来越少，导致系统运行速度减慢，严重情况会使程序宕掉。<br><strong>1. BitMap和内存的关系</strong><br>位图和矢量图的区别</p>
+    <published>2016-02-28T16:00:00.000Z</published>
+    <updated>2016-03-02T06:17:53.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="番外篇">番外篇</h1><p> 首先我们先了解位图和矢量图的区别</p>
 <ul>
-<li>位图<br>位图使用我们称为像素的一格一格的小点来描述图像.您的计算机屏幕其实就是一张包含大量像素点的网格.在位图中,上面我们看到的树叶图像将会由每一个网格中的像素点的位置和色彩值来决定.每一点的色彩是固定的,当我们在更高分辨率下观看图像时,每一个小点看上去就像是一个个马赛克色块,如下面例子中的右图.<br>当您在进行位图编辑时,其实您是在一点一点的定义图像中的所有像素点的信息,而不是类似矢量图只需要定义图形的轮廓线段和曲线.因为一定尺寸的位图图像是在一定分辨率下被一点一点记录下来,所以这些位图图像的品质是和图像生成时采用的分辨率相关的.当图像放大后,会在图像边缘出</li>
-<li>矢量图<br>矢量图使用线段和曲线描述图像,所以称为矢量,同时图形也包含了色彩和位置信息.下面例子中的树叶,就是利用大量的点连接成曲线来描述树叶的轮廓线.然后根据轮廓线,在图像内部填充一定的色彩.<br>当您进行矢量图形的编辑时,您定义的是描述图形形状的线和曲线的属性,这些属性将被记录下来.对矢量图形的操作,例如移动,重新定义尺寸,重新定义形状,或者改变矢量图形的色彩,都不会改变矢量图形的显示品质.您也可以通过矢量对象的交叠,使得图形的某一部分被隐藏,或者改变对象的透明度.矢量图形是”分辨率独立”的,这就是说,当您显示或输出图像时,图像的品质不受设备的分辨率的影响.在例子中,右图是放大后的矢量图形,我们看见图像的品质没有受到影响.  </li>
+<li>位图<br>位图使用我们称为像素的一格一格的小点来描述图像.计算机屏幕其实就是一张包含大量像素点的网格.在位图中,平时看到的图像将会由每一个网格中的像素点的位置和色彩值来决定.每一点的色彩是固定的,当我们在更高分辨率下观看图像时,每一个小点看上去就像是一个个马赛克色块.当图像放大后,边缘变得模糊不清.位图图像的清晰度取决于图像大小与分辨率</li>
+<li>矢量图<br>矢量图使用线段和曲线描述图像,所以称为矢量,同时图形也包含了色彩和位置信息.当您进行矢量图形的编辑时,您定义的是描述图形形状的线和曲线的属性,这些属性将被记录下来.对矢量图形的操作,例如移动,重新定义尺寸,重新定义形状,或者改变矢量图形的色彩,都不会改变矢量图形的显示品质.您也可以通过矢量对象的交叠,使得图形的某一部分被隐藏,或者改变对象的透明度.矢量图形是”分辨率独立”的,这就是说,当您显示或输出图像时,图像的品质不受设备的分辨率的影响.  </li>
 </ul>
-<p><strong>2. Bitmap占用大小和内存的关系</strong><br>由上描素可知。Bitmap的是属于位图，而影响位图的占用大小的几个关键点：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>图片长度</span><br><span class="line"><span class="number">2.</span>图片宽度</span><br><span class="line"><span class="number">3.</span>每个像素所占的字节(Bitmap的RGB值)</span><br></pre></td></tr></table></figure></p>
+<h1 id="BitMap和内存的关系">BitMap和内存的关系</h1><p>说到内存就会想到内存溢出。内存溢出就是分配的内存不足以放下数据项序列。如在一个域中输入的数据超过了它的要求就会系统能给你的，系统不能满足需求，于是产生溢出。或者可以这样理解堆上分配的内存没有被释放，从而失去对其控制。这样会造成程序能使用的内存越来越少，导致系统运行速度减慢，严重情况会使程序宕掉。</p>
+<p>在日常开发中影响位图的占用大小的几个关键点：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>图片长度</span><br><span class="line"><span class="number">2.</span>图片宽度</span><br><span class="line"><span class="number">3.</span>每个像素所占的字节(Bitmap的RGB值)</span><br></pre></td></tr></table></figure></p>
 <p>BitMap的的计算公式为:<br>一张图片（BitMap）占用的内存=图片长度<em>图片宽度</em>单位像素占用的字节数<br><a href="http://blog.csdn.net/hudashi/article/details/7856519" target="_blank" rel="external">详解介绍如何计算Bitmap内存占用</a><br> <strong>注意：</strong></p>
 <blockquote>
 <p>Bitmap的占用空间大小和目标文件的大小无关，主要是图片的长和宽。</p>
 </blockquote>
-<h1 id="Bitmap优化">Bitmap优化</h1><h2 id="1-及时释放内存">1.及时释放内存</h2><p> <strong>1.为什么要及时回收Bitmap的内存</strong><br>   Bitmap类有一个方法recycle()，从方法名可以看出意思是回收。这里就有疑问了，Android系统有自己的垃圾回收机制，可以不定期的回收掉不使用的内存空间，当然也包括Bitmap的空间。那为什么还需要这个方法呢？<br> Bitmap类的构造方法都是私有的，所以开发者不能直接new出一个Bitmap对象，只能通过BitmapFactory类的各种静态方法来实例化一个Bitmap。仔细查看BitmapFactory    的源代码可以看到，生成Bitmap对象最终都是通过JNI调用方式实现的。所以，加载Bitmap到内存里以后，是包含两部分内存区域    的。简单的说，一部分是Java部分的，一部分是C部分的。这个Bitmap对象是由Java部分分配的，不用的时候系统就会自动回收了，但是那个对应的C可用的内存区域，虚拟机是不能直接回收的，这个只能调用底层的功能释放。所以需要调用recycle()方法来释放C部分的内存。从Bitmap类的源代码也可以看到，recycle()方法里也的确是调用了JNI方法了。<br>  那如果不调用recycle()，是否就一定存在内存泄露呢？也不是的。Android的每个应用都运行在独立的进程里，有着独立的内存，如果整个进程被应用本身或者系统杀死了，内存也就都被释放掉了，当然也包括C部分的内存。<br>  Android对于进程的管理是非常复杂的。简单的说，Android系统的进程分为几个级别，系统会在内存不足的情况下杀死一些低优先  级的进程，以提供给其它进程充足的内存空间。在实际项目开发过程中，有的开发者会在退出程序的时候使用  Process.killProcess(Process.myPid())的方式将自己的进程杀死，但是有的应用仅仅会使用调用Activity.finish()方法的方式关闭掉所有的Activity。</p>
-<p><strong>2.手动释放内存</strong><br>Android手机的用户，根据习惯不同，可能会有两种方式退出整个应用程序：一种是按Home键直接退到桌面；另一种是从应用程序的退出按钮或者按Back键退出程序。那么从系统的角度来说，这两种方式有什么区别呢？按Home键，应用程序并没有被关闭，而是成为了后台应用程序。按Back键，一般来说，应用程序关闭了，但是进程并没有被杀死，而是成为了空进程（程序本身对退出做了特殊处理的不考虑在内）。<br>Android系统已经做了大量进程管理的工作，这些已经可以满足用户的需求。个人建议，应用程序在退出应用的时候不需要手动杀死自己所在的进程。对于应用程序本身的进程管理，交给Android系统来处理就可以了。应用程序需要做的，是尽量做好程序本身的内存管理工作。</p>
-<p>一般来说，如果能够获得Bitmap对象的引用，就需要及时的调用Bitmap的recycle()方法来释放Bitmap占用的内存空间，而不要等Android系统来进行释放。<br>下面是释放Bitmap的示例代码片段。<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在Activity或Fragment的onDestory方法中进行回收(必须确保bitmap不在使用)</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onDestory</span><span class="params">()</span></span>&#123;</span><br><span class="line">     <span class="comment">// 先判断是否已经回收</span></span><br><span class="line">	<span class="keyword">if</span>(bitmap != <span class="keyword">null</span> &amp;&amp; !bitmap.isRecycled())&#123; </span><br><span class="line">        <span class="comment">// 回收并且置为null</span></span><br><span class="line">        bitmap.recycle(); </span><br><span class="line">        bitmap = <span class="keyword">null</span>; </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>从上面的代码可以看到，bitmap.recycle()方法用于回收该Bitmap所占用的内存，接着将bitmap置空，最后使用System.gc()调用一下系统的垃圾回收器进行回收，可以通知垃圾回收器尽快进行回收。这里需要注意的是，调用System.gc()并不能保证立即开始进行回收过程，而只是为了加快回收的到来。</p>
+<h1 id="Bitmap内存优化">Bitmap内存优化</h1><p>上面说了这么多基本的概念和原理。下面就来看看实战中应该如果避免内存溢出。</p>
+<h2 id="1-及时释放内存">1.及时释放内存</h2><p> <strong>1.为什么要及时回收Bitmap的内存</strong></p>
+<p>  Android系统有自己的垃圾回收机制，可以不定期的回收掉不使用的内存空间，当然也包括Bitmap的空间。那为什么还需要这个方法呢？Bitmap类的构造方法都是私有的，，只能通过BitmapFactory类的来实例化一个Bitmap。仔细查BitmapFactory的源代码可以看到，生成Bitmap对象最终都是通过JNI调用方式实现的。所以，加载Bitmap到内存里以后，是包含两部分内存区域的。简单的说，一部分是Java部分的，一部分是C部分的。这个Bitmap对象是由Java部分分配的，不用的时候系统就会自动回收了，但是那个对应的C可用的内存区域，虚拟机是不能直接回收的，这个只能调用底层的功能释放。所以需要调用recycle()方法来释放C部分的内存。从Bitmap类的源代码也可以看到，recycle()方法里也的确是调用了JNI方法了。<br>  那如果不调用recycle()，是否就一定存在内存泄露呢？也不是的。Android的每个应用都运行在独立的进程里，有着独立的内存，如果整个进程被应用本身或者系统杀死了，内存也就都被释放掉了，当然也包括C部分的内存。</p>
+<p><strong>2.手动释放内存</strong></p>
+<p>下面是释放Bitmap的示例代码片段。<br><figure class="highlight aspectj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//在Activity或Fragment的onDestory方法中进行回收(必须确保bitmap不在使用)</span></span><br><span class="line"><span class="keyword">public</span> <span class="function"><span class="keyword">void</span> <span class="title">onDestory</span><span class="params">()</span></span>&#123;</span><br><span class="line">     <span class="comment">// 先判断是否已经回收</span></span><br><span class="line">	<span class="keyword">if</span>(bitmap != <span class="keyword">null</span> &amp;&amp; !bitmap.isRecycled())&#123; </span><br><span class="line">        <span class="comment">// 回收并且置为null</span></span><br><span class="line">        bitmap.recycle(); </span><br><span class="line">        bitmap = <span class="keyword">null</span>; </span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="2-进行图片压缩">2.进行图片压缩</h2><p>  如果我在开始的时候加载一张很大的图，直接超过了分配的内存大小，那也会引起内存溢出。这个时候我们就需要对加载的BitMap的大小进行控制，这个时候就需要用到图片压缩。<br><a href="http://www.cnblogs.com/xiaochao1234/p/3880402.html" target="_blank" rel="external">图片压缩比较靠谱的几种办法</a></p>
-<h2 id="3-捕获异常">3.捕获异常</h2><p>在Android系统里，读取位图Bitmap时，分给虚拟机中的图片的堆栈大只有8M，如果超出了。为了避免应用在分配Bitmap内存的时候出现OutOfMemory异常以后Crash掉，所以在实例化Bitmap的代码中，一定要对OutOfMemory异常进行捕获。</p>
+<h2 id="3-捕获异常">3.捕获异常</h2><p>在Android系统里，读取位图Bitmap时，分给虚拟机中的图片的堆栈大只有8M，为了避免应用在分配Bitmap内存的时候出现OutOfMemory异常以后Crash掉，所以在实例化Bitmap的代码中，一定要对OutOfMemory异常进行捕获。</p>
 <p>以下是代码示例。</p>
  <figure class="highlight actionscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Bitmap bitmap = <span class="literal">null</span>;  </span><br><span class="line"><span class="keyword">try</span> &#123; </span><br><span class="line">    <span class="comment">// 实例化Bitmap </span></span><br><span class="line">    bitmap = BitmapFactory.decodeFile(path); </span><br><span class="line">&#125; <span class="keyword">catch</span> (OutOfMemoryError e) &#123; </span><br><span class="line">    <span class="comment">// </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>这里对初始化Bitmap对象过程中可能发生的OutOfMemory异常进行了捕获。如果发生了OutOfMemory异常，应用不会崩溃，而是得到了一个默认的Bitmap图。</p>
@@ -45,7 +47,9 @@
 </blockquote>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h1 id="分析">分析</h1><p>首先先了解一个概念内存溢出。内存溢出就是分配的内存不足以放下数据项序列。如在一个域中输入的数据超过了它的要求就会系统能给你的，系统不能满足需求，于是产生溢出。或者可以这样理解堆上分配的内存没有被释放，从而失去对其控制。这样会造成程序能使]]>
+    <![CDATA[<h1 id="番外篇">番外篇</h1><p> 首先我们先了解位图和矢量图的区别</p>
+<ul>
+<li>位图<br>位图使用我们称为像素的一格一格的小点来描述图像.计算机屏幕其实就是一张包含大量像素点的网格.在位图中,平时看到的图像将会由每一个网格中的像素点的位置和色彩值来]]>
     </summary>
     
       <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
@@ -57,7 +61,7 @@
     <link href="http://waylenw.github.io/Android/android-handler-thread-usage/"/>
     <id>http://waylenw.github.io/Android/android-handler-thread-usage/</id>
     <published>2016-01-29T16:00:00.000Z</published>
-    <updated>2016-03-01T12:38:47.000Z</updated>
+    <updated>2016-03-01T12:39:57.000Z</updated>
     <content type="html"><![CDATA[<p>我们看到HandlerThread很快就会联想到Handler。Android中Handler的使用，一般都在UI主线程中执行，因此在Handler接收消息后，处理消息时，不能做一些很耗时的操作，否则将出现ANR错误。Android中专门提供了HandlerThread类，来解决该类问题。HandlerThread类是一个线程专门处理Hanlder的消息，依次从Handler的队列中获取信息，逐个进行处理，保证安全，不会出现混乱引发的异常。HandlerThread继承于Thread，所以它本质就是个Thread。与普通Thread的差别就在于，它有个Looper成员变量。</p>
 <h1 id="简介">简介</h1><p> 看看官方的对他的讲解</p>
 <blockquote>
