@@ -4,7 +4,7 @@
   <subtitle><![CDATA[移动互联网、摄影。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2016-03-02T06:17:53.000Z</updated>
+  <updated>2016-03-14T11:28:54.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -15,11 +15,75 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Mac使用操作大全]]></title>
+    <link href="http://waylenw.github.io/Mac/mac-control-all/"/>
+    <id>http://waylenw.github.io/Mac/mac-control-all/</id>
+    <published>2016-03-14T11:28:54.000Z</published>
+    <updated>2016-03-14T11:28:54.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>本博主要是mac使用操作教程汇总。不定时的更新。</p>
+</blockquote>
+<p> 推荐：<br> <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/SystemPreferences/index.html" target="_blank" rel="external">Mac开发配置配置手册</a></p>
+<h1 id="系统基本介绍">系统基本介绍</h1><p> <a href="http://blog.csdn.net/smstong/article/details/15499661" target="_blank" rel="external">系统目录结构介绍</a><br></p>
+<h1 id="基本操作">基本操作</h1><blockquote>
+<p><a href="http://sspai.com/28012/" target="_blank" rel="external">Mac卸载软件的四种方法</a><br>  <a href="http://jingyan.baidu.com/article/8cdccae965875c315413cdfe.html" target="_blank" rel="external">Mac修改hosts文件</a></p>
+</blockquote>
+<p> <strong>如何使用右键</strong></p>
+<blockquote>
+<p>1.两指点击触摸板<br>  2.⌃+单击触摸板</p>
+</blockquote>
+<p> <strong>手势操作</strong></p>
+<blockquote>
+<p>系统偏好设置＝》触摸板＝》里面可以查看所有相关的手势操作，有图演示非常易懂<br> <a href="http://www.ifunmac.com/2012/11/mac-gesture/" target="_blank" rel="external">20个Mac用户必须掌握的触摸手势</a></p>
+</blockquote>
+<h1 id="软件">软件</h1><p><a href="http://blog.csdn.net/github_25928675/article/details/49179247" target="_blank" rel="external">OS x yosemite jdk安装路径和环境变量配置</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>本博主要是mac使用操作教程汇总。不定时的更新。</p>
+</blockquote>
+<p> 推荐：<br> <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/SystemPr]]>
+    </summary>
+    
+      <category term="Mac" scheme="http://waylenw.github.io/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Mac常用快捷键]]></title>
+    <link href="http://waylenw.github.io/Mac/mac-kemap-all/"/>
+    <id>http://waylenw.github.io/Mac/mac-kemap-all/</id>
+    <published>2016-03-13T16:00:00.000Z</published>
+    <updated>2016-03-14T11:31:12.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="快捷键">快捷键</h1><p><strong>快捷键的符号所对应的按键</strong></p>
+<p>⌥—&gt; option|alt</p>
+<p>⇧—&gt;shift</p>
+<p>⌃—&gt;control</p>
+<p>⌘—&gt;command</p>
+<p>⎋—&gt;esc</p>
+<h1 id="常用快捷键">常用快捷键</h1><p><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/Mac/keybroad.jpg" alt=""> </p>
+<h1 id="更多补充">更多补充</h1><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_ins">cmd</span>+方向键上  <span class="comment">#返回向一级文件夹</span></span><br><span class="line"><span class="built_ins">cmd</span>+方向键    <span class="comment">#进入下一级文件夹       </span></span><br><span class="line"><span class="built_ins">cmd</span>+alt+v    <span class="comment">#将文件复制并移动</span></span><br></pre></td></tr></table></figure>
+<p>文本位置跳转快捷键：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">跳转到一行的开头：Command+左箭头</span><br><span class="line">跳转到一行的末尾：Command+右箭头</span><br><span class="line">跳转到当前单词的开头(适合英文、拼音)：<span class="keyword">Option</span>+左箭头</span><br><span class="line">跳转到当前单词的末尾(适合英文、拼音)：<span class="keyword">Option</span>+右箭头</span><br><span class="line">跳转到全部文本的开头：Command+上箭头</span><br><span class="line">跳转到全部文本的末尾：Command+下箭头</span><br></pre></td></tr></table></figure></p>
+<p>在以上快捷键中加入Shift，则可以扩展成为选中文本效果的快捷键：<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">选中光标到本行开头的文本：<span class="keyword">Shift</span>+Command+左箭头</span><br><span class="line">选中光标到本行末尾的文本：<span class="keyword">Shift</span>+Command+右箭头</span><br><span class="line">选中光标到当前单词的开头(适合英文、拼音)：<span class="keyword">Shift</span>+Option+左箭头</span><br><span class="line">选中光标到当前单词的末尾(适合英文、拼音)：<span class="keyword">Shift</span>+Option+右箭头</span><br><span class="line">选中光标到全部文本的开头：<span class="keyword">Shift</span>+Command+上箭头</span><br><span class="line">选中光标到全部文本的末尾：<span class="keyword">Shift</span>+Command+下箭头</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="快捷键">快捷键</h1><p><strong>快捷键的符号所对应的按键</strong></p>
+<p>⌥—&gt; option|alt</p>
+<p>⇧—&gt;shift</p>
+<p>⌃—&gt;control</p>
+<p>⌘—&gt;command<]]>
+    </summary>
+    
+      <category term="Mac" scheme="http://waylenw.github.io/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Android Bitmap与内存之间的联系]]></title>
     <link href="http://waylenw.github.io/Android/android-bitmap-memory-yh/"/>
     <id>http://waylenw.github.io/Android/android-bitmap-memory-yh/</id>
     <published>2016-02-28T16:00:00.000Z</published>
-    <updated>2016-03-02T06:17:53.000Z</updated>
+    <updated>2016-03-02T06:24:48.000Z</updated>
     <content type="html"><![CDATA[<h1 id="番外篇">番外篇</h1><p> 首先我们先了解位图和矢量图的区别</p>
 <ul>
 <li>位图<br>位图使用我们称为像素的一格一格的小点来描述图像.计算机屏幕其实就是一张包含大量像素点的网格.在位图中,平时看到的图像将会由每一个网格中的像素点的位置和色彩值来决定.每一点的色彩是固定的,当我们在更高分辨率下观看图像时,每一个小点看上去就像是一个个马赛克色块.当图像放大后,边缘变得模糊不清.位图图像的清晰度取决于图像大小与分辨率</li>
@@ -210,7 +274,7 @@
     <link href="http://waylenw.github.io/android-dev-teacher/"/>
     <id>http://waylenw.github.io/android-dev-teacher/</id>
     <published>2016-01-17T16:00:00.000Z</published>
-    <updated>2016-02-26T08:53:30.000Z</updated>
+    <updated>2016-03-14T11:08:11.000Z</updated>
     <content type="html"><![CDATA[<p> <strong>不定时更新</strong></p>
 <blockquote>
 <p>本博客的所链接的文章不全是原创。很多是写的非常好的博客。所以本博客主要是收集Android开发教程优秀的博客。以下是推荐初学者学习和了解Android开发的的链接</p>
@@ -223,7 +287,7 @@
 <h2 id="数据存储和网络请求">数据存储和网络请求</h2><p> <a href="http://blog.csdn.net/wenwen091100304/article/details/49050277" target="_blank" rel="external">数据存储方式之Shareprefences</a><br> <a href="http://www.liaohuqiu.net/cn/posts/storage-in-android/" target="_blank" rel="external">Android存储路径完全讲解</a><br> <a href="http://blog.csdn.net/loongggdroid/article/details/12304695" target="_blank" rel="external">Android SD卡存储容量相关讲解</a>、<br><strong>网络请求</strong><br><a href="http://blog.csdn.net/u010590685/article/details/49104875" target="_blank" rel="external">Android访问https</a><br><a href="http://www.cnblogs.com/hanyonglu/archive/2012/02/20/2358801.html" target="_blank" rel="external">Android实现网络多线程断点续传下载</a></p>
 <h2 id="多线程">多线程</h2><p> <a href="http://blog.csdn.net/yuzhiboyi/article/details/7562245" target="_blank" rel="external">Handler讲解之基本使用(一)</a><br> <a href="http://blog.csdn.net/yuzhiboyi/article/details/7562254" target="_blank" rel="external">Handler讲解之sendMessage(二)</a><br> <a href="http://blog.csdn.net/yuzhiboyi/article/details/7562259" target="_blank" rel="external">Handler讲解之异步任务操作(三)</a><br> <a href="http://waylenw.github.io/Android/android-handler-thread-usage/">HandlerThread使用总结</a><br> <a href="http://blog.csdn.net/yanbober/article/details/48861457" target="_blank" rel="external">Loader的全面讲解及源码浅析</a><br> <a href="http://blog.csdn.net/hitlion2008/article/details/7560878" target="_blank" rel="external">AysnTask基本使用介绍</a><br> <a href="http://blog.csdn.net/guolin_blog/article/details/11711405" target="_blank" rel="external">AysnTask机制从源码角度讲解</a><br> <a href="http://get.ftqq.com/6333.get" target="_blank" rel="external">AsyncTask的存在的缺陷</a><br> <a href="http://blog.csdn.net/hitlion2008/article/details/7983449" target="_blank" rel="external">AsyncTask的验证</a><br> <a href="https://segmentfault.com/a/1190000004487149" target="_blank" rel="external">如何使用 volatile, synchronized, final 进行线程间通信</a><br> <strong>优化</strong><br> <a href="http://blog.csdn.net/github_25928675/article/details/47259097" target="_blank" rel="external">Android 线程池的使用和讲解</a><br><a href="http://droidyue.com/blog/2015/09/05/android-process-and-thread-schedule-nice/" target="_blank" rel="external">线程优先级讲解</a><br> <strong>案例</strong><br> <a href="http://blog.csdn.net/github_25928675/article/details/47702303" target="_blank" rel="external">Android计时和倒计时</a></p>
 <h2 id="多媒体">多媒体</h2><p><a href="http://blog.csdn.net/github_25928675/article/details/49181907" target="_blank" rel="external">Android音频播放讲解</a><br><a href="http://blog.csdn.net/peijiangping1989/article/details/7042610" target="_blank" rel="external">Android音频录制</a><br><a href="http://blog.csdn.net/peijiangping1989/article/details/7049991" target="_blank" rel="external">Android视频录制</a><br><a href="http://www.open-open.com/lib/view/open1341754267229.html" target="_blank" rel="external">Android视频播放的三种方式</a><br><a href="http://www.devwiki.net/2015/09/20/Android-Music-Play-Mode/#comments" target="_blank" rel="external">Android音乐播放模式切换-外放、听筒、耳机</a><br><a href="http://blog.csdn.net/shineflowers/article/details/48031873" target="_blank" rel="external">Android MediaMetadataRetriever获得媒体信息</a><br><a href="http://www.cnblogs.com/hanyonglu/archive/2012/05/10/2494908.html" target="_blank" rel="external">Android Loader获取本机所有图片(相册)</a><br> 经验<br> <a href="http://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&amp;mid=401454605&amp;idx=1&amp;sn=d5a16f6dc13e7581fec08a4e704cd5d0&amp;scene=0#wechat_redirect" target="_blank" rel="external">Android相机开发那些坑</a></p>
-<h2 id="图形处理和动画">图形处理和动画</h2><p> <a href="http://blog.csdn.net/aminfo/article/details/7847761" target="_blank" rel="external">Android 帧动画</a><br> <a href="http://waylenw.github.io/Android/android-fit-screen-img/">Android 图片拉伸适配的解决方法</a></p>
+<h2 id="图形处理和动画">图形处理和动画</h2><p> <a href="http://www.jianshu.com/p/f1feafffc365" target="_blank" rel="external">通过Hardware Layer提升Android动画性能</a><br> <a href="http://blog.csdn.net/aminfo/article/details/7847761" target="_blank" rel="external">Android 帧动画</a><br> <a href="http://waylenw.github.io/Android/android-fit-screen-img/">Android 图片拉伸适配的解决方法</a></p>
 <h2 id="权限和动作">权限和动作</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46460417" target="_blank" rel="external">权限和动作大全</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/45916267" target="_blank" rel="external">自定义权限</a></p>
 <h2 id="软键盘输入法">软键盘输入法</h2><p> <a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0822/3344.html" target="_blank" rel="external">软键盘遮挡问题</a></p>
 <h2 id="Android系统信息和安全机制">Android系统信息和安全机制</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/50561889" target="_blank" rel="external">Android 获取设备硬件和系统信息</a><br> <a href="http://blog.csdn.net/xinzheng_wang/article/details/7837550" target="_blank" rel="external">Android 系统CPU,RAM,ROM,SDCard,MAC等信息查询</a><br> <a href="http://blog.csdn.net/vipzjyno1/article/details/21039349/" target="_blank" rel="external">Android Apk反编译</a><br> <a href="http://blog.csdn.net/jiangwei0910410003/article/details/50402000" target="_blank" rel="external">Android签名机制之—签名过程详解</a></p>
@@ -245,52 +309,6 @@
       <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
     
       <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Mac使用操作大全]]></title>
-    <link href="http://waylenw.github.io/Mac/mac-control-all/"/>
-    <id>http://waylenw.github.io/Mac/mac-control-all/</id>
-    <published>2016-01-07T10:20:59.000Z</published>
-    <updated>2016-01-07T10:20:59.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>本博主要是mac使用操作教程汇总。不定时的更新。</p>
-</blockquote>
-<p> 推荐：<br> <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/SystemPreferences/index.html" target="_blank" rel="external">Mac开发配置配置手册</a></p>
-<h1 id="系统基本介绍">系统基本介绍</h1><p> <a href="http://blog.csdn.net/smstong/article/details/15499661" target="_blank" rel="external">系统目录结构介绍</a><br></p>
-<h1 id="快捷键">快捷键</h1><p><strong>快捷键的符号所对应的按键</strong></p>
-<p>⌥—&gt; option|alt</p>
-<p>⇧—&gt;shift</p>
-<p>⌃—&gt;control</p>
-<p>⌘—&gt;command</p>
-<p>⎋—&gt;esc</p>
-<p><strong>快捷键一览</strong></p>
-<p><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/Mac/keybroad.jpg" alt=""><br>以下为补充</p>
-<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_ins">cmd</span>+方向键上  <span class="comment">#返回向一级文件夹</span></span><br><span class="line"><span class="built_ins">cmd</span>+方向键    <span class="comment">#进入下一级文件夹       </span></span><br><span class="line"><span class="built_ins">cmd</span>+alt+v    <span class="comment">#将文件复制并移动</span></span><br></pre></td></tr></table></figure>
-<p>文本位置跳转快捷键：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">跳转到一行的开头：Command+左箭头</span><br><span class="line">跳转到一行的末尾：Command+右箭头</span><br><span class="line">跳转到当前单词的开头(适合英文、拼音)：<span class="keyword">Option</span>+左箭头</span><br><span class="line">跳转到当前单词的末尾(适合英文、拼音)：<span class="keyword">Option</span>+右箭头</span><br><span class="line">跳转到全部文本的开头：Command+上箭头</span><br><span class="line">跳转到全部文本的末尾：Command+下箭头</span><br></pre></td></tr></table></figure></p>
-<p>在以上快捷键中加入Shift，则可以扩展成为选中文本效果的快捷键：<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">选中光标到本行开头的文本：<span class="keyword">Shift</span>+Command+左箭头</span><br><span class="line">选中光标到本行末尾的文本：<span class="keyword">Shift</span>+Command+右箭头</span><br><span class="line">选中光标到当前单词的开头(适合英文、拼音)：<span class="keyword">Shift</span>+Option+左箭头</span><br><span class="line">选中光标到当前单词的末尾(适合英文、拼音)：<span class="keyword">Shift</span>+Option+右箭头</span><br><span class="line">选中光标到全部文本的开头：<span class="keyword">Shift</span>+Command+上箭头</span><br><span class="line">选中光标到全部文本的末尾：<span class="keyword">Shift</span>+Command+下箭头</span><br></pre></td></tr></table></figure></p>
-<h1 id="基本操作">基本操作</h1><blockquote>
-<p><a href="http://sspai.com/28012/" target="_blank" rel="external">Mac卸载软件的四种方法</a><br>  <a href="http://jingyan.baidu.com/article/8cdccae965875c315413cdfe.html" target="_blank" rel="external">Mac修改hosts文件</a></p>
-</blockquote>
-<p> <strong>如何使用右键</strong></p>
-<blockquote>
-<p>1.两指点击触摸板<br>  2.⌃+单击触摸板</p>
-</blockquote>
-<p> <strong>手势操作</strong></p>
-<blockquote>
-<p>系统偏好设置＝》触摸板＝》里面可以查看所有相关的手势操作，有图演示非常易懂<br> <a href="http://www.ifunmac.com/2012/11/mac-gesture/" target="_blank" rel="external">20个Mac用户必须掌握的触摸手势</a></p>
-</blockquote>
-<h1 id="软件">软件</h1><p><a href="http://blog.csdn.net/github_25928675/article/details/49179247" target="_blank" rel="external">OS x yosemite jdk安装路径和环境变量配置</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<blockquote>
-<p>本博主要是mac使用操作教程汇总。不定时的更新。</p>
-</blockquote>
-<p> 推荐：<br> <a href="https://aaaaaashu.gitbooks.io/mac-dev-setup/content/SystemPr]]>
-    </summary>
-    
-      <category term="Mac" scheme="http://waylenw.github.io/tags/Mac/"/>
     
   </entry>
   
@@ -792,28 +810,6 @@
     </summary>
     
       <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Google相关服务汇总]]></title>
-    <link href="http://waylenw.github.io/mobile/google-service-all/"/>
-    <id>http://waylenw.github.io/mobile/google-service-all/</id>
-    <published>2015-09-29T16:00:00.000Z</published>
-    <updated>2015-10-17T01:31:45.000Z</updated>
-    <content type="html"><![CDATA[<ol>
-<li><strong><a href="https://store.google.com/" target="_blank" rel="external">google商店</a></strong><br>购买nexus系列手机,平板,android wear系统产品<br>目前国内的ip(非Vpn工具fq)是无法访问Google store的。只能通过VPN访问。</li>
-</ol>
-<ol>
-<li><strong><a href="https://play.google.com/store" target="_blank" rel="external">google play</a></strong><br>Android官方的APP商店。</li>
-</ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<ol>
-<li><strong><a href="https://store.google.com/" target="_blank" rel="external">google商店</a></strong><br>购买nexus系列手机,平板,android wear系统产品]]>
-    </summary>
-    
-      <category term="mobile" scheme="http://waylenw.github.io/tags/mobile/"/>
     
   </entry>
   
