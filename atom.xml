@@ -50,35 +50,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Mac常用快捷键]]></title>
-    <link href="http://waylenw.github.io/Mac/mac-kemap-all/"/>
-    <id>http://waylenw.github.io/Mac/mac-kemap-all/</id>
-    <published>2016-03-13T16:00:00.000Z</published>
-    <updated>2016-03-14T11:31:12.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="快捷键">快捷键</h1><p><strong>快捷键的符号所对应的按键</strong></p>
-<p>⌥—&gt; option|alt</p>
-<p>⇧—&gt;shift</p>
-<p>⌃—&gt;control</p>
-<p>⌘—&gt;command</p>
-<p>⎋—&gt;esc</p>
-<h1 id="常用快捷键">常用快捷键</h1><p><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/Mac/keybroad.jpg" alt=""> </p>
-<h1 id="更多补充">更多补充</h1><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_ins">cmd</span>+方向键上  <span class="comment">#返回向一级文件夹</span></span><br><span class="line"><span class="built_ins">cmd</span>+方向键    <span class="comment">#进入下一级文件夹       </span></span><br><span class="line"><span class="built_ins">cmd</span>+alt+v    <span class="comment">#将文件复制并移动</span></span><br></pre></td></tr></table></figure>
-<p>文本位置跳转快捷键：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">跳转到一行的开头：Command+左箭头</span><br><span class="line">跳转到一行的末尾：Command+右箭头</span><br><span class="line">跳转到当前单词的开头(适合英文、拼音)：<span class="keyword">Option</span>+左箭头</span><br><span class="line">跳转到当前单词的末尾(适合英文、拼音)：<span class="keyword">Option</span>+右箭头</span><br><span class="line">跳转到全部文本的开头：Command+上箭头</span><br><span class="line">跳转到全部文本的末尾：Command+下箭头</span><br></pre></td></tr></table></figure></p>
-<p>在以上快捷键中加入Shift，则可以扩展成为选中文本效果的快捷键：<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">选中光标到本行开头的文本：<span class="keyword">Shift</span>+Command+左箭头</span><br><span class="line">选中光标到本行末尾的文本：<span class="keyword">Shift</span>+Command+右箭头</span><br><span class="line">选中光标到当前单词的开头(适合英文、拼音)：<span class="keyword">Shift</span>+Option+左箭头</span><br><span class="line">选中光标到当前单词的末尾(适合英文、拼音)：<span class="keyword">Shift</span>+Option+右箭头</span><br><span class="line">选中光标到全部文本的开头：<span class="keyword">Shift</span>+Command+上箭头</span><br><span class="line">选中光标到全部文本的末尾：<span class="keyword">Shift</span>+Command+下箭头</span><br></pre></td></tr></table></figure></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="快捷键">快捷键</h1><p><strong>快捷键的符号所对应的按键</strong></p>
-<p>⌥—&gt; option|alt</p>
-<p>⇧—&gt;shift</p>
-<p>⌃—&gt;control</p>
-<p>⌘—&gt;command<]]>
-    </summary>
-    
-      <category term="Mac" scheme="http://waylenw.github.io/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[Android Bitmap与内存之间的联系]]></title>
     <link href="http://waylenw.github.io/Android/android-bitmap-memory-yh/"/>
     <id>http://waylenw.github.io/Android/android-bitmap-memory-yh/</id>
@@ -549,25 +520,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Android Studio logcat高亮]]></title>
-    <link href="http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/"/>
-    <id>http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/</id>
-    <published>2015-11-30T16:00:00.000Z</published>
-    <updated>2016-03-01T06:13:59.000Z</updated>
-    <content type="html"><![CDATA[<p>Android studio中默认的日志打印都是白色。这对我们日常开发查找Log信息非常影响效率。此时我们就需要对Log信息根据级别进行相应高亮。其实配置log级别对应的颜色相对简单，但是很多开发者并不知道由此功能。</p>
-<h1 id="效果图">效果图</h1><p>  <img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/androidstudio/logcat1.png" alt=""></p>
-<h1 id="如何配置logcat高亮">如何配置logcat高亮</h1><p>  在工具栏中找到<code>setting=&gt;android logcat</code>.即可对Android logcat日志各种打印级别设置颜色。<br>  在选择时 要将红色的框内的钩取消才可编辑。<br>    <img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/androidstudio/logcat.png" alt=""></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Android studio中默认的日志打印都是白色。这对我们日常开发查找Log信息非常影响效率。此时我们就需要对Log信息根据级别进行相应高亮。其实配置log级别对应的颜色相对简单，但是很多开发者并不知道由此功能。</p>
-<h1 id="效果图">效果图</h1><p>]]>
-    </summary>
-    
-      <category term="Android Studio" scheme="http://waylenw.github.io/tags/Android-Studio/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[Android Studio添加版本控制]]></title>
     <link href="http://waylenw.github.io/AndroidStudio/android-studio-add-cvs-control/"/>
     <id>http://waylenw.github.io/AndroidStudio/android-studio-add-cvs-control/</id>
@@ -586,6 +538,25 @@
     <summary type="html">
     <![CDATA[<blockquote>
 <p>有时候在切换多个Android studio的项目时候,原本项目是由svn或者git管理或者你的项目是由其他的版本控制工具clone下来的，你会发现在项目包中点击右键弹出的菜单,你会发现并没有git或者svn的选项。那么如何解决呢,看下文。</p>]]>
+    </summary>
+    
+      <category term="Android Studio" scheme="http://waylenw.github.io/tags/Android-Studio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android Studio logcat高亮]]></title>
+    <link href="http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/"/>
+    <id>http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/</id>
+    <published>2015-11-30T16:00:00.000Z</published>
+    <updated>2016-03-01T06:13:59.000Z</updated>
+    <content type="html"><![CDATA[<p>Android studio中默认的日志打印都是白色。这对我们日常开发查找Log信息非常影响效率。此时我们就需要对Log信息根据级别进行相应高亮。其实配置log级别对应的颜色相对简单，但是很多开发者并不知道由此功能。</p>
+<h1 id="效果图">效果图</h1><p>  <img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/androidstudio/logcat1.png" alt=""></p>
+<h1 id="如何配置logcat高亮">如何配置logcat高亮</h1><p>  在工具栏中找到<code>setting=&gt;android logcat</code>.即可对Android logcat日志各种打印级别设置颜色。<br>  在选择时 要将红色的框内的钩取消才可编辑。<br>    <img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/androidstudio/logcat.png" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Android studio中默认的日志打印都是白色。这对我们日常开发查找Log信息非常影响效率。此时我们就需要对Log信息根据级别进行相应高亮。其实配置log级别对应的颜色相对简单，但是很多开发者并不知道由此功能。</p>
+<h1 id="效果图">效果图</h1><p>]]>
     </summary>
     
       <category term="Android Studio" scheme="http://waylenw.github.io/tags/Android-Studio/"/>
@@ -716,6 +687,35 @@
     </summary>
     
       <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Mac常用快捷键]]></title>
+    <link href="http://waylenw.github.io/Mac/mac-kemap-all/"/>
+    <id>http://waylenw.github.io/Mac/mac-kemap-all/</id>
+    <published>2015-11-15T16:00:00.000Z</published>
+    <updated>2016-03-14T11:37:36.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="快捷键">快捷键</h1><p><strong>快捷键的符号所对应的按键</strong></p>
+<p>⌥—&gt; option|alt</p>
+<p>⇧—&gt;shift</p>
+<p>⌃—&gt;control</p>
+<p>⌘—&gt;command</p>
+<p>⎋—&gt;esc</p>
+<h1 id="常用快捷键">常用快捷键</h1><p><img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/Mac/keybroad.jpg" alt=""> </p>
+<h1 id="更多补充">更多补充</h1><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_ins">cmd</span>+方向键上  <span class="comment">#返回向一级文件夹</span></span><br><span class="line"><span class="built_ins">cmd</span>+方向键    <span class="comment">#进入下一级文件夹       </span></span><br><span class="line"><span class="built_ins">cmd</span>+alt+v    <span class="comment">#将文件复制并移动</span></span><br></pre></td></tr></table></figure>
+<p>文本位置跳转快捷键：<br><figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">跳转到一行的开头：Command+左箭头</span><br><span class="line">跳转到一行的末尾：Command+右箭头</span><br><span class="line">跳转到当前单词的开头(适合英文、拼音)：<span class="keyword">Option</span>+左箭头</span><br><span class="line">跳转到当前单词的末尾(适合英文、拼音)：<span class="keyword">Option</span>+右箭头</span><br><span class="line">跳转到全部文本的开头：Command+上箭头</span><br><span class="line">跳转到全部文本的末尾：Command+下箭头</span><br></pre></td></tr></table></figure></p>
+<p>在以上快捷键中加入Shift，则可以扩展成为选中文本效果的快捷键：<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">选中光标到本行开头的文本：<span class="keyword">Shift</span>+Command+左箭头</span><br><span class="line">选中光标到本行末尾的文本：<span class="keyword">Shift</span>+Command+右箭头</span><br><span class="line">选中光标到当前单词的开头(适合英文、拼音)：<span class="keyword">Shift</span>+Option+左箭头</span><br><span class="line">选中光标到当前单词的末尾(适合英文、拼音)：<span class="keyword">Shift</span>+Option+右箭头</span><br><span class="line">选中光标到全部文本的开头：<span class="keyword">Shift</span>+Command+上箭头</span><br><span class="line">选中光标到全部文本的末尾：<span class="keyword">Shift</span>+Command+下箭头</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="快捷键">快捷键</h1><p><strong>快捷键的符号所对应的按键</strong></p>
+<p>⌥—&gt; option|alt</p>
+<p>⇧—&gt;shift</p>
+<p>⌃—&gt;control</p>
+<p>⌘—&gt;command<]]>
+    </summary>
+    
+      <category term="Mac" scheme="http://waylenw.github.io/tags/Mac/"/>
     
   </entry>
   
