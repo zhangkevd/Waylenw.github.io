@@ -418,7 +418,7 @@ body >header a {
   color: #fff;
 }
 #imglogo {
-  float: left;
+  float: center;
   width: 4em;
   height: 4em;
 }
