@@ -17,7 +17,7 @@
 
 位图位图使用我们称为像素的一格一格的小点来描述图像.计算机屏幕其实就是一张包含大量像素点的网格.在位图中,平时看到的图像将会由每一个网格中的像素点的位置和色彩值来决定.每一点的色彩是固定的,当我们在更高分辨率下观看图像时,每一个小点看上去就像是一个个马赛克色块.当图像放大后,边缘变得模糊不清.位图图像的清晰度取决于图像大小与分辨率
 矢量图矢量图使用线段和">
-<meta property="og:updated_time" content="2016-04-11T14:32:40.000Z">
+<meta property="og:updated_time" content="2016-04-12T09:09:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android Bitmap内存优化">
 <meta name="twitter:description" content="番外篇 首先我们先了解位图和矢量图的区别
@@ -68,15 +68,15 @@ var _hmt = _hmt || [];
             </a>
             <nav id="main-nav">
                 
-                    <a class="main-nav-link" href="/.">Home</a>
+                    <a class="main-nav-link" href="/.">主页</a>
                 
-                    <a class="main-nav-link" href="/archives">Archives</a>
+                    <a class="main-nav-link" href="/archives">归档</a>
                 
                     <a class="main-nav-link" href="/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/">精华</a>
                 
                     <a class="main-nav-link" href="/somore">大杂烩</a>
                 
-                    <a class="main-nav-link" href="/abouts">About</a>
+                    <a class="main-nav-link" href="/abouts">关于</a>
                 
             </nav>
             
@@ -84,7 +84,7 @@ var _hmt = _hmt || [];
                 <nav id="sub-nav">
                     <div class="profile" id="profile-nav">
                         <a id="profile-anchor" href="javascript:;">
-                            <img class="avatar" src="/css/images/avatar.png" />
+                            <img class="avatar" src="/css/images/avatar.jpg" />
                             <i class="fa fa-caret-down"></i>
                         </a>
                     </div>
@@ -133,15 +133,15 @@ var _hmt = _hmt || [];
         <table class="menu outer">
             <tr>
                 
-                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                    <td><a class="main-nav-link" href="/.">主页</a></td>
                 
-                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
                 
                     <td><a class="main-nav-link" href="/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/">精华</a></td>
                 
                     <td><a class="main-nav-link" href="/somore">大杂烩</a></td>
                 
-                    <td><a class="main-nav-link" href="/abouts">About</a></td>
+                    <td><a class="main-nav-link" href="/abouts">关于</a></td>
                 
                 <td>
                     
@@ -162,7 +162,7 @@ var _hmt = _hmt || [];
 <aside id="profile">
     <div class="inner profile-inner">
         <div class="base-info profile-block">
-            <img id="avatar" src="/css/images/avatar.png" />
+            <img id="avatar" src="/css/images/avatar.jpg" />
             <h2 id="name">WaylenWang</h2>
             <h3 id="title">专注移动互联网</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Guangzhou, China</span>
@@ -236,6 +236,7 @@ var _hmt = _hmt || [];
 <li>位图<br>位图使用我们称为像素的一格一格的小点来描述图像.计算机屏幕其实就是一张包含大量像素点的网格.在位图中,平时看到的图像将会由每一个网格中的像素点的位置和色彩值来决定.每一点的色彩是固定的,当我们在更高分辨率下观看图像时,每一个小点看上去就像是一个个马赛克色块.当图像放大后,边缘变得模糊不清.位图图像的清晰度取决于图像大小与分辨率</li>
 <li>矢量图<br>矢量图使用线段和曲线描述图像,所以称为矢量,同时图形也包含了色彩和位置信息.当您进行矢量图形的编辑时,您定义的是描述图形形状的线和曲线的属性,这些属性将被记录下来.对矢量图形的操作,例如移动,重新定义尺寸,重新定义形状,或者改变矢量图形的色彩,都不会改变矢量图形的显示品质.您也可以通过矢量对象的交叠,使得图形的某一部分被隐藏,或者改变对象的透明度.矢量图形是”分辨率独立”的,这就是说,当您显示或输出图像时,图像的品质不受设备的分辨率的影响.  </li>
 </ul>
+<a id="more"></a>        
 <h1 id="BitMap和内存的关系">BitMap和内存的关系</h1><p>说到内存就会想到内存溢出。内存溢出就是分配的内存不足以放下数据项序列。如在一个域中输入的数据超过了它的要求就会系统能给你的，系统不能满足需求，于是产生溢出。或者可以这样理解堆上分配的内存没有被释放，从而失去对其控制。这样会造成程序能使用的内存越来越少，导致系统运行速度减慢，严重情况会使程序宕掉。</p>
 <p>在日常开发中影响位图的占用大小的几个关键点：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span>图片长度</span><br><span class="line"><span class="number">2.</span>图片宽度</span><br><span class="line"><span class="number">3.</span>每个像素所占的字节(Bitmap的RGB值)</span><br></pre></td></tr></table></figure></p>
 <p>BitMap的的计算公式为:<br>一张图片（BitMap）占用的内存=图片长度<em>图片宽度</em>单位像素占用的字节数<br><a href="http://blog.csdn.net/hudashi/article/details/7856519" target="_blank" rel="external">详解介绍如何计算Bitmap内存占用</a><br> <strong>注意：</strong></p>
@@ -266,7 +267,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://waylenw.github.io/Android/android-bitmap-memory-yh/" data-id="cimx739nf001nbf0xfkemazzh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://waylenw.github.io/Android/android-bitmap-memory-yh/" data-id="cimx8ba6y001nhm0xajzmj4dn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -416,48 +417,12 @@ var _hmt = _hmt || [];
                 <aside id="sidebar">
     
         
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">归档</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">3</span></li></ul>
-        </div>
-    </div>
-
-    
-        
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/">mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/互联网/">互联网</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客精华/">博客精华</a><span class="tag-list-count">5</span></li></ul>
         </div>
     </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">标签云</h3>
-        <div class="widget tagcloud">
-            <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 16.67px;">Android Studio</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/互联网/" style="font-size: 10px;">互联网</a> <a href="/tags/博客精华/" style="font-size: 16.67px;">博客精华</a>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">链接</h3>
-        <div class="widget">
-            <ul>
-                
-                    <li>
-                        <a href="http://hexo.io">Hexo</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
 
     
     <div id="toTop" class="fa fa-chevron-up"></div>
@@ -475,7 +440,7 @@ var _hmt = _hmt || [];
         
     
     <script type="text/javascript">
-    var duoshuoQuery = {short_name:'waylenw# enter duoshuo shortname here'};
+    var duoshuoQuery = {short_name:'waylenw'};
     (function() {
     var ds = document.createElement('script');
     ds.type = 'text/javascript';ds.async = true;

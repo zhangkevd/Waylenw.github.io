@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="WaylenWang">
 <meta property="og:description" content="概述
 官方APi的描述SurfaceView是视图(View)的继承类，这个视图里内嵌了一个专门用于绘制的Surface。你可以控制这个Surface的格式和尺寸。Surfaceview控制这个Surface的绘制位置。surface是纵深排序(Z-ordered)的，这表明它总在自己所在窗口的后面。surfaceview提供了一个可见区域，只有在这个可见区域内 的surface部分内容才可见，可">
-<meta property="og:updated_time" content="2015-12-26T06:47:05.000Z">
+<meta property="og:updated_time" content="2016-04-12T09:15:08.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android SurfaceView的基本介绍(一)">
 <meta name="twitter:description" content="概述
@@ -62,15 +62,15 @@ var _hmt = _hmt || [];
             </a>
             <nav id="main-nav">
                 
-                    <a class="main-nav-link" href="/.">Home</a>
+                    <a class="main-nav-link" href="/.">主页</a>
                 
-                    <a class="main-nav-link" href="/archives">Archives</a>
+                    <a class="main-nav-link" href="/archives">归档</a>
                 
                     <a class="main-nav-link" href="/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/">精华</a>
                 
                     <a class="main-nav-link" href="/somore">大杂烩</a>
                 
-                    <a class="main-nav-link" href="/abouts">About</a>
+                    <a class="main-nav-link" href="/abouts">关于</a>
                 
             </nav>
             
@@ -78,7 +78,7 @@ var _hmt = _hmt || [];
                 <nav id="sub-nav">
                     <div class="profile" id="profile-nav">
                         <a id="profile-anchor" href="javascript:;">
-                            <img class="avatar" src="/css/images/avatar.png" />
+                            <img class="avatar" src="/css/images/avatar.jpg" />
                             <i class="fa fa-caret-down"></i>
                         </a>
                     </div>
@@ -127,15 +127,15 @@ var _hmt = _hmt || [];
         <table class="menu outer">
             <tr>
                 
-                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                    <td><a class="main-nav-link" href="/.">主页</a></td>
                 
-                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                    <td><a class="main-nav-link" href="/archives">归档</a></td>
                 
                     <td><a class="main-nav-link" href="/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/">精华</a></td>
                 
                     <td><a class="main-nav-link" href="/somore">大杂烩</a></td>
                 
-                    <td><a class="main-nav-link" href="/abouts">About</a></td>
+                    <td><a class="main-nav-link" href="/abouts">关于</a></td>
                 
                 <td>
                     
@@ -156,7 +156,7 @@ var _hmt = _hmt || [];
 <aside id="profile">
     <div class="inner profile-inner">
         <div class="base-info profile-block">
-            <img id="avatar" src="/css/images/avatar.png" />
+            <img id="avatar" src="/css/images/avatar.jpg" />
             <h2 id="name">WaylenWang</h2>
             <h3 id="title">专注移动互联网</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Guangzhou, China</span>
@@ -229,6 +229,7 @@ var _hmt = _hmt || [];
 <li><strong>官方APi的描述</strong><br>SurfaceView是视图(View)的继承类，这个视图里内嵌了一个专门用于绘制的Surface。你可以控制这个Surface的格式和尺寸。Surfaceview控制这个Surface的绘制位置。surface是纵深排序(Z-ordered)的，这表明它总在自己所在窗口的后面。surfaceview提供了一个可见区域，只有在这个可见区域内 的surface部分内容才可见，可见区域外的部分不可见。surface的排版显示受到视图层级关系的影响，它的兄弟视图结点会在顶端显示。这意味者 surface的内容会被它的兄弟视图遮挡，这一特性可以用来放置遮盖物(overlays)(例如，文本和按钮等控件)。注意，如果surface上面 有透明控件，那么它的每次变化都会引起框架重新计算它和顶层控件的透明效果，这会影响性能。</li>
 <li><strong>定义</strong><br>SurfaceView是View类的子类，可以直接从内存或者DMA等硬件接口取得图像数据，是个非常重要的绘图视图。它的特性是：可以在主线程之外的线程中向屏幕绘图上。这样可以避免画图任务繁重的时候造成主线程阻塞，从而提高了程序的反应速度。在游戏开发中多用到SurfaceView，游戏中的背景、人物、动画等等尽量在画布canvas中画出。</li>
 <li><p><strong>绘制机制</strong><br>更详细的讲解:<a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1201/656.html" target="_blank" rel="external">http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2012/1201/656.html</a></p>
+<a id="more"></a>     
 <h1 id="实现">实现</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainActivity</span> <span class="keyword">extends</span> <span class="title">Activity</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> SurfaceView surfaceView</span><br><span class="line"></span><br><span class="line">　　　 <span class="annotation">@Override</span></span><br><span class="line">     <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onCreate</span><span class="params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        surfaceView=<span class="keyword">new</span> SurfaceView(<span class="keyword">this</span>);</span><br><span class="line">        setContentView(surfaceView);</span><br><span class="line">        surfaceView.getHolder().addCallback(callback);</span><br><span class="line">     &#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">   <span class="comment">/**</span><br><span class="line">    * surface的回调</span><br><span class="line">    */</span></span><br><span class="line">   <span class="keyword">private</span> SurfaceHolder.Callback callback = <span class="keyword">new</span> SurfaceHolder.Callback() &#123;</span><br><span class="line">       <span class="annotation">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">surfaceDestroyed</span><span class="params">(SurfaceHolder holder)</span> </span>&#123;</span><br><span class="line">       <span class="comment">//在surface销毁的时候调用</span></span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="annotation">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">surfaceCreated</span><span class="params">(SurfaceHolder holder)</span> </span>&#123;</span><br><span class="line">           <span class="comment">//在创建时激发，一般在这里调用画图的线程。</span></span><br><span class="line">                </span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="annotation">@Override</span></span><br><span class="line">       <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">surfaceChanged</span><span class="params">(SurfaceHolder holder, <span class="keyword">int</span> format,</span><br><span class="line">                                  <span class="keyword">int</span> width, <span class="keyword">int</span> height)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//销毁时激发，一般在这里将画图的线程停止、释放。</span></span><br><span class="line"></span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">    &#125;;　　</span><br><span class="line">   &#125;      　　</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
@@ -242,7 +243,7 @@ var _hmt = _hmt || [];
 
 </div>
 
-    <a data-url="http://waylenw.github.io/Android/android-surfaceview-one/" data-id="cimx739n0001bbf0xt7nwxiiv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://waylenw.github.io/Android/android-surfaceview-one/" data-id="cimx8ba6g001bhm0xj6wlx3i6" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -392,48 +393,12 @@ var _hmt = _hmt || [];
                 <aside id="sidebar">
     
         
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">归档</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">三月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">二月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a><span class="archive-list-count">8</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/12/">十二月 2015</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/09/">九月 2015</a><span class="archive-list-count">3</span></li></ul>
-        </div>
-    </div>
-
-    
-        
     <div class="widget-wrap">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
             <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android-Studio/">Android Studio</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/">mobile</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/互联网/">互联网</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客精华/">博客精华</a><span class="tag-list-count">5</span></li></ul>
         </div>
     </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">标签云</h3>
-        <div class="widget tagcloud">
-            <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Android-Studio/" style="font-size: 16.67px;">Android Studio</a> <a href="/tags/Mac/" style="font-size: 13.33px;">Mac</a> <a href="/tags/hexo/" style="font-size: 13.33px;">hexo</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/互联网/" style="font-size: 10px;">互联网</a> <a href="/tags/博客精华/" style="font-size: 16.67px;">博客精华</a>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">链接</h3>
-        <div class="widget">
-            <ul>
-                
-                    <li>
-                        <a href="http://hexo.io">Hexo</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
 
     
     <div id="toTop" class="fa fa-chevron-up"></div>
@@ -451,7 +416,7 @@ var _hmt = _hmt || [];
         
     
     <script type="text/javascript">
-    var duoshuoQuery = {short_name:'waylenw# enter duoshuo shortname here'};
+    var duoshuoQuery = {short_name:'waylenw'};
     (function() {
     var ds = document.createElement('script');
     ds.type = 'text/javascript';ds.async = true;
