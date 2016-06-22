@@ -626,7 +626,7 @@
     <link href="http://waylenw.github.io/android-all-open-source/"/>
     <id>http://waylenw.github.io/android-all-open-source/</id>
     <published>2015-10-14T16:00:00.000Z</published>
-    <updated>2016-06-22T11:24:27.000Z</updated>
+    <updated>2016-06-22T11:30:18.000Z</updated>
     <content type="html"><![CDATA[<h1 id="概述">概述</h1><p> 此博客初衷是记录一下自己开发过程后使用到或者收集到的一些轮子和开源项目，不追求全，只追求实用吧。会不断的更新,也是希望能继续完善吧。<br> <strong>推荐</strong><br> <a href="https://github.com/Trinea/android-open-project#%E5%8D%81%E4%BA%8Cflipview" target="_blank" rel="external">Github最全面的Android开源项目汇总</a><br> <a id="more"></a>    </p>
 <h1 id="功能框架">功能框架</h1><p> <strong>网络请求</strong></p>
 <ul>
@@ -710,7 +710,7 @@
 <ul>
 <li><a href="https://github.com/appunite/AndroidFFmpeg" target="_blank" rel="external">AndroidFFmpeg</a><br>Android FFmpeg.用于复杂视频处理(转码、压缩、录制视频等)</li>
 </ul>
-<p>-[MagicCamera]<a href="https://github.com/wuhaoyu1990/MagicCamera" target="_blank" rel="external">https://github.com/wuhaoyu1990/MagicCamera</a>)<br> 集成了美颜滤镜效果。<br> <img src="https://raw.githubusercontent.com/wuhaoyu1990/MagicCamera/master/Screenshot_1.png" alt=""></p>
+<p>-<a href="https://github.com/wuhaoyu1990/MagicCamera" target="_blank" rel="external">MagicCamera</a><br> 集成了美颜滤镜效果。<br> <img src="https://raw.githubusercontent.com/wuhaoyu1990/MagicCamera/master/Screenshot_1.png" alt=""></p>
 <h1 id="动画">动画</h1><ul>
 <li><a href="https://github.com/jaychou2012/SwitchLayout" target="_blank" rel="external">SwitchLayout 视图切换动画</a></li>
 <li><a href="https://github.com/sd6352051/NiftyDialogEffects" target="_blank" rel="external">NiftyDialogEffects 支持自定义飞入动画样式的 Dialog</a><br><img src="https://camo.githubusercontent.com/456687ac516bb07f1076928d635bfddf6b90d5ec/687474703a2f2f696d67302e70682e3132362e6e65742f69433436653162586b55316631724966555a6f3939773d3d2f363539373632303632313938343031393430382e676966" alt=""><ul>
