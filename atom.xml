@@ -210,7 +210,7 @@
     <link href="http://waylenw.github.io/android-sdk-verion/"/>
     <id>http://waylenw.github.io/android-sdk-verion/</id>
     <published>2016-01-17T16:00:00.000Z</published>
-    <updated>2016-06-13T02:19:22.000Z</updated>
+    <updated>2016-06-13T02:35:12.000Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>Android开发的童鞋们都知道，Google的碎片化是很严重的，所以官方提供了兼容包去试配一些低版本的机器。并且兼容包也在更新，除此之外，Android的SDK版本更新也十分的快速，基本上是一年发一个大的版本号。而且Api的变更也十分大，但是很多时候对这些变更感到无从下手。以下链接的这篇文章对SDK版本更新的内容都会有一个汇总。相信你可以很快熟悉各版本之间的差异。</p>
 </blockquote>
@@ -626,9 +626,13 @@
     <link href="http://waylenw.github.io/android-all-open-source/"/>
     <id>http://waylenw.github.io/android-all-open-source/</id>
     <published>2015-10-14T16:00:00.000Z</published>
-    <updated>2016-06-07T06:53:11.000Z</updated>
+    <updated>2016-06-22T11:24:27.000Z</updated>
     <content type="html"><![CDATA[<h1 id="概述">概述</h1><p> 此博客初衷是记录一下自己开发过程后使用到或者收集到的一些轮子和开源项目，不追求全，只追求实用吧。会不断的更新,也是希望能继续完善吧。<br> <strong>推荐</strong><br> <a href="https://github.com/Trinea/android-open-project#%E5%8D%81%E4%BA%8Cflipview" target="_blank" rel="external">Github最全面的Android开源项目汇总</a><br> <a id="more"></a>    </p>
-<h1 id="功能框架">功能框架</h1><p><strong>数据库</strong></p>
+<h1 id="功能框架">功能框架</h1><p> <strong>网络请求</strong></p>
+<ul>
+<li><a href="https://github.com/jeasonlzy0216/OkHttpUtils" target="_blank" rel="external">OkHttpUtils</a><br>基于Okhttp的Api的使用封装。Api简洁实用。功能也非常全面。</li>
+</ul>
+<p><strong>数据库</strong></p>
 <ul>
 <li><a href="http://blog.csdn.net/lmj623565791/article/details/39122981" target="_blank" rel="external">ORMLite</a></li>
 <li><a href="http://blog.csdn.net/krislight/article/details/9391455" target="_blank" rel="external">GreenDaoMaster</a></li>
@@ -702,6 +706,11 @@
 <li><a href="https://github.com/mxn21/SlidingCard" target="_blank" rel="external">SlidingCard相册的效果</a><br><img src="https://raw.githubusercontent.com/mxn21/SlidingCard/master/screen.gif" alt=""></li>
 <li><a href="https://github.com/gpfduoduo/RadarScanView" target="_blank" rel="external">雷达扫描的效果</a><br><img src="https://raw.githubusercontent.com/gpfduoduo/RadarScanView/master/RadarScanView/gif/radar.gif" alt=""></li>
 </ul>
+<h1 id="多媒体">多媒体</h1><p> 项目名：AndroidFFmpeg</p>
+<ul>
+<li><a href="https://github.com/appunite/AndroidFFmpeg" target="_blank" rel="external">AndroidFFmpeg</a><br>Android FFmpeg.用于复杂视频处理(转码、压缩、录制视频等)</li>
+</ul>
+<p>-[MagicCamera]<a href="https://github.com/wuhaoyu1990/MagicCamera" target="_blank" rel="external">https://github.com/wuhaoyu1990/MagicCamera</a>)<br> 集成了美颜滤镜效果。<br> <img src="https://raw.githubusercontent.com/wuhaoyu1990/MagicCamera/master/Screenshot_1.png" alt=""></p>
 <h1 id="动画">动画</h1><ul>
 <li><a href="https://github.com/jaychou2012/SwitchLayout" target="_blank" rel="external">SwitchLayout 视图切换动画</a></li>
 <li><a href="https://github.com/sd6352051/NiftyDialogEffects" target="_blank" rel="external">NiftyDialogEffects 支持自定义飞入动画样式的 Dialog</a><br><img src="https://camo.githubusercontent.com/456687ac516bb07f1076928d635bfddf6b90d5ec/687474703a2f2f696d67302e70682e3132362e6e65742f69433436653162586b55316631724966555a6f3939773d3d2f363539373632303632313938343031393430382e676966" alt=""><ul>
@@ -710,12 +719,12 @@
 </li>
 </ul>
 <h1 id="图像处理">图像处理</h1><ul>
-<li><a href="https://github.com/jaychou2012/ImageBlurring" target="_blank" rel="external">ImageBlurring图像模糊</a></li>
+<li><a href="https://github.com/qiujuer/ImageBlurring" target="_blank" rel="external">ImageBlurring图像模糊</a></li>
 <li><p><a href="https://github.com/cooltechworks/BitmapMerger" target="_blank" rel="external">BitmapMerger图片合成</a><br><img src="https://cloud.githubusercontent.com/assets/13122232/8438305/9f7c2644-1f82-11e5-8f51-25ba7cca0711.gif" alt="这里写图片描述"></p>
 <h1 id="功能应用">功能应用</h1></li>
 <li><a href="http://wister.iteye.com/blog/334562" target="_blank" rel="external">pinyin4j的使用(汉字转拼音)</a></li>
-<li><a href="https://git.oschina.net/xiao-lifan/MutiPhotoChoser" target="_blank" rel="external">MutiPhotoChoser</a><br>自定义相册多图选择</li>
-<li><a href="https://github.com/bboyfeiyu/Colorful" target="_blank" rel="external">Colorful</a><br>实现了换肤的功能。</li>
+<li><a href="https://git.oschina.net/xiao-lifan/MutiPhotoChoser" target="_blank" rel="external">MutiPhotoChoser</a><br>自定义相册多图选择  </li>
+<li><a href="https://github.com/bboyfeiyu/Colorful" target="_blank" rel="external">Colorful</a><br>实现了换肤的功能。<br><img src="https://raw.githubusercontent.com/hehonghui/Colorful/master/images/colorful.gif" alt=""></li>
 <li><a href="https://github.com/sevenler/Uninstall_Statics" target="_blank" rel="external">Apk统计自身被卸载</a></li>
 <li><p><a href="https://github.com/kymjs/EmojiChat" target="_blank" rel="external">Emoji表情的实现</a><br><img src="https://raw.githubusercontent.com/kymjs/EmojiChat/master/screen_shots/Screenshot_2.png" alt=""></p>
 <h2 id="图表">图表</h2><p><a href="https://github.com/diogobernardino/WilliamChart" target="_blank" rel="external">WilliamChart</a></p>
