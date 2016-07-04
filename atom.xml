@@ -4,7 +4,7 @@
   <subtitle><![CDATA[专注移动互联网。]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://waylenw.github.io/"/>
-  <updated>2016-05-25T13:10:04.000Z</updated>
+  <updated>2016-07-04T11:11:05.000Z</updated>
   <id>http://waylenw.github.io/</id>
   
   <author>
@@ -13,6 +13,98 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Android开源项目汇总]]></title>
+    <link href="http://waylenw.github.io/android-all-open-source/"/>
+    <id>http://waylenw.github.io/android-all-open-source/</id>
+    <published>2016-07-04T16:00:00.000Z</published>
+    <updated>2016-07-04T11:11:05.000Z</updated>
+    <content type="html"><![CDATA[<p>最后更新时间<br>2016-07-05</p>
+<h1 id="概述">概述</h1><p> 此博客初衷是记录一下自己开发过程后使用到或者收集到的一些轮子和开源项目，不追求全，只追求实用吧。会不断的更新,也是希望能继续完善吧。<br> <strong>推荐</strong><br> <a href="https://github.com/Trinea/android-open-project#%E5%8D%81%E4%BA%8Cflipview" target="_blank" rel="external">Github最全面的Android开源项目汇总</a><br> <a id="more"></a>    </p>
+<h1 id="Loading">Loading</h1><ul>
+<li>MetaballLoading<br>水滴传递的加载效果<br>github:<a href="https://github.com/dodola/MetaballLoading" target="_blank" rel="external">https://github.com/dodola/MetaballLoading</a><br><img src="https://raw.githubusercontent.com/dodola/MetaballLoading/master/metaball.gif" alt=""> </li>
+<li>WhorlView<br>漩涡风格的加载效果<br>github:<a href="https://github.com/Kyson/WhorlView" target="_blank" rel="external">https://github.com/Kyson/WhorlView</a><br><img src="https://raw.githubusercontent.com/Kyson/WhorlView/master/art/whorl_progress_showcase.gif" alt=""></li>
+<li>AVLoadingIndicatorView<br>Android Loading动画的一个集合<br>github:<a href="https://github.com/81813780/AVLoadingIndicatorView" target="_blank" rel="external">https://github.com/81813780/AVLoadingIndicatorView</a><br><img src="https://raw.githubusercontent.com/81813780/AVLoadingIndicatorView/master/Demo.gif" alt=""></li>
+<li>shapeLoadingView<br>仿58loading效果<br><a href="https://github.com/zzz40500/android-shapeLoadingView" target="_blank" rel="external">https://github.com/zzz40500/android-shapeLoadingView</a><br><img src="https://camo.githubusercontent.com/575b98a56c5546043ec045d044429590e4a623fe/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f3136363836362d376434313538646532636534306139612e676966" alt=""></li>
+</ul>
+<h1 id="ViewPager">ViewPager</h1><ul>
+<li><p><a href="https://github.com/chenupt/SpringIndicator" target="_blank" rel="external">SpringIndicator</a><br>viewapger指示器，像水滴流动的效果<br><img src="https://raw.githubusercontent.com/chenupt/SpringIndicator/master/img/si_1.0.0.gif" alt=""></p>
+<ul>
+<li><a href="https://github.com/matrixxun/ProductTour" target="_blank" rel="external">ProductTour</a><br>ViewPager的PageTransformer切换动画<br><img src="https://raw.githubusercontent.com/matrixxun/ProductTour/master/art/run.gif" alt=""></li>
+<li><a href="https://github.com/kaelaela/VerticalViewa没有衔接效果
+![](https://raw.githubusercontent.com/kaelaela/VerticalViewPager/master/art/default.gif" target="_blank" rel="external">VerticalVie向上滑动的viewpager,没有衔接效果()wPager</a></li>
+</ul>
+<h1 id="指示器">指示器</h1><ul>
+<li><a href="https://github.com/H07000223/FlycoTabLayout" target="_blank" rel="external">FlycoTabLayout</a><br>包含两种TabLayout.[SlidingTabLayout是基于<a href="https://github.com/jpardogo/PagerSlidingTabStrip" target="_blank" rel="external">PagerSlidingTabStrip</a>的大量修改，新增了很多自定义的功能。CommonTabLayout:不同于SlidingTabLayout对ViewPager依赖,它是一个不依赖ViewPager可以与其他控件自由搭配使用的TabLayout.<br><img src="https://raw.githubusercontent.com/H07000223/FlycoTabLayout/master/preview_1.gif" alt=""></li>
+</ul>
+<h1 id="Dialog">Dialog</h1><ul>
+<li><a href="https://github.com/H07000223/FlycoDialog_Master" target="_blank" rel="external">FlycoDialog</a><br>多种样式与动画效果的对话框<br><img src="https://raw.githubusercontent.com/H07000223/FlycoDialog_Master/master/gif/preview_1.gif" alt=""></li>
+</ul>
+</li>
+</ul>
+<h1 id="ListView">ListView</h1><ul>
+<li><a href="https://github.com/bavariama1/ListBuddies" target="_blank" rel="external">瀑布流</a></li>
+<li><a href="https://github.com/Waylenw/Android-UI-Effect#listindex" target="_blank" rel="external">IndexView</a><br>索引控件可拖动，可根据列表滚动移动<br><img src="https://raw.githubusercontent.com/Waylenwang/AndroidUI_Waylen/master/screenpic/indexView.gif" alt=""></li>
+<li><a href="https://github.com/baoyongzhang/SwipeMenuListView" target="_blank" rel="external">SwipeMenuListView(右滑删除)</a><br><img src="https://raw.githubusercontent.com/baoyongzhang/SwipeMenuListView/master/demo3.gif" alt=""></li>
+</ul>
+<h1 id="侧滑菜单">侧滑菜单</h1><ul>
+<li><a href="https://github.com/BlueMor/DragLayout" target="_blank" rel="external">DragLayout 使用 support.v4 包下的 ViewDragHelper 实现 QQ5.0 侧滑</a><br><img src="https://raw.githubusercontent.com/BlueMor/DragLayout/master/screenshots/123.gif" alt="这里写图片描述"></li>
+<li><a href="https://github.com/mxn21/FlowingDrawer" target="_blank" rel="external">FlowingDrawer(具有弹性的侧滑菜单)</a><br><img src="http://www.jcodecraeer.com/uploads/151022/1-1510220ZQQ25.gif" alt="这里写图片描述"></li>
+</ul>
+<h1 id="下拉上拉刷新">下拉上拉刷新</h1><ul>
+<li><a href="https://github.com/bingoogolapple/BGARefreshLayout-Android" target="_blank" rel="external">BGARefreshLayout-Android</a><br>多种下拉刷新效果(支持上拉刷新)</li>
+<li><a href="https://github.com/cymcsg/UltimateRecyclerView" target="_blank" rel="external">UltimateRecyclerView</a><br>支持ListView、RecycleView上拉刷新以及右滑动删除，支持拖动，动画，和和粘性头部。隐藏和显示Actionbar和ToolBar等<br><img src="https://camo.githubusercontent.com/34707aab637bd5766d183e4bf739e07a589d5aa9/68747470733a2f2f627974656275636b65742e6f72672f6d61727368616c6368656e2f696d616765732f7261772f343462656231363231323163373139656134303934626437656131633966306364376465346330342f756c74696d61746572656379636c6572766965772f756c74696d6174655f72656379636c65727669657731322e676966" alt=""></li>
+<li><p><a href="https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh" target="_blank" rel="external">Ultra-Pull-To-Refresh</a><br>此库是单纯的下拉刷新的组件,使用起来简单，<code>API LEVEL &gt;= 8</code>可以ui样式十分的简单。还有md风格的下拉刷新样式哦。<br><img src="https://camo.githubusercontent.com/4dfccd5a50f7d59b512300fce341a1217950603a/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f6d6174657269616c2d7374796c652e676966" alt=""></p>
+<h1 id="MD">MD</h1><ul>
+<li><a href="https://github.com/drakeet/MaterialDialog" target="_blank" rel="external">MD风格的dialog</a></li>
+<li><a href="https://github.com/rey5137/material" target="_blank" rel="external">Md风格组件的集合</a></li>
+<li><a href="https://github.com/siriscac/RippleView" target="_blank" rel="external">RippleView</a><br>兼容低版本的水波纹控件<br><img src="https://camo.githubusercontent.com/eec41193900aad4803dcf18bc9915fafa3f7d1cf/68747470733a2f2f7261772e6769746875622e636f6d2f73697269736361632f526970706c65566965772f6d61737465722f53637265656e732f53637265656e2e676966" alt=""></li>
+<li><a href="https://github.com/nbsp-team/MaterialFilePicker" target="_blank" rel="external">MaterialFilePicker</a><br>MD风格的文件选择器</li>
+</ul>
+<h1 id="效果实现">效果实现</h1><ul>
+<li><a href="https://github.com/mxn21/SlidingCard" target="_blank" rel="external">SlidingCard相册的效果</a><br><img src="https://raw.githubusercontent.com/mxn21/SlidingCard/master/screen.gif" alt=""></li>
+<li><a href="https://github.com/gpfduoduo/RadarScanView" target="_blank" rel="external">雷达扫描的效果</a><br><img src="https://raw.githubusercontent.com/gpfduoduo/RadarScanView/master/RadarScanView/gif/radar.gif" alt=""></li>
+</ul>
+</li>
+</ul>
+<h1 id="多媒体">多媒体</h1><ul>
+<li><a href="https://github.com/appunite/AndroidFFmpeg" target="_blank" rel="external">AndroidFFmpeg</a><br>Android FFmpeg.用于复杂视频处理(转码、压缩、录制视 频等)</li>
+<li><a href="https://github.com/wysaid/android-gpuimage-plus" target="_blank" rel="external">android-gpuimage-plus</a><br>Android-gpuimag的增强版。</li>
+<li><a href="https://github.com/wuhaoyu1990/MagicCamera" target="_blank" rel="external">MagicCamera</a><br>集成了美颜滤镜效果。<br><img src="https://raw.githubusercontent.com/wuhaoyu1990/MagicCamera/master/Screenshot_1.png" alt=""></li>
+</ul>
+<h1 id="动画">动画</h1><ul>
+<li><a href="https://github.com/jaychou2012/SwitchLayout" target="_blank" rel="external">SwitchLayout 视图切换动画</a></li>
+<li><a href="https://github.com/sd6352051/NiftyDialogEffects" target="_blank" rel="external">NiftyDialogEffects 支持自定义飞入动画样式的 Dialog</a><br><img src="https://camo.githubusercontent.com/456687ac516bb07f1076928d635bfddf6b90d5ec/687474703a2f2f696d67302e70682e3132362e6e65742f69433436653162586b55316631724966555a6f3939773d3d2f363539373632303632313938343031393430382e676966" alt=""></li>
+<li><a href="https://github.com/daimajia/AndroidViewAnimations" target="_blank" rel="external">AndroidViewAnimations</a><br>View动画的Android </li>
+</ul>
+<h1 id="图像处理">图像处理</h1><ul>
+<li><a href="https://github.com/qiujuer/ImageBlurring" target="_blank" rel="external">ImageBlurring图像模糊</a></li>
+<li><a href="https://github.com/cooltechworks/BitmapMerger这里写图片描述" target="_blank" rel="external">BitmapMerger图片合成</a><br><img src="https://cloud.githubusercontent.com/assets/13122232/8438305/9f7c2644-1f82-11e5-8f51-25ba7cca0711.gif" alt=""></li>
+</ul>
+<h1 id="功能应用">功能应用</h1><ul>
+<li><a href="http://wister.iteye.com/blog/334562" target="_blank" rel="external">pinyin4j</a><br>  汉字转拼音,获取汉字首字母等操作。</li>
+<li><a href="https://git.oschina.net/xiao-lifan/MutiPhotoChoser" target="_blank" rel="external">MutiPhotoChoser</a><br>自定义相册多图选择  </li>
+<li><a href="https://github.com/bboyfeiyu/Colorful" target="_blank" rel="external">Colorful</a><br>实现了换肤的功能。<br><img src="https://raw.githubusercontent.com/hehonghui/Colorful/master/images/colorful.gif" alt=""></li>
+<li><a href="https://github.com/sevenler/Uninstall_Statics" target="_blank" rel="external">Apk统计自身被卸载</a></li>
+<li><a href="https://github.com/kymjs/EmojiChat" target="_blank" rel="external">Emoji表情的实现</a><br><img src="https://raw.githubusercontent.com/kymjs/EmojiChat/master/screen_shots/Screenshot_2.png" alt=""></li>
+</ul>
+<h1 id="图表">图表</h1><p> <a href="https://github.com/diogobernardino/WilliamChart" target="_blank" rel="external">WilliamChart</a></p>
+<h1 id="Demo">Demo</h1><ul>
+<li><a href="https://github.com/stormzhang/9GAG" target="_blank" rel="external">9GAG(整合一些轮子的案例)</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最后更新时间<br>2016-07-05</p>
+<h1 id="概述">概述</h1><p> 此博客初衷是记录一下自己开发过程后使用到或者收集到的一些轮子和开源项目，不追求全，只追求实用吧。会不断的更新,也是希望能继续完善吧。<br> <strong>推荐</strong><br> <a href="https://github.com/Trinea/android-open-project#%E5%8D%81%E4%BA%8Cflipview">Github最全面的Android开源项目汇总</a><br>]]>
+    
+    </summary>
+    
+      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
+    
+      <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Android开发拆墙(GFW)技巧之谈]]></title>
@@ -206,44 +298,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Android SDK版本与兼容包相关]]></title>
-    <link href="http://waylenw.github.io/android-sdk-verion/"/>
-    <id>http://waylenw.github.io/android-sdk-verion/</id>
-    <published>2016-01-17T16:00:00.000Z</published>
-    <updated>2016-06-13T02:35:12.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>Android开发的童鞋们都知道，Google的碎片化是很严重的，所以官方提供了兼容包去试配一些低版本的机器。并且兼容包也在更新，除此之外，Android的SDK版本更新也十分的快速，基本上是一年发一个大的版本号。而且Api的变更也十分大，但是很多时候对这些变更感到无从下手。以下链接的这篇文章对SDK版本更新的内容都会有一个汇总。相信你可以很快熟悉各版本之间的差异。</p>
-</blockquote>
- <a id="more"></a>    
-<h1 id="SDK版本相关">SDK版本相关</h1><blockquote>
-<p><a href="https://developer.android.com/intl/zh-cn/sdk/api_diff/23/changes.html" target="_blank" rel="external">官方SDK版本Api变动列表:(6.0为例)</a><br> <a href="http://developer.android.com/intl/zh-cn/guide/topics/manifest/uses-sdk-element.html#ApiLevels" target="_blank" rel="external">Android API Level所有版本列表</a></p>
-</blockquote>
-<h2 id="4-X">4.X</h2><p> <a href="http://my.oschina.net/u/1175378/blog/143448?fromerr=px75uTtO" target="_blank" rel="external">Android 4.1 API官方文档详解</a></p>
-<h2 id="5-X">5.X</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46648381" target="_blank" rel="external">Android 5.0 Api的变化</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46344791" target="_blank" rel="external">Android 5.0 camera2Api的使用</a><br> <a href="http://wuxiaolong.me/2015/08/03/Palette/" target="_blank" rel="external">Android Palette取色器</a><br> <a href="http://blog.csdn.net/xu_fu/article/details/44004841" target="_blank" rel="external">VectorDrawable与SVG</a><br> <a href="http://www.jianshu.com/p/ba72bb5d181d" target="_blank" rel="external">Android5.x新API介绍（一）</a><br> <a href="http://www.jianshu.com/p/c82ea2333af6" target="_blank" rel="external">Android5.x新API介绍（二）</a></p>
-<h2 id="6-X">6.X</h2><p><a href="http://www.race604.com/whats-new-in-android6-0/" target="_blank" rel="external">Android 6.0 中新的新技术</a><br><a href="http://waylenw.github.io/Android/Android-sdk-6-change/">Android 6.0的变化</a><br><a href="http://jijiaxin89.com/2015/08/30/Android-s-Runtime-Permission/" target="_blank" rel="external">运行时权限开发者需要知道的一切</a></p>
-<h1 id="兼容库相关">兼容库相关</h1><blockquote>
-<p>兼容库和兼容包是什么？兼容库和兼容包是对Android一些更低版本实现高版本的功能所<br>   提供的兼容架包。<br>   <a href="http://developer.android.com/intl/zh-cn/tools/support-library/index.html" target="_blank" rel="external">官方Support Library版本更新汇总</a></p>
-</blockquote>
-<h2 id="Support-V4">Support-V4</h2><p> 在项目中引入<br> <figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile <span class="list">(<span class="quoted">'com</span>.android.support<span class="keyword">:support-v4</span>:<span class="number">13.0</span>.<span class="number">0</span>')</span></span><br></pre></td></tr></table></figure></p>
-<p> <a href="http://mp.weixin.qq.com/s?__biz=MzA3MDMyMjkzNg==&amp;mid=212038361&amp;idx=1&amp;sn=ffcb677d058ecd7ff291a8a42d449566&amp;scene=0#rd" target="_blank" rel="external">NestedScrolling 实战:(5.0加入)</a></p>
-<h2 id="Support-V7">Support-V7</h2><p> <a href="http://waylenw.github.io/Android/android-recyclerview-one/">Android RecyclerView三部曲之基础篇(一)</a></p>
-<h2 id="Android_Design_Support_Library">Android Design Support Library</h2><p> <a href="http://blog.csdn.net/lmj623565791/article/details/46405409" target="_blank" rel="external">NavigationView的实用讲解</a><br> <a href="http://wuxiaolong.me/2015/08/03/TabLayout/" target="_blank" rel="external">TabLayout的使用讲解</a></p>
-<h2 id="百分比库">百分比库</h2><p> <a href="http://blog.csdn.net/lmj623565791/article/details/46695347" target="_blank" rel="external">Android 百分比布局库(percent-support-lib) 解析与扩展</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<blockquote>
-<p>Android开发的童鞋们都知道，Google的碎片化是很严重的，所以官方提供了兼容包去试配一些低版本的机器。并且兼容包也在更新，除此之外，Android的SDK版本更新也十分的快速，基本上是一年发一个大的版本号。而且Api的变更也十分大，但是很多时候对这些变更感到无从下手。以下链接的这篇文章对SDK版本更新的内容都会有一个汇总。相信你可以很快熟悉各版本之间的差异。</p>
-</blockquote>]]>
-    
-    </summary>
-    
-      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
-    
-      <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[Android RecyclerView三部曲之基础篇(一)]]></title>
     <link href="http://waylenw.github.io/Android/android-recyclerview-one/"/>
     <id>http://waylenw.github.io/Android/android-recyclerview-one/</id>
@@ -314,6 +368,44 @@
 ]]></content>
     <summary type="html">
     <![CDATA[<h2 id="概述">概述</h2><p> 本博客的所链接的文章不全是原创。很多是写的非常好的博客。所以本博客主要是收集Android开发教程优秀的博客。以下是推荐初学者学习和了解Android开发的的链接<br> <strong>推荐</strong><br><a href="http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/">Android学习之路</a><br><a href="http://blog.csdn.net/xyz_lmn/article/details/41411355">Android知识图谱</a><br><a href="http://blog.csdn.net/singwhatiwanna/article/details/49560409">Android学习路线指南之从入门到高级</a><br><a href="http://hukai.me/android-training-course-in-chinese/index.html">Android官方培训课程中文版</a><br><a href="http://www.jianshu.com/p/0a984f999592">Android编码规范</a></p>]]>
+    
+    </summary>
+    
+      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
+    
+      <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android SDK版本与兼容包相关]]></title>
+    <link href="http://waylenw.github.io/android-sdk-verion/"/>
+    <id>http://waylenw.github.io/android-sdk-verion/</id>
+    <published>2016-01-17T16:00:00.000Z</published>
+    <updated>2016-06-13T02:35:12.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>Android开发的童鞋们都知道，Google的碎片化是很严重的，所以官方提供了兼容包去试配一些低版本的机器。并且兼容包也在更新，除此之外，Android的SDK版本更新也十分的快速，基本上是一年发一个大的版本号。而且Api的变更也十分大，但是很多时候对这些变更感到无从下手。以下链接的这篇文章对SDK版本更新的内容都会有一个汇总。相信你可以很快熟悉各版本之间的差异。</p>
+</blockquote>
+ <a id="more"></a>    
+<h1 id="SDK版本相关">SDK版本相关</h1><blockquote>
+<p><a href="https://developer.android.com/intl/zh-cn/sdk/api_diff/23/changes.html" target="_blank" rel="external">官方SDK版本Api变动列表:(6.0为例)</a><br> <a href="http://developer.android.com/intl/zh-cn/guide/topics/manifest/uses-sdk-element.html#ApiLevels" target="_blank" rel="external">Android API Level所有版本列表</a></p>
+</blockquote>
+<h2 id="4-X">4.X</h2><p> <a href="http://my.oschina.net/u/1175378/blog/143448?fromerr=px75uTtO" target="_blank" rel="external">Android 4.1 API官方文档详解</a></p>
+<h2 id="5-X">5.X</h2><p> <a href="http://blog.csdn.net/github_25928675/article/details/46648381" target="_blank" rel="external">Android 5.0 Api的变化</a><br> <a href="http://blog.csdn.net/github_25928675/article/details/46344791" target="_blank" rel="external">Android 5.0 camera2Api的使用</a><br> <a href="http://wuxiaolong.me/2015/08/03/Palette/" target="_blank" rel="external">Android Palette取色器</a><br> <a href="http://blog.csdn.net/xu_fu/article/details/44004841" target="_blank" rel="external">VectorDrawable与SVG</a><br> <a href="http://www.jianshu.com/p/ba72bb5d181d" target="_blank" rel="external">Android5.x新API介绍（一）</a><br> <a href="http://www.jianshu.com/p/c82ea2333af6" target="_blank" rel="external">Android5.x新API介绍（二）</a></p>
+<h2 id="6-X">6.X</h2><p><a href="http://www.race604.com/whats-new-in-android6-0/" target="_blank" rel="external">Android 6.0 中新的新技术</a><br><a href="http://waylenw.github.io/Android/Android-sdk-6-change/">Android 6.0的变化</a><br><a href="http://jijiaxin89.com/2015/08/30/Android-s-Runtime-Permission/" target="_blank" rel="external">运行时权限开发者需要知道的一切</a></p>
+<h1 id="兼容库相关">兼容库相关</h1><blockquote>
+<p>兼容库和兼容包是什么？兼容库和兼容包是对Android一些更低版本实现高版本的功能所<br>   提供的兼容架包。<br>   <a href="http://developer.android.com/intl/zh-cn/tools/support-library/index.html" target="_blank" rel="external">官方Support Library版本更新汇总</a></p>
+</blockquote>
+<h2 id="Support-V4">Support-V4</h2><p> 在项目中引入<br> <figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">compile <span class="list">(<span class="quoted">'com</span>.android.support<span class="keyword">:support-v4</span>:<span class="number">13.0</span>.<span class="number">0</span>')</span></span><br></pre></td></tr></table></figure></p>
+<p> <a href="http://mp.weixin.qq.com/s?__biz=MzA3MDMyMjkzNg==&amp;mid=212038361&amp;idx=1&amp;sn=ffcb677d058ecd7ff291a8a42d449566&amp;scene=0#rd" target="_blank" rel="external">NestedScrolling 实战:(5.0加入)</a></p>
+<h2 id="Support-V7">Support-V7</h2><p> <a href="http://waylenw.github.io/Android/android-recyclerview-one/">Android RecyclerView三部曲之基础篇(一)</a></p>
+<h2 id="Android_Design_Support_Library">Android Design Support Library</h2><p> <a href="http://blog.csdn.net/lmj623565791/article/details/46405409" target="_blank" rel="external">NavigationView的实用讲解</a><br> <a href="http://wuxiaolong.me/2015/08/03/TabLayout/" target="_blank" rel="external">TabLayout的使用讲解</a></p>
+<h2 id="百分比库">百分比库</h2><p> <a href="http://blog.csdn.net/lmj623565791/article/details/46695347" target="_blank" rel="external">Android 百分比布局库(percent-support-lib) 解析与扩展</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>Android开发的童鞋们都知道，Google的碎片化是很严重的，所以官方提供了兼容包去试配一些低版本的机器。并且兼容包也在更新，除此之外，Android的SDK版本更新也十分的快速，基本上是一年发一个大的版本号。而且Api的变更也十分大，但是很多时候对这些变更感到无从下手。以下链接的这篇文章对SDK版本更新的内容都会有一个汇总。相信你可以很快熟悉各版本之间的差异。</p>
+</blockquote>]]>
     
     </summary>
     
@@ -456,26 +548,6 @@
   </entry>
   
   <entry>
-    <title><![CDATA[Android Studio logcat高亮]]></title>
-    <link href="http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/"/>
-    <id>http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/</id>
-    <published>2015-11-30T16:00:00.000Z</published>
-    <updated>2016-04-12T09:16:20.000Z</updated>
-    <content type="html"><![CDATA[<p>Android studio中默认的日志打印都是白色。这对我们日常开发查找Log信息非常影响效率。此时我们就需要对Log信息根据级别进行相应高亮。其实配置log级别对应的颜色相对简单，但是很多开发者并不知道由此功能。</p>
- <a id="more"></a>    
-<h1 id="效果图">效果图</h1><p>  <img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/androidstudio/logcat1.png" alt=""></p>
-<h1 id="如何配置logcat高亮">如何配置logcat高亮</h1><p>  在工具栏中找到<code>setting=&gt;android logcat</code>.即可对Android logcat日志各种打印级别设置颜色。<br>  在选择时 要将红色的框内的钩取消才可编辑。<br>    <img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/androidstudio/logcat.png" alt=""></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Android studio中默认的日志打印都是白色。这对我们日常开发查找Log信息非常影响效率。此时我们就需要对Log信息根据级别进行相应高亮。其实配置log级别对应的颜色相对简单，但是很多开发者并不知道由此功能。</p>]]>
-    
-    </summary>
-    
-      <category term="Android Studio" scheme="http://waylenw.github.io/tags/Android-Studio/"/>
-    
-  </entry>
-  
-  <entry>
     <title><![CDATA[Android Studio添加版本控制]]></title>
     <link href="http://waylenw.github.io/AndroidStudio/android-studio-add-cvs-control/"/>
     <id>http://waylenw.github.io/AndroidStudio/android-studio-add-cvs-control/</id>
@@ -496,6 +568,26 @@
     <![CDATA[<blockquote>
 <p>有时候在切换多个Android studio的项目时候,原本项目是由svn或者git管理或者你的项目是由其他的版本控制工具clone下来的，你会发现在项目包中点击右键弹出的菜单,你会发现并没有git或者svn的选项。那么如何解决呢,看下文。</p>
 </blockquote>]]>
+    
+    </summary>
+    
+      <category term="Android Studio" scheme="http://waylenw.github.io/tags/Android-Studio/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Android Studio logcat高亮]]></title>
+    <link href="http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/"/>
+    <id>http://waylenw.github.io/AndroidStudio/android-studio-logcat-highlight/</id>
+    <published>2015-11-30T16:00:00.000Z</published>
+    <updated>2016-04-12T09:16:20.000Z</updated>
+    <content type="html"><![CDATA[<p>Android studio中默认的日志打印都是白色。这对我们日常开发查找Log信息非常影响效率。此时我们就需要对Log信息根据级别进行相应高亮。其实配置log级别对应的颜色相对简单，但是很多开发者并不知道由此功能。</p>
+ <a id="more"></a>    
+<h1 id="效果图">效果图</h1><p>  <img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/androidstudio/logcat1.png" alt=""></p>
+<h1 id="如何配置logcat高亮">如何配置logcat高亮</h1><p>  在工具栏中找到<code>setting=&gt;android logcat</code>.即可对Android logcat日志各种打印级别设置颜色。<br>  在选择时 要将红色的框内的钩取消才可编辑。<br>    <img src="https://raw.githubusercontent.com/Waylenw/GithubImg/master/androidstudio/logcat.png" alt=""></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Android studio中默认的日志打印都是白色。这对我们日常开发查找Log信息非常影响效率。此时我们就需要对Log信息根据级别进行相应高亮。其实配置log级别对应的颜色相对简单，但是很多开发者并不知道由此功能。</p>]]>
     
     </summary>
     
@@ -614,130 +706,6 @@
     </summary>
     
       <category term="Mac" scheme="http://waylenw.github.io/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Android开源项目和轮子]]></title>
-    <link href="http://waylenw.github.io/android-all-open-source/"/>
-    <id>http://waylenw.github.io/android-all-open-source/</id>
-    <published>2015-10-14T16:00:00.000Z</published>
-    <updated>2016-07-04T08:42:21.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="概述">概述</h1><p> 此博客初衷是记录一下自己开发过程后使用到或者收集到的一些轮子和开源项目，不追求全，只追求实用吧。会不断的更新,也是希望能继续完善吧。<br> <strong>推荐</strong><br> <a href="https://github.com/Trinea/android-open-project#%E5%8D%81%E4%BA%8Cflipview" target="_blank" rel="external">Github最全面的Android开源项目汇总</a><br> <a id="more"></a>    </p>
-<h1 id="功能框架">功能框架</h1><p> <strong>网络请求</strong></p>
-<ul>
-<li><a href="https://github.com/jeasonlzy0216/OkHttpUtils" target="_blank" rel="external">OkHttpUtils</a><br>基于Okhttp的Api的使用封装。Api简洁实用。功能也非常全面。</li>
-</ul>
-<hr>
-<p><strong>数据库</strong></p>
-<ul>
-<li><a href="http://blog.csdn.net/lmj623565791/article/details/39122981" target="_blank" rel="external">ORMLite</a></li>
-<li><a href="http://blog.csdn.net/krislight/article/details/9391455" target="_blank" rel="external">GreenDaoMaster</a></li>
-</ul>
-<p>框架对比<br><a href="http://blog.csdn.net/u012565107/article/details/21546829" target="_blank" rel="external">ORMLitehe和greenDaoMaster简单性能对比</a></p>
-<hr>
-<p><strong>图片加载</strong></p>
-<ul>
-<li><a href="https://github.com/nostra13/Android-Universal-Image-Loader" target="_blank" rel="external">ImageLoader</a><br>ImageLoader是目前Android平台上使用数量最多也是最为常见的图片加载框架。<br>使用讲解:<a href="http://blog.csdn.net/github_25928675/article/details/46442037" target="_blank" rel="external">http://blog.csdn.net/github_25928675/article/details/46442037</a></li>
-<li><a href="https://github.com/square/picasso" target="_blank" rel="external">picasso</a><br>Picasso是美国一家支付公司Square推出的。它的特点是通过复杂的压缩来减少内存的消耗,自带内存和硬盘的二级缓存<br>使用讲解:<a href="http://blog.csdn.net/github_25928675/article/details/46660179" target="_blank" rel="external">http://blog.csdn.net/github_25928675/article/details/46660179</a></li>
-<li><a href="https://github.com/facebook/fresco" target="_blank" rel="external">Fresco</a><br>Fresco是FaceBook推出的一款图片加载框架。自动释放内存。<br>使用讲解:<a href="http://fresco-cn.org/docs/index.html" target="_blank" rel="external">http://fresco-cn.org/docs/index.html</a></li>
-</ul>
-<p>框架对比<br><a href="http://stackoverflow.com/questions/29363321/picasso-v-s-- imageloader-v-s-fresco-vs-glide" target="_blank" rel="external">Stackoverflow几个框架对比</a><br><a href="http://www.csdn.net/article/2015-10-21/2825984" target="_blank" rel="external">MDCC 2015:三大图片缓存原理、特性对比</a></p>
-<hr>
-<p><strong>工具类</strong></p>
-<ul>
-<li><a href="https://github.com/pengwei1024/LogUtils" target="_blank" rel="external">LogUtil</a><br>支持直接打印数据集合,如List、Set、Map、数组</li>
-<li><a href="https://github.com/bunnyblue/DroidFix" target="_blank" rel="external">DroidFix</a><br>热修复的工具,修改补丁</li>
-</ul>
-<p><strong>插件</strong></p>
-<ul>
-<li><a href="https://github.com/dmytrodanylyk/" target="_blank" rel="external">folding-plug</a><br>布局文件分组</li>
-</ul>
-<p><strong>依赖注入</strong></p>
-<ul>
-<li><a href="https://github.com/wyouflf/xUtils" target="_blank" rel="external">xUtils的Viewutils</a></li>
-</ul>
-<hr>
-<h1 id="View">View</h1><h2 id="Loading">Loading</h2><ul>
-<li><a href="https://github.com/dodola/MetaballLoading" target="_blank" rel="external">MetaballLoading</a><br>水滴传递的加载效果<br><img src="https://raw.githubusercontent.com/dodola/MetaballLoading/master/metaball.gif" alt=""></li>
-<li><a href="https://github.com/Kyson/WhorlView" target="_blank" rel="external">WhorlView</a><br>漩涡风格的加载效果<br><img src="http://www.jcodecraeer.com/uploads/150818/1-150QP34Q2261.gif" alt=""></li>
-<li><a href="https://github.com/81813780/AVLoadingIndicatorView" target="_blank" rel="external">AVLoadingIndicatorView</a><br>Android Loading动画的一个集合<br><img src="https://raw.githubusercontent.com/81813780/AVLoadingIndicatorView/master/Demo.gif" alt=""></li>
-<li><a href="https://github.com/zzz40500/android-shapeLoadingView" target="_blank" rel="external">android-shapeLoadingView仿58loading效果</a><br><img src="https://camo.githubusercontent.com/575b98a56c5546043ec045d044429590e4a623fe/687474703a2f2f75706c6f61642d696d616765732e6a69616e7368752e696f2f75706c6f61645f696d616765732f3136363836362d376434313538646532636534306139612e676966" alt=""></li>
-</ul>
-<h2 id="ViewPager">ViewPager</h2><ul>
-<li><p><a href="https://github.com/chenupt/SpringIndicator" target="_blank" rel="external">SpringIndicator</a><br>viewapger指示器，像水滴流动的效果<br><img src="https://raw.githubusercontent.com/chenupt/SpringIndicator/master/img/si_1.0.0.gif" alt=""></p>
-<ul>
-<li><a href="https://github.com/matrixxun/ProductTour" target="_blank" rel="external">ProductTour</a><br>ViewPager的PageTransformer切换动画<br><img src="https://raw.githubusercontent.com/matrixxun/ProductTour/master/art/run.gif" alt=""></li>
-<li><a href="https://github.com/kaelaela/VerticalViewa没有衔接效果
-![](https://raw.githubusercontent.com/kaelaela/VerticalViewPager/master/art/default.gif" target="_blank" rel="external">VerticalVie向上滑动的viewpager,没有衔接效果()wPager</a></li>
-</ul>
-<h2 id="指示器">指示器</h2><ul>
-<li><a href="https://github.com/H07000223/FlycoTabLayout" target="_blank" rel="external">FlycoTabLayout</a><br>包含两种TabLayout.[SlidingTabLayout是基于<a href="https://github.com/jpardogo/PagerSlidingTabStrip" target="_blank" rel="external">PagerSlidingTabStrip</a>的大量修改，新增了很多自定义的功能。CommonTabLayout:不同于SlidingTabLayout对ViewPager依赖,它是一个不依赖ViewPager可以与其他控件自由搭配使用的TabLayout.<br><img src="https://raw.githubusercontent.com/H07000223/FlycoTabLayout/master/preview_1.gif" alt=""></li>
-</ul>
-<h2 id="Dialog">Dialog</h2><ul>
-<li><a href="https://github.com/H07000223/FlycoDialog_Master" target="_blank" rel="external">FlycoDialog</a><br>多种样式与动画效果的对话框<br><img src="https://raw.githubusercontent.com/H07000223/FlycoDialog_Master/master/gif/preview_1.gif" alt=""></li>
-</ul>
-</li>
-</ul>
-<h2 id="ListView">ListView</h2><ul>
-<li><a href="https://github.com/bavariama1/ListBuddies" target="_blank" rel="external">瀑布流</a></li>
-<li><a href="https://github.com/Waylenw/Android-UI-Effect#listindex" target="_blank" rel="external">IndexView</a><br>索引控件可拖动，可根据列表滚动移动<br><img src="https://raw.githubusercontent.com/Waylenwang/AndroidUI_Waylen/master/screenpic/indexView.gif" alt=""></li>
-<li><a href="https://github.com/baoyongzhang/SwipeMenuListView" target="_blank" rel="external">SwipeMenuListView(右滑删除)</a><br><img src="https://raw.githubusercontent.com/baoyongzhang/SwipeMenuListView/master/demo3.gif" alt=""></li>
-</ul>
-<h2 id="侧滑菜单">侧滑菜单</h2><ul>
-<li><a href="https://github.com/BlueMor/DragLayout" target="_blank" rel="external">DragLayout 使用 support.v4 包下的 ViewDragHelper 实现 QQ5.0 侧滑</a><br><img src="https://raw.githubusercontent.com/BlueMor/DragLayout/master/screenshots/123.gif" alt="这里写图片描述"></li>
-<li><a href="https://github.com/mxn21/FlowingDrawer" target="_blank" rel="external">FlowingDrawer(具有弹性的侧滑菜单)</a><br><img src="http://www.jcodecraeer.com/uploads/151022/1-1510220ZQQ25.gif" alt="这里写图片描述"></li>
-</ul>
-<h2 id="下拉上拉刷新">下拉上拉刷新</h2><ul>
-<li><a href="https://github.com/bingoogolapple/BGARefreshLayout-Android" target="_blank" rel="external">BGARefreshLayout-Android</a><br>多种下拉刷新效果(支持上拉刷新)</li>
-<li><a href="https://github.com/cymcsg/UltimateRecyclerView" target="_blank" rel="external">UltimateRecyclerView</a><br>支持ListView、RecycleView上拉刷新以及右滑动删除，支持拖动，动画，和和粘性头部。隐藏和显示Actionbar和ToolBar等<br><img src="https://camo.githubusercontent.com/34707aab637bd5766d183e4bf739e07a589d5aa9/68747470733a2f2f627974656275636b65742e6f72672f6d61727368616c6368656e2f696d616765732f7261772f343462656231363231323163373139656134303934626437656131633966306364376465346330342f756c74696d61746572656379636c6572766965772f756c74696d6174655f72656379636c65727669657731322e676966" alt=""></li>
-<li><p><a href="https://github.com/liaohuqiu/android-Ultra-Pull-To-Refresh" target="_blank" rel="external">Ultra-Pull-To-Refresh</a><br>此库是单纯的下拉刷新的组件,使用起来简单，<code>API LEVEL &gt;= 8</code>可以ui样式十分的简单。还有md风格的下拉刷新样式哦。<br><img src="https://camo.githubusercontent.com/4dfccd5a50f7d59b512300fce341a1217950603a/687474703a2f2f737261696e2d6769746875622e71696e6975646e2e636f6d2f756c7472612d7074722f6d6174657269616c2d7374796c652e676966" alt=""></p>
-<h2 id="MD">MD</h2><ul>
-<li><a href="https://github.com/drakeet/MaterialDialog" target="_blank" rel="external">MD风格的dialog</a></li>
-<li><a href="https://github.com/rey5137/material" target="_blank" rel="external">Md风格组件的集合</a></li>
-<li><a href="https://github.com/siriscac/RippleView" target="_blank" rel="external">RippleView</a><br>兼容低版本的水波纹控件<br><img src="https://camo.githubusercontent.com/eec41193900aad4803dcf18bc9915fafa3f7d1cf/68747470733a2f2f7261772e6769746875622e636f6d2f73697269736361632f526970706c65566965772f6d61737465722f53637265656e732f53637265656e2e676966" alt=""></li>
-<li><a href="https://github.com/nbsp-team/MaterialFilePicker" target="_blank" rel="external">MaterialFilePicker</a><br>MD风格的文件选择器</li>
-</ul>
-<h2 id="效果实现">效果实现</h2><ul>
-<li><a href="https://github.com/mxn21/SlidingCard" target="_blank" rel="external">SlidingCard相册的效果</a><br><img src="https://raw.githubusercontent.com/mxn21/SlidingCard/master/screen.gif" alt=""></li>
-<li><a href="https://github.com/gpfduoduo/RadarScanView" target="_blank" rel="external">雷达扫描的效果</a><br><img src="https://raw.githubusercontent.com/gpfduoduo/RadarScanView/master/RadarScanView/gif/radar.gif" alt=""></li>
-</ul>
-</li>
-</ul>
-<h1 id="多媒体">多媒体</h1><ul>
-<li><a href="https://github.com/appunite/AndroidFFmpeg" target="_blank" rel="external">AndroidFFmpeg</a><br>Android FFmpeg.用于复杂视频处理(转码、压缩、录制视 频等)</li>
-<li><a href="https://github.com/wysaid/android-gpuimage-plus" target="_blank" rel="external">android-gpuimage-plus</a><br>Android-gpuimag的增强版。</li>
-<li><a href="https://github.com/wuhaoyu1990/MagicCamera" target="_blank" rel="external">MagicCamera</a><br>集成了美颜滤镜效果。<br><img src="https://raw.githubusercontent.com/wuhaoyu1990/MagicCamera/master/Screenshot_1.png" alt=""></li>
-</ul>
-<h1 id="动画">动画</h1><ul>
-<li><a href="https://github.com/jaychou2012/SwitchLayout" target="_blank" rel="external">SwitchLayout 视图切换动画</a></li>
-<li><a href="https://github.com/sd6352051/NiftyDialogEffects" target="_blank" rel="external">NiftyDialogEffects 支持自定义飞入动画样式的 Dialog</a><br><img src="https://camo.githubusercontent.com/456687ac516bb07f1076928d635bfddf6b90d5ec/687474703a2f2f696d67302e70682e3132362e6e65742f69433436653162586b55316631724966555a6f3939773d3d2f363539373632303632313938343031393430382e676966" alt=""></li>
-<li><a href="https://github.com/daimajia/AndroidViewAnimations" target="_blank" rel="external">AndroidViewAnimations</a><br>View动画的Android </li>
-</ul>
-<h1 id="图像处理">图像处理</h1><ul>
-<li><a href="https://github.com/qiujuer/ImageBlurring" target="_blank" rel="external">ImageBlurring图像模糊</a></li>
-<li><a href="https://github.com/cooltechworks/BitmapMerger这里写图片描述" target="_blank" rel="external">BitmapMerger图片合成</a><br><img src="https://cloud.githubusercontent.com/assets/13122232/8438305/9f7c2644-1f82-11e5-8f51-25ba7cca0711.gif" alt=""></li>
-</ul>
-<h1 id="功能应用">功能应用</h1><ul>
-<li><a href="http://wister.iteye.com/blog/334562" target="_blank" rel="external">pinyin4j的使用(汉字转拼音)</a></li>
-<li><a href="https://git.oschina.net/xiao-lifan/MutiPhotoChoser" target="_blank" rel="external">MutiPhotoChoser</a><br>自定义相册多图选择  </li>
-<li><a href="https://github.com/bboyfeiyu/Colorful" target="_blank" rel="external">Colorful</a><br>实现了换肤的功能。<br><img src="https://raw.githubusercontent.com/hehonghui/Colorful/master/images/colorful.gif" alt=""></li>
-<li><a href="https://github.com/sevenler/Uninstall_Statics" target="_blank" rel="external">Apk统计自身被卸载</a></li>
-<li><a href="https://github.com/kymjs/EmojiChat" target="_blank" rel="external">Emoji表情的实现</a><br><img src="https://raw.githubusercontent.com/kymjs/EmojiChat/master/screen_shots/Screenshot_2.png" alt=""></li>
-</ul>
-<h2 id="图表">图表</h2><p> <a href="https://github.com/diogobernardino/WilliamChart" target="_blank" rel="external">WilliamChart</a></p>
-<h1 id="Demo">Demo</h1><ul>
-<li><a href="https://github.com/stormzhang/9GAG" target="_blank" rel="external">9GAG(整合一些轮子的案例)</a></li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="概述">概述</h1><p> 此博客初衷是记录一下自己开发过程后使用到或者收集到的一些轮子和开源项目，不追求全，只追求实用吧。会不断的更新,也是希望能继续完善吧。<br> <strong>推荐</strong><br> <a href="https://github.com/Trinea/android-open-project#%E5%8D%81%E4%BA%8Cflipview">Github最全面的Android开源项目汇总</a><br>]]>
-    
-    </summary>
-    
-      <category term="Android" scheme="http://waylenw.github.io/tags/Android/"/>
-    
-      <category term="博客精华" scheme="http://waylenw.github.io/tags/%E5%8D%9A%E5%AE%A2%E7%B2%BE%E5%8D%8E/"/>
     
   </entry>
   
