@@ -1006,6 +1006,7 @@ a.article-title:hover {
   display: inline-block;
   line-height: 1em;
   padding: 6px 15px;
+  float: left;
   -webkit-border-radius: 15px;
   border-radius: 15px;
   background: #f5f8f9;
